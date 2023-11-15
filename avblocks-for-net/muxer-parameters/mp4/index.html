@@ -128,8 +128,8 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../getting-started/">
-   Getting Started
+  <a class="reference internal" href="../../getting-started-windows/">
+   Getting Started - Windows
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -138,8 +138,8 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../getting-started/create-a-c-sharp-console-application-in-visual-studio/">
-     Create a C# console application in Visual Studio
+    <a class="reference internal" href="../../getting-started-windows/create-a-c-sharp-console-app-in-visual-studio/">
+     Create a C# Console App in Visual Studio
     </a>
    </li>
   </ul>
@@ -657,41 +657,41 @@ title="Print to PDF"
 <span class="w">    </span><span class="c1">// in order to use the production release for testing (without a valid license).</span>
 <span class="w">    </span><span class="n">transcoder</span><span class="p">.</span><span class="n">AllowDemoMode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">true</span><span class="p">;</span>
 
-<span class="w">	</span><span class="c1">// Configure output socket</span>
-<span class="w">	</span><span class="p">{</span>
-<span class="w">		</span><span class="c1">// MP4 container socket </span>
-<span class="w">		</span><span class="kt">var</span><span class="w"> </span><span class="n">socket</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MediaSocket</span><span class="p">();</span>
-<span class="w">		</span><span class="n">socket</span><span class="p">.</span><span class="n">StreamType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">StreamType</span><span class="p">.</span><span class="n">Mp4</span><span class="p">;</span>
+<span class="w">    </span><span class="c1">// Configure output socket</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// MP4 container socket </span>
+<span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">socket</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MediaSocket</span><span class="p">();</span>
+<span class="w">        </span><span class="n">socket</span><span class="p">.</span><span class="n">StreamType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">StreamType</span><span class="p">.</span><span class="n">Mp4</span><span class="p">;</span>
 
-<span class="w">		</span><span class="c1">// The MP4 FastStart parameters must be set on the socket</span>
-<span class="w">		</span><span class="n">socket</span><span class="p">.</span><span class="n">Params</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">Param</span><span class="p">.</span><span class="n">Muxer</span><span class="p">.</span><span class="n">MP4</span><span class="p">.</span><span class="n">FastStart</span><span class="p">,</span><span class="w"> </span><span class="k">true</span><span class="p">);</span>
-<span class="w">		</span><span class="n">socket</span><span class="p">.</span><span class="n">Params</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">Param</span><span class="p">.</span><span class="n">Muxer</span><span class="p">.</span><span class="n">MP4</span><span class="p">.</span><span class="n">FastStartUseTempFile</span><span class="p">,</span><span class="w"> </span><span class="k">true</span><span class="p">);</span>
-<span class="w">		</span><span class="n">socket</span><span class="p">.</span><span class="n">Params</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">Param</span><span class="p">.</span><span class="n">Muxer</span><span class="p">.</span><span class="n">MP4</span><span class="p">.</span><span class="n">FastStartTempFileDirectory</span><span class="p">,</span><span class="w"> </span><span class="s">@&quot;C:\Temp&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="c1">// The MP4 FastStart parameters must be set on the socket</span>
+<span class="w">        </span><span class="n">socket</span><span class="p">.</span><span class="n">Params</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">Param</span><span class="p">.</span><span class="n">Muxer</span><span class="p">.</span><span class="n">MP4</span><span class="p">.</span><span class="n">FastStart</span><span class="p">,</span><span class="w"> </span><span class="k">true</span><span class="p">);</span>
+<span class="w">        </span><span class="n">socket</span><span class="p">.</span><span class="n">Params</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">Param</span><span class="p">.</span><span class="n">Muxer</span><span class="p">.</span><span class="n">MP4</span><span class="p">.</span><span class="n">FastStartUseTempFile</span><span class="p">,</span><span class="w"> </span><span class="k">true</span><span class="p">);</span>
+<span class="w">        </span><span class="n">socket</span><span class="p">.</span><span class="n">Params</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">Param</span><span class="p">.</span><span class="n">Muxer</span><span class="p">.</span><span class="n">MP4</span><span class="p">.</span><span class="n">FastStartTempFileDirectory</span><span class="p">,</span><span class="w"> </span><span class="s">@&quot;C:\Temp&quot;</span><span class="p">);</span>
 
-<span class="w">		</span><span class="c1">// H.264 video pin	</span>
-<span class="w">		</span><span class="p">{</span>
-<span class="w">			</span><span class="kt">var</span><span class="w"> </span><span class="n">streamInfo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">VideoStreamInfo</span><span class="p">();</span>
-<span class="w">			</span><span class="n">streamInfo</span><span class="p">.</span><span class="n">StreamType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">StreamType</span><span class="p">.</span><span class="n">H264</span><span class="p">;</span>
-<span class="w">			</span><span class="n">streamInfo</span><span class="p">.</span><span class="n">StreamSubType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">StreamSubType</span><span class="p">.</span><span class="n">Avc1</span><span class="p">;</span>
-<span class="w">			</span>
-<span class="w">			</span><span class="kt">var</span><span class="w"> </span><span class="n">pin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MediaPin</span><span class="p">();</span>
-<span class="w">			</span><span class="n">pin</span><span class="p">.</span><span class="n">StreamInfo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">streamInfo</span><span class="p">;</span>
-<span class="w">			</span><span class="n">socket</span><span class="p">.</span><span class="n">Pins</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">pin</span><span class="p">);</span>
-<span class="w">		</span><span class="p">}</span>
-<span class="w">	</span>
-<span class="w">		</span><span class="c1">// AAC audio pin	</span>
-<span class="w">		</span><span class="p">{</span>
-<span class="w">			</span><span class="kt">var</span><span class="w"> </span><span class="n">streamInfo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">AudioStreamInfo</span><span class="p">();</span>
-<span class="w">			</span><span class="n">streamInfo</span><span class="p">.</span><span class="n">StreamType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">StreamType</span><span class="p">.</span><span class="n">Aac</span><span class="p">;</span>
-<span class="w">			</span><span class="n">streamInfo</span><span class="p">.</span><span class="n">StreamSubType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">StreamSubType</span><span class="p">.</span><span class="n">AacMp4</span><span class="p">;</span>
-<span class="w">			</span>
-<span class="w">			</span><span class="kt">var</span><span class="w"> </span><span class="n">pin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MediaPin</span><span class="p">();</span>
-<span class="w">			</span><span class="n">pin</span><span class="p">.</span><span class="n">StreamInfo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">streamInfo</span><span class="p">;</span>
-<span class="w">			</span><span class="n">socket</span><span class="p">.</span><span class="n">Pins</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">pin</span><span class="p">);</span>
-<span class="w">		</span><span class="p">}</span>
-<span class="w">	</span>
-<span class="w">		</span><span class="n">transcoder</span><span class="p">.</span><span class="n">Outputs</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">socket</span><span class="p">);</span>
-<span class="w">	</span><span class="p">}</span>
+<span class="w">        </span><span class="c1">// H.264 video pin	</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="kt">var</span><span class="w"> </span><span class="n">streamInfo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">VideoStreamInfo</span><span class="p">();</span>
+<span class="w">            </span><span class="n">streamInfo</span><span class="p">.</span><span class="n">StreamType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">StreamType</span><span class="p">.</span><span class="n">H264</span><span class="p">;</span>
+<span class="w">            </span><span class="n">streamInfo</span><span class="p">.</span><span class="n">StreamSubType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">StreamSubType</span><span class="p">.</span><span class="n">Avc1</span><span class="p">;</span>
+<span class="w">            </span>
+<span class="w">            </span><span class="kt">var</span><span class="w"> </span><span class="n">pin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MediaPin</span><span class="p">();</span>
+<span class="w">            </span><span class="n">pin</span><span class="p">.</span><span class="n">StreamInfo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">streamInfo</span><span class="p">;</span>
+<span class="w">            </span><span class="n">socket</span><span class="p">.</span><span class="n">Pins</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">pin</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span>
+<span class="w">        </span><span class="c1">// AAC audio pin	</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="kt">var</span><span class="w"> </span><span class="n">streamInfo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">AudioStreamInfo</span><span class="p">();</span>
+<span class="w">            </span><span class="n">streamInfo</span><span class="p">.</span><span class="n">StreamType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">StreamType</span><span class="p">.</span><span class="n">Aac</span><span class="p">;</span>
+<span class="w">            </span><span class="n">streamInfo</span><span class="p">.</span><span class="n">StreamSubType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">StreamSubType</span><span class="p">.</span><span class="n">AacMp4</span><span class="p">;</span>
+<span class="w">            </span>
+<span class="w">            </span><span class="kt">var</span><span class="w"> </span><span class="n">pin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MediaPin</span><span class="p">();</span>
+<span class="w">            </span><span class="n">pin</span><span class="p">.</span><span class="n">StreamInfo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">streamInfo</span><span class="p">;</span>
+<span class="w">            </span><span class="n">socket</span><span class="p">.</span><span class="n">Pins</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">pin</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span>
+<span class="w">        </span><span class="n">transcoder</span><span class="p">.</span><span class="n">Outputs</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">socket</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
 </div>

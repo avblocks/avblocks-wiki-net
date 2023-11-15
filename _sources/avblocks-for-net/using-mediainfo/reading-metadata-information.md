@@ -10,7 +10,7 @@ taxonomy:
 
 This topic describes how to use the MediaInfo class to read metadata like ID3 tags, OGG attributes, and Windows Media attributes from a file.
 
-The code snippets in this article are from the [read_metadata_any_file](https://github.com/avblocks/avblocks-samples/tree/main/windows/net/samples/read_metadata_any_file) AVBlocks sample.
+The code snippets in this article are from the [info_metadata_file](https://github.com/avblocks/avblocks-net/tree/main/samples/info_metadata_file) AVBlocks sample.
 
 ## Create a MediaInfo object
 

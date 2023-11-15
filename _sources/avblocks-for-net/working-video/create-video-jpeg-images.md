@@ -10,7 +10,7 @@ taxonomy:
 
 How to use the Transcoder to make a video from a sequence of JPEG images.
 
-The code snippets in this article are from the [Slideshow](https://github.com/avblocks/avblocks-samples/tree/main/windows/net/samples/Slideshow) sample app. 
+The code snippets in this article are from the [slideshow](https://github.com/avblocks/avblocks-net/tree/main/samples/slideshow) sample app. 
 
 
 ## Create a Transcoder object

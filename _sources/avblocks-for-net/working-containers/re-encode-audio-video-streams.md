@@ -10,7 +10,7 @@ taxonomy:
 
 This topic describes how to use the Transcoder class to re-encode audio and video streams.
 
-The code snippets in this article are from the [ReEncode](https://github.com/avblocks/avblocks-samples/tree/main/windows/net/samples/ReEncode) AVBlocks sample.
+The code snippets in this article are from the [re-encode](https://github.com/avblocks/avblocks-net/tree/main/samples/re-encode) AVBlocks sample.
 
 ## Why Re-encode?
 

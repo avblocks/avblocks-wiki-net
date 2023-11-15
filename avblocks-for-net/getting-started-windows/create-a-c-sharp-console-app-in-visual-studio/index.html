@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Change Video Frame Rate &#8212; AVBlocks for .NET</title>
+    <title>Create a C# Console App in Visual Studio &#8212; AVBlocks for .NET</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,8 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../../genindex/" />
     <link rel="search" title="Search" href="../../../search/" />
-    <link rel="next" title="Convert Raw Video To Compressed Video" href="../convert-raw-video-compressed-video/" />
-    <link rel="prev" title="Pad Video" href="../pad-video/" />
+    <link rel="next" title="Initialization and Termination" href="../../initialization-and-termination/" />
+    <link rel="prev" title="Getting Started - Windows" href="../" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -127,18 +127,18 @@ const thebe_selector_output = ".output, .cell_output"
  </span>
 </p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../getting-started-windows/">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../">
    Getting Started - Windows
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../getting-started-windows/create-a-c-sharp-console-app-in-visual-studio/">
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      Create a C# Console App in Visual Studio
     </a>
    </li>
@@ -252,48 +252,48 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="../">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../working-video/">
    Working with Video
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
   <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
+  <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../overlay-image-on-video/">
+    <a class="reference internal" href="../../working-video/overlay-image-on-video/">
      Overlay Image On Video
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../upscale-video/">
+    <a class="reference internal" href="../../working-video/upscale-video/">
      Upscale Video
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../crop-video/">
+    <a class="reference internal" href="../../working-video/crop-video/">
      Crop Video
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../pad-video/">
+    <a class="reference internal" href="../../working-video/pad-video/">
      Pad Video
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../working-video/change-video-frame-rate/">
      Change Video Frame Rate
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../convert-raw-video-compressed-video/">
+    <a class="reference internal" href="../../working-video/convert-raw-video-compressed-video/">
      Convert Raw Video To Compressed Video
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../create-video-jpeg-images/">
+    <a class="reference internal" href="../../working-video/create-video-jpeg-images/">
      Create Video From JPEG Images
     </a>
    </li>
@@ -487,7 +487,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../../_sources/avblocks-for-net/working-video/change-video-frame-rate.md"
+        <a href="../../../_sources/avblocks-for-net/getting-started-windows/create-a-c-sharp-console-app-in-visual-studio.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -547,18 +547,18 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#source-video">
-   Source Video
+  <a class="reference internal nav-link" href="#create-the-visual-studio-project">
+   Create the Visual Studio project
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#complete-program">
-   Complete Program
+  <a class="reference internal nav-link" href="#run-the-application">
+   Run the application
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#how-to-run">
-   How to run
+  <a class="reference internal nav-link" href="#troubleshooting">
+   Troubleshooting
   </a>
  </li>
 </ul>
@@ -570,7 +570,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Change Video Frame Rate</h1>
+                <h1>Create a C# Console App in Visual Studio</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -581,18 +581,18 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#source-video">
-   Source Video
+  <a class="reference internal nav-link" href="#create-the-visual-studio-project">
+   Create the Visual Studio project
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#complete-program">
-   Complete Program
+  <a class="reference internal nav-link" href="#run-the-application">
+   Run the application
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#how-to-run">
-   How to run
+  <a class="reference internal nav-link" href="#troubleshooting">
+   Troubleshooting
   </a>
  </li>
 </ul>
@@ -605,20 +605,24 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="change-video-frame-rate">
-<h1>Change Video Frame Rate<a class="headerlink" href="#change-video-frame-rate" title="Permalink to this headline">#</a></h1>
-<p>How to change the frame rate of a video from 24 fps to 30 fps.</p>
-<section id="source-video">
-<h2>Source Video<a class="headerlink" href="#source-video" title="Permalink to this headline">#</a></h2>
-<p>For a source video we use the MP4 file from the TED talk video <a class="reference external" href="https://archive.org/details/AndrewConnolly_2014">What’s the next window into our universe?</a> by Andrew Connolly. The original video format is Wide 480p or 16:9, 854 x 480.</p>
-</section>
-<section id="complete-program">
-<h2>Complete Program<a class="headerlink" href="#complete-program" title="Permalink to this headline">#</a></h2>
-<p>This code takes an MP4 file encoded at 24 fps, and increases the video framerate to 30 fps. The audio stream is copied from the source as is.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="create-a-c-console-app-in-visual-studio">
+<h1>Create a C# Console App in Visual Studio<a class="headerlink" href="#create-a-c-console-app-in-visual-studio" title="Permalink to this headline">#</a></h1>
+<p>This topic describes the steps needed to configure a C# console application in Visual Studio. These steps have been verified to work with Visual Studio 2022 Community Edition, on Windows 11 Pro (22H2).</p>
+<section id="create-the-visual-studio-project">
+<h2>Create the Visual Studio project<a class="headerlink" href="#create-the-visual-studio-project" title="Permalink to this headline">#</a></h2>
+<ol>
+<li><p>Create a C# console application in Visual Studio.</p>
+<ul class="simple">
+<li><p>Name the project <code class="docutils literal notranslate"><span class="pre">simple-converter</span></code>.</p></li>
+<li><p>Select <code class="docutils literal notranslate"><span class="pre">Place</span> <span class="pre">solution</span> <span class="pre">and</span> <span class="pre">project</span> <span class="pre">in</span> <span class="pre">the</span> <span class="pre">same</span> <span class="pre">directory</span></code></p></li>
+<li><p>Choose <code class="docutils literal notranslate"><span class="pre">.NET</span> <span class="pre">6.0</span> <span class="pre">(Long-term</span> <span class="pre">support)</span></code> for Framework</p></li>
+</ul>
+</li>
+<li><p>In Visual Studio, select <code class="docutils literal notranslate"><span class="pre">Build</span> <span class="pre">|</span> <span class="pre">Configuration</span> <span class="pre">Manager</span></code> from the menu, then add the <code class="docutils literal notranslate"><span class="pre">x64</span></code> platform to the solution platforms.</p></li>
+<li><p>Replace the contents of Program.cs with this code:</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="nn">PrimoSoftware.AVBlocks</span><span class="p">;</span>
-<span class="k">using</span><span class="w"> </span><span class="nn">System.Collections.Generic</span><span class="p">;</span>
 
-<span class="k">namespace</span><span class="w"> </span><span class="nn">ChangeVideoFrameRate</span>
+<span class="k">namespace</span><span class="w"> </span><span class="nn">SimpleConverter</span>
 <span class="p">{</span>
 <span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">Program</span>
 <span class="w">    </span><span class="p">{</span>
@@ -626,34 +630,20 @@ title="Print to PDF"
 <span class="w">        </span><span class="p">{</span>
 <span class="w">            </span><span class="n">Library</span><span class="p">.</span><span class="n">Initialize</span><span class="p">();</span>
 
-<span class="w">            </span><span class="c1">// start with two identical input and output configuration</span>
-<span class="w">            </span><span class="kt">var</span><span class="w"> </span><span class="n">inputInfo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MediaInfo</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                </span><span class="n">InputFile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;AndrewConnolly_2014.mp4&quot;</span>
-<span class="w">            </span><span class="p">};</span>
-
-<span class="w">            </span><span class="kt">var</span><span class="w"> </span><span class="n">outputInfo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MediaInfo</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                </span><span class="n">InputFile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;AndrewConnolly_2014.mp4&quot;</span>
-<span class="w">            </span><span class="p">};</span>
-
-<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">inputInfo</span><span class="p">.</span><span class="n">Load</span><span class="p">()</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">outputInfo</span><span class="p">.</span><span class="n">Load</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                </span>
-<span class="w">                </span><span class="c1">// create input socket</span>
+<span class="w">            </span><span class="kt">var</span><span class="w"> </span><span class="n">inputInfo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MediaInfo</span><span class="p">();</span>
+<span class="w">            </span>
+<span class="w">            </span><span class="n">inputInfo</span><span class="p">.</span><span class="n">Inputs</span><span class="p">[</span><span class="m">0</span><span class="p">].</span><span class="n">File</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Wildlife.wmv&quot;</span><span class="p">;</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">inputInfo</span><span class="p">.</span><span class="n">Open</span><span class="p">())</span>
+<span class="w">            </span><span class="p">{</span>
 <span class="w">                </span><span class="kt">var</span><span class="w"> </span><span class="n">inputSocket</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MediaSocket</span><span class="p">.</span><span class="n">FromMediaInfo</span><span class="p">(</span><span class="n">inputInfo</span><span class="p">);</span>
+<span class="w">                </span><span class="kt">var</span><span class="w"> </span><span class="n">outputSocket</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MediaSocket</span><span class="p">.</span><span class="n">FromPreset</span><span class="p">(</span><span class="n">Preset</span><span class="p">.</span><span class="n">Video</span><span class="p">.</span><span class="n">Generic</span><span class="p">.</span><span class="n">MP4</span><span class="p">.</span><span class="n">Base_H264_AAC</span><span class="p">);</span>
+<span class="w">                </span><span class="n">outputSocket</span><span class="p">.</span><span class="n">File</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Wildlife.mp4&quot;</span><span class="p">;</span>
 
-<span class="w">                </span><span class="c1">// create output socket</span>
-<span class="w">                </span><span class="kt">var</span><span class="w"> </span><span class="n">outputSocket</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MediaSocket</span><span class="p">.</span><span class="n">FromMediaInfo</span><span class="p">(</span><span class="n">outputInfo</span><span class="p">);</span>
-<span class="w">                </span><span class="n">outputSocket</span><span class="p">.</span><span class="n">File</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;AndrewConnolly_2014_30fps.mp4&quot;</span><span class="p">;</span>
-
-<span class="w">                </span><span class="c1">// change the frame rate from 24 fps to 30 fps</span>
-<span class="w">                </span><span class="kt">var</span><span class="w"> </span><span class="n">outVideoStream</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">outputSocket</span><span class="p">.</span><span class="n">Pins</span><span class="p">[</span><span class="m">0</span><span class="p">].</span><span class="n">StreamInfo</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">VideoStreamInfo</span><span class="p">;</span>
-<span class="w">                </span><span class="n">outVideoStream</span><span class="p">.</span><span class="n">FrameRate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">30.0</span><span class="p">;</span>
-
-<span class="w">                </span><span class="c1">// create and run a transcoder</span>
-<span class="w">                </span><span class="k">using</span><span class="w"> </span><span class="p">(</span><span class="kt">var</span><span class="w"> </span><span class="n">transcoder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Transcoder</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="k">using</span><span class="w"> </span><span class="p">(</span><span class="kt">var</span><span class="w"> </span><span class="n">transcoder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Transcoder</span><span class="p">())</span>
+<span class="w">                </span><span class="p">{</span>
 <span class="w">                    </span><span class="n">transcoder</span><span class="p">.</span><span class="n">Inputs</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">inputSocket</span><span class="p">);</span>
 <span class="w">                    </span><span class="n">transcoder</span><span class="p">.</span><span class="n">Outputs</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">outputSocket</span><span class="p">);</span>
 
-<span class="w">                    </span><span class="c1">// process</span>
 <span class="w">                    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">transcoder</span><span class="p">.</span><span class="n">Open</span><span class="p">())</span>
 <span class="w">                    </span><span class="p">{</span>
 <span class="w">                        </span><span class="n">transcoder</span><span class="p">.</span><span class="n">Run</span><span class="p">();</span>
@@ -668,12 +658,27 @@ title="Print to PDF"
 <span class="p">}</span>
 </pre></div>
 </div>
+</li>
+<li><p><a class="reference external" href="https://github.com/avblocks/avblocks-net-core/releases/">Download</a> the 64 bit version of AVBlocks for .NET (net60). The file you need will have a name similar to <code class="docutils literal notranslate"><span class="pre">avblocks-net60-v3.0.0-demo.1-windows.zip</span></code> - the version number may differ.</p></li>
+<li><p>Unzip in a location of your choice, then copy the file <code class="docutils literal notranslate"><span class="pre">AVBlocks.clrcore.x64.dll</span></code> and <code class="docutils literal notranslate"><span class="pre">AVBlocks64.dll</span></code> from the <code class="docutils literal notranslate"><span class="pre">lib</span></code> directory to the project’s directory.</p></li>
+<li><p>Switch to the project in Visual Studio and add a reference to <code class="docutils literal notranslate"><span class="pre">AVBlocks.clrcore.x64.dll</span></code>.</p></li>
+<li><p>Add the <code class="docutils literal notranslate"><span class="pre">AVBlocks64.dll</span></code> to your project simply as a file, open file properties, and set the ‘Copy to Output Directory’ to ‘Copy if newer’, so it is copied to the output directory automatically. The <code class="docutils literal notranslate"><span class="pre">AVBlocks.clrcore.x64.dll</span></code> needs <code class="docutils literal notranslate"><span class="pre">AVBlocks64.dll</span></code> and will not work without it.</p></li>
+<li><p>Build the project (Ctrl + Shift + B)</p></li>
+</ol>
 </section>
-<section id="how-to-run">
-<h2>How to run<a class="headerlink" href="#how-to-run" title="Permalink to this headline">#</a></h2>
-<p>Follow the <a class="reference internal" href="../../getting-started-windows/create-a-c-sharp-console-app-in-visual-studio/"><span class="doc std std-doc">steps</span></a> to create a C# console application in Visual Studio but in <code class="docutils literal notranslate"><span class="pre">Program.cs</span></code> use the code from this article.</p>
-<p>Download the <code class="docutils literal notranslate"><span class="pre">AndrewConnolly_2014.mp4</span></code> MPEG4 file from the <a class="reference external" href="https://archive.org/details/AndrewConnolly_2014">Internet Archive</a> and save it in <code class="docutils literal notranslate"><span class="pre">bin\x64\Debug\net6.0</span></code> under the project’s directory.</p>
-<p>Run the application in Visual Studio. Wait a few seconds for the Transcoder to finish. The converted file <code class="docutils literal notranslate"><span class="pre">AndrewConnolly_2014_30fps.mp4</span></code> will be in the <code class="docutils literal notranslate"><span class="pre">bin\x64\Debug\net6.0</span></code> directory.</p>
+<section id="run-the-application">
+<h2>Run the application<a class="headerlink" href="#run-the-application" title="Permalink to this headline">#</a></h2>
+<ol class="simple">
+<li><p>Download the <code class="docutils literal notranslate"><span class="pre">Wildlife.wmv</span></code> HD movie from the <a class="reference external" href="https://archive.org/download/WildlifeHd/Wildlife.wmv">Internet Archive</a> and save it in <code class="docutils literal notranslate"><span class="pre">bin\x64\Debug\net6.0</span></code> under the project’s directory.</p></li>
+<li><p>Run the application in Visual Studio. Wait a few seconds for the Transcoder to finish. The converted file <code class="docutils literal notranslate"><span class="pre">Wildlife.mp4</span></code> will be in the <code class="docutils literal notranslate"><span class="pre">bin\x64\Debug\net6.0</span></code> directory.</p></li>
+</ol>
+</section>
+<section id="troubleshooting">
+<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>You may get a <code class="docutils literal notranslate"><span class="pre">'DllNotFoundException'</span> <span class="pre">exception:</span> <span class="pre">Unable</span> <span class="pre">to</span> <span class="pre">load</span> <span class="pre">DLL</span> <span class="pre">'AVBlocks64.dll':</span> <span class="pre">The</span> <span class="pre">specified</span> <span class="pre">module</span> <span class="pre">could</span> <span class="pre">not</span> <span class="pre">be</span> <span class="pre">found.</span></code> To fix that, copy the file <code class="docutils literal notranslate"><span class="pre">AVBlocks64.dll</span></code> to <code class="docutils literal notranslate"><span class="pre">bin\x64\Debug\net6.0</span></code> under the project’s directory.</p></li>
+<li><p>Transcoder.Open may fail if there is already a file <code class="docutils literal notranslate"><span class="pre">Wildlife.mp4</span></code> in the <code class="docutils literal notranslate"><span class="pre">bin\x64\Debug\net6.0</span></code> directory. Delete <code class="docutils literal notranslate"><span class="pre">Wildlife.mp4</span></code> to solve that.</p></li>
+</ul>
 </section>
 </section>
 
@@ -690,7 +695,7 @@ title="Print to PDF"
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./avblocks-for-net/working-video"
+            path: "./avblocks-for-net/getting-started-windows"
         },
         predefinedOutput: true
     }
@@ -704,17 +709,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../pad-video/" title="previous page">
+    <a class='left-prev' id="prev-link" href="../" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Pad Video</p>
+            <p class="prev-next-title">Getting Started - Windows</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../convert-raw-video-compressed-video/" title="next page">
+    <a class='right-next' id="next-link" href="../../initialization-and-termination/" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Convert Raw Video To Compressed Video</p>
+        <p class="prev-next-title">Initialization and Termination</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

@@ -10,7 +10,7 @@ taxonomy:
 
 This topic describes how to use the Transcoder class to mux AAC audio and H.264 video into an MP4 file.
 
-The code snippets in this article are from the [mux_mp4_avc_aac_file](https://github.com/avblocks/avblocks-samples/tree/main/windows/net/samples/mux_mp4_avc_aac_file) AVBlocks sample.
+The code snippets in this article are from the [mux_mp4_file](https://github.com/avblocks/avblocks-net/tree/main/samples/mux_mp4_file) AVBlocks sample.
 
 ## Complete .NET code
 

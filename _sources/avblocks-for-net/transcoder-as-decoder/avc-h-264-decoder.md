@@ -176,9 +176,9 @@ namespace H264Decoder
 
 ## How to run
 
-Follow the steps to [create a C# console application in Visual Studio](../getting-started/create-a-c-sharp-console-application-in-visual-studio) but in `Program.cs` use the code from this article. 
+Follow the steps to [create a C# console application in Visual Studio](../getting-started-windows/create-a-c-sharp-console-app-in-visual-studio) but in `Program.cs` use the code from this article. 
 
-Copy the `foreman_qcif.h264` file from the assets archive to `bin\x64\Debug` under the project's directory.
+Copy the `foreman_qcif.h264` file from the assets archive to `bin\x64\Debug\net6.0` under the project's directory.
 
 Run the application in Visual Studio.
 

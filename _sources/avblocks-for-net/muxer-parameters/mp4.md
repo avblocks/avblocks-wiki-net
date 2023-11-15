@@ -39,41 +39,41 @@ using (var transcoder = new Transcoder())
     // in order to use the production release for testing (without a valid license).
     transcoder.AllowDemoMode = true;
 
-	// Configure output socket
-	{
-		// MP4 container socket 
-		var socket = new MediaSocket();
-		socket.StreamType = StreamType.Mp4;
+    // Configure output socket
+    {
+        // MP4 container socket 
+        var socket = new MediaSocket();
+        socket.StreamType = StreamType.Mp4;
 
-		// The MP4 FastStart parameters must be set on the socket
-		socket.Params.Add(Param.Muxer.MP4.FastStart, true);
-		socket.Params.Add(Param.Muxer.MP4.FastStartUseTempFile, true);
-		socket.Params.Add(Param.Muxer.MP4.FastStartTempFileDirectory, @"C:\Temp");
+        // The MP4 FastStart parameters must be set on the socket
+        socket.Params.Add(Param.Muxer.MP4.FastStart, true);
+        socket.Params.Add(Param.Muxer.MP4.FastStartUseTempFile, true);
+        socket.Params.Add(Param.Muxer.MP4.FastStartTempFileDirectory, @"C:\Temp");
 
-		// H.264 video pin	
-		{
-			var streamInfo = new VideoStreamInfo();
-			streamInfo.StreamType = StreamType.H264;
-			streamInfo.StreamSubType = StreamSubType.Avc1;
-			
-			var pin = new MediaPin();
-			pin.StreamInfo = streamInfo;
-			socket.Pins.Add(pin);
-		}
-	
-		// AAC audio pin	
-		{
-			var streamInfo = new AudioStreamInfo();
-			streamInfo.StreamType = StreamType.Aac;
-			streamInfo.StreamSubType = StreamSubType.AacMp4;
-			
-			var pin = new MediaPin();
-			pin.StreamInfo = streamInfo;
-			socket.Pins.Add(pin);
-		}
-	
-		transcoder.Outputs.Add(socket);
-	}
+        // H.264 video pin	
+        {
+            var streamInfo = new VideoStreamInfo();
+            streamInfo.StreamType = StreamType.H264;
+            streamInfo.StreamSubType = StreamSubType.Avc1;
+            
+            var pin = new MediaPin();
+            pin.StreamInfo = streamInfo;
+            socket.Pins.Add(pin);
+        }
+    
+        // AAC audio pin	
+        {
+            var streamInfo = new AudioStreamInfo();
+            streamInfo.StreamType = StreamType.Aac;
+            streamInfo.StreamSubType = StreamSubType.AacMp4;
+            
+            var pin = new MediaPin();
+            pin.StreamInfo = streamInfo;
+            socket.Pins.Add(pin);
+        }
+    
+        transcoder.Outputs.Add(socket);
+    }
 }
 ```
 

@@ -10,7 +10,7 @@ taxonomy:
 
 How to use the Transcoder class to convert a raw YUV video file into a compressed video file. The format of the output is configured with an AVBlocks preset.
 
-The code snippets in this article are from the [enc_yuv_preset_file](https://github.com/avblocks/avblocks-samples/tree/main/windows/net/samples/enc_yuv_preset_file) sample.
+The code snippets in this article are from the [enc_preset_file](https://github.com/avblocks/avblocks-net/tree/main/samples/enc_preset_file) sample.
 
 <!-- end of list -->
 

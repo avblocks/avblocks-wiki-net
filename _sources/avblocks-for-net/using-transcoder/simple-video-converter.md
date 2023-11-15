@@ -35,7 +35,7 @@ namespace SimpleConverter
 
             if (inputInfo.Load()) {
                 var inputSocket = MediaSocket.FromMediaInfo(inputInfo);
-                var outputSocket = MediaSocket.FromPreset(Preset.iPad_H264_720p);
+                var outputSocket = MediaSocket.FromPreset(Preset.Video.Generic.MP4.Base_H264_AAC);
                 outputSocket.File = "Wildlife.mp4";
 
                 using (var transcoder = new Transcoder()) {
@@ -58,9 +58,9 @@ namespace SimpleConverter
 
 ## How to run
 
-Follow the steps to [create a C# console application in Visual Studio](../getting-started/create-a-c-sharp-console-application-in-visual-studio) but in `Program.cs` use the code from this article. 
+Follow the steps to [create a C# console application in Visual Studio](../getting-started-windows/create-a-c-sharp-console-app-in-visual-studio) but in `Program.cs` use the code from this article. 
 
-Download the `Wildlife.wmv` HD movie from the [Internet Archive](https://archive.org/download/WildlifeHd/Wildlife.wmv) and save it in `bin\x64\Debug` under the project's directory.
+Download the `Wildlife.wmv` HD movie from the [Internet Archive](https://archive.org/download/WildlifeHd/Wildlife.wmv) and save it in `bin\x64\Debug\net6.0` under the project's directory.
 
-Run the application in Visual Studio. Wait a few seconds for the Transcoder to finish. The converted file `Wildlife.mp4` will be in the `bin\x64\Debug` directory.
+Run the application in Visual Studio. Wait a few seconds for the Transcoder to finish. The converted file `Wildlife.mp4` will be in the `bin\x64\Debug\net6.0` directory.
 
