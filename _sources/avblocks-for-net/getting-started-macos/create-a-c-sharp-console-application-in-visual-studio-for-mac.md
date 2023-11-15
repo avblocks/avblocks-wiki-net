@@ -31,13 +31,13 @@ This topic describes the steps needed to configure a C# console application in V
                 Library.Initialize();
 
                 var inputInfo = new MediaInfo();
-                
-                inputInfo.Inputs[0].File = "Wildlife.wmv";
+
+                inputInfo.Inputs[0].File = "AAP.m4v";
                 if (inputInfo.Open())
                 {
                     var inputSocket = MediaSocket.FromMediaInfo(inputInfo);
                     var outputSocket = MediaSocket.FromPreset(Preset.Video.Generic.MP4.Base_H264_AAC);
-                    outputSocket.File = "Wildlife.mp4";
+                    outputSocket.File = "AAP.mp4";
 
                     using (var transcoder = new Transcoder())
                     {
