@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>AVC / H.264 Decoder &#8212; AVBlocks for .NET</title>
+    <title>AAC Decoder &#8212; AVBlocks for .NET</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,8 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../../genindex/" />
     <link rel="search" title="Search" href="../../../search/" />
-    <link rel="next" title="AVC / H.264 Annex B Parser" href="../avc-h-264-annex-b-parser/" />
-    <link rel="prev" title="AAC Decoder" href="../aac-decoder/" />
+    <link rel="next" title="AVC / H.264 Decoder" href="../avc-h-264-decoder/" />
+    <link rel="prev" title="Transcoder as Decoder" href="../" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -240,13 +240,13 @@ const thebe_selector_output = ".output, .cell_output"
    </i>
   </label>
   <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="../aac-decoder/">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      AAC Decoder
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../avc-h-264-decoder/">
      AVC / H.264 Decoder
     </a>
    </li>
@@ -509,7 +509,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../../_sources/avblocks-for-net/transcoder-as-decoder/avc-h-264-decoder.md"
+        <a href="../../../_sources/avblocks-for-net/transcoder-as-decoder/aac-decoder.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -569,8 +569,8 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#video-input">
-   Video Input
+  <a class="reference internal nav-link" href="#source-audio">
+   Source Audio
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -614,7 +614,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>AVC / H.264 Decoder</h1>
+                <h1>AAC Decoder</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -625,8 +625,8 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#video-input">
-   Video Input
+  <a class="reference internal nav-link" href="#source-audio">
+   Source Audio
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -671,23 +671,23 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="avc-h-264-decoder">
-<h1>AVC / H.264 Decoder<a class="headerlink" href="#avc-h-264-decoder" title="Permalink to this headline">#</a></h1>
-<p>How to use <a class="reference external" href="https://doc.avblocks.com/net/latest/class_primo_software_1_1_a_v_blocks_1_1_transcoder.html#adcea55e196dc32689f98e91fa154a0eb">Transcoder.Pull</a> to decode an AVC / H.264 elementary stream</p>
-<section id="video-input">
-<h2>Video Input<a class="headerlink" href="#video-input" title="Permalink to this headline">#</a></h2>
-<p>As video input we use the <code class="docutils literal notranslate"><span class="pre">foreman_qcif.h264</span></code> file from the <a class="reference external" href="https://github.com/avblocks/avblocks-assets/releases">AVBlocks Assets</a> archive. After downloading and unzipping you will find <code class="docutils literal notranslate"><span class="pre">foreman_qcif.h264</span></code> in the <code class="docutils literal notranslate"><span class="pre">vid</span></code> subdirectory.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="aac-decoder">
+<h1>AAC Decoder<a class="headerlink" href="#aac-decoder" title="Permalink to this headline">#</a></h1>
+<p>This article explains how you can use <a class="reference external" href="https://doc.avblocks.com/net/latest/class_primo_software_1_1_a_v_blocks_1_1_transcoder.html#adcea55e196dc32689f98e91fa154a0eb">Transcoder.Pull</a> to decode an AAC ADTS elementary stream.</p>
+<section id="source-audio">
+<h2>Source Audio<a class="headerlink" href="#source-audio" title="Permalink to this headline">#</a></h2>
+<p>For source we use the <code class="docutils literal notranslate"><span class="pre">Hydrate-Kenny_Beltrey.aac</span></code> file from the <a class="reference external" href="https://github.com/avblocks/avblocks-assets/releases">AVBlocks Assets</a> repository. After downloading and unzipping you will find <code class="docutils literal notranslate"><span class="pre">Hydrate-Kenny_Beltrey.aac</span></code> in the <code class="docutils literal notranslate"><span class="pre">aud</span></code> subdirectory.</p>
 </section>
 <section id="code">
 <h2>Code<a class="headerlink" href="#code" title="Permalink to this headline">#</a></h2>
-<p>This code takes an H.264 stream, and decodes it to raw uncompressed YUV frames.</p>
+<p>This code takes an AAC ADTS stream and decodes it to uncompressed LPCM samples.</p>
 <section id="initialize-avblocks">
 <h3>Initialize AVBlocks<a class="headerlink" href="#initialize-avblocks" title="Permalink to this headline">#</a></h3>
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">DecodeH264Stream</span><span class="p">()</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">DecodeAACStream</span><span class="p">()</span>
 <span class="p">{</span>
 <span class="w">    </span><span class="n">Library</span><span class="p">.</span><span class="n">Initialize</span><span class="p">();</span>
 
-<span class="w">    </span><span class="n">DecodeH264Stream</span><span class="p">(</span><span class="s">&quot;foreman_qcif.h264&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">DecodeAACStream</span><span class="p">(</span><span class="s">&quot;Hydrate-Kenny_Beltrey.aac&quot;</span><span class="p">);</span>
 
 <span class="w">    </span><span class="n">Library</span><span class="p">.</span><span class="n">Shutdown</span><span class="p">();</span>
 <span class="p">}</span>
@@ -696,23 +696,28 @@ title="Print to PDF"
 </section>
 <section id="configure-transcoder">
 <h3>Configure Transcoder<a class="headerlink" href="#configure-transcoder" title="Permalink to this headline">#</a></h3>
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">DecodeH264Stream</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">inputFile</span><span class="p">)</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">DecodeAACStream</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">inputFile</span><span class="p">)</span>
 <span class="p">{</span>
 <span class="w">    </span><span class="c1">// Create an input socket from file</span>
-<span class="w">    </span><span class="kt">var</span><span class="w"> </span><span class="n">inSocket</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MediaSocket</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">var</span><span class="w"> </span><span class="n">inSocket</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MediaSocket</span><span class="p">()</span>
+<span class="w">    </span><span class="p">{</span>
 <span class="w">        </span><span class="n">File</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">inputFile</span>
 <span class="w">    </span><span class="p">};</span>
 
 <span class="w">    </span><span class="c1">// Create an output socket with one YUV 4:2:0 video pin</span>
-<span class="w">    </span><span class="kt">var</span><span class="w"> </span><span class="n">outSocket</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MediaSocket</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">StreamType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">StreamType</span><span class="p">.</span><span class="n">UncompressedVideo</span>
+<span class="w">    </span><span class="kt">var</span><span class="w"> </span><span class="n">outSocket</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MediaSocket</span><span class="p">()</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">StreamType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">StreamType</span><span class="p">.</span><span class="n">LPCM</span>
 <span class="w">    </span><span class="p">};</span>
 
-<span class="w">    </span><span class="n">outSocket</span><span class="p">.</span><span class="n">Pins</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">MediaPin</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">StreamInfo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">VideoStreamInfo</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="n">StreamType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">StreamType</span><span class="p">.</span><span class="n">UncompressedVideo</span><span class="p">,</span>
-<span class="w">            </span><span class="n">ColorFormat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ColorFormat</span><span class="p">.</span><span class="n">YUV420</span><span class="p">,</span>
-<span class="w">            </span><span class="n">ScanType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ScanType</span><span class="p">.</span><span class="n">Progressive</span>
+<span class="w">    </span><span class="n">outSocket</span><span class="p">.</span><span class="n">Pins</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">MediaPin</span><span class="p">()</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">StreamInfo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">AudioStreamInfo</span><span class="p">()</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">StreamType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">StreamType</span><span class="p">.</span><span class="n">LPCM</span><span class="p">,</span>
+<span class="w">            </span><span class="n">SampleRate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">44100</span><span class="p">,</span>
+<span class="w">            </span><span class="n">Channels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="p">,</span>
+<span class="w">            </span><span class="n">BitsPerSample</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">16</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">    </span><span class="p">});</span>
 
@@ -724,7 +729,7 @@ title="Print to PDF"
 
 <span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">transcoder</span><span class="p">.</span><span class="n">Open</span><span class="p">())</span>
 <span class="w">        </span><span class="p">{</span>
-<span class="w">            </span><span class="n">DecodeH264Stream</span><span class="p">(</span><span class="n">transcoder</span><span class="p">);</span>
+<span class="w">            </span><span class="n">DecodeAACStream</span><span class="p">(</span><span class="n">transcoder</span><span class="p">);</span>
 
 <span class="w">            </span><span class="n">transcoder</span><span class="p">.</span><span class="n">Close</span><span class="p">();</span>
 <span class="w">        </span><span class="p">}</span>
@@ -735,17 +740,17 @@ title="Print to PDF"
 </section>
 <section id="call-transcoder-pull">
 <h3>Call Transcoder.Pull<a class="headerlink" href="#call-transcoder-pull" title="Permalink to this headline">#</a></h3>
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">DecodeH264Stream</span><span class="p">(</span><span class="n">Transcoder</span><span class="w"> </span><span class="n">transcoder</span><span class="p">)</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">DecodeAACStream</span><span class="p">(</span><span class="n">Transcoder</span><span class="w"> </span><span class="n">transcoder</span><span class="p">)</span>
 <span class="p">{</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">inputIndex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">var</span><span class="w"> </span><span class="n">yuvFrame</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MediaSample</span><span class="p">();</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">outputIndex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">var</span><span class="w"> </span><span class="n">audioSample</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MediaSample</span><span class="p">();</span>
 
-<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">transcoder</span><span class="p">.</span><span class="n">Pull</span><span class="p">(</span><span class="k">out</span><span class="w"> </span><span class="n">inputIndex</span><span class="p">,</span><span class="w"> </span><span class="n">yuvFrame</span><span class="p">))</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">transcoder</span><span class="p">.</span><span class="n">Pull</span><span class="p">(</span><span class="k">out</span><span class="w"> </span><span class="n">outputIndex</span><span class="p">,</span><span class="w"> </span><span class="n">audioSample</span><span class="p">))</span>
 <span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="c1">// Each call to Transcoder::pull returns a raw YUV 4:2:0 frame. </span>
-<span class="w">        </span><span class="n">ProcessYUVFrame</span><span class="p">(</span><span class="n">yuvFrame</span><span class="p">.</span><span class="n">Buffer</span><span class="p">);</span>
+<span class="w">        </span><span class="c1">// Each call to Transcoder::pull returns one audio frame. </span>
+<span class="w">        </span><span class="c1">// One audio frame typically contains 512 audio samples.  </span>
+<span class="w">        </span><span class="n">ProcessAudioFrame</span><span class="p">(</span><span class="n">audioSample</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
-
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -755,49 +760,58 @@ title="Print to PDF"
 <h2>Complete Program<a class="headerlink" href="#complete-program" title="Permalink to this headline">#</a></h2>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="nn">PrimoSoftware.AVBlocks</span><span class="p">;</span>
 
-<span class="k">namespace</span><span class="w"> </span><span class="nn">H264Decoder</span>
+<span class="k">namespace</span><span class="w"> </span><span class="nn">AACDecoder</span>
 <span class="p">{</span>
 <span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">Program</span>
 <span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">frameIndex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">;</span>
-<span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">ProcessYUVFrame</span><span class="p">(</span><span class="n">MediaBuffer</span><span class="w"> </span><span class="n">buffer</span><span class="p">)</span>
+<span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">sampleIndex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">;</span>
+<span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">ProcessAudioFrame</span><span class="p">(</span><span class="n">MediaSample</span><span class="w"> </span><span class="n">sample</span><span class="p">)</span>
 <span class="w">        </span><span class="p">{</span>
-<span class="w">            </span><span class="c1">// Do something with the YUV frame, </span>
-<span class="w">            </span><span class="c1">// for example you can save it to a file or render the frame on the screen</span>
+<span class="w">            </span><span class="c1">// The samples of multi-channel audio (such as stereo and surround) are stored by </span>
+<span class="w">            </span><span class="c1">// cycling through the samples for each channel before advancing to the next sample time</span>
 
-<span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Frame Index : {0}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">frameIndex</span><span class="p">);</span>
-<span class="w">            </span><span class="n">frameIndex</span><span class="o">++</span><span class="p">;</span>
+<span class="w">            </span><span class="c1">// sample.Buffer contains 512 interleaved samples.</span>
+<span class="w">            </span><span class="c1">// In this example each sample is 16 bit signed integer (so 1024 bytes total) </span>
+
+<span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Sample Index : {0} StartTime : {1} Buffer.Start : {2} Buffer.DataSize : {3}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">sampleIndex</span><span class="p">,</span><span class="w"> </span><span class="n">sample</span><span class="p">.</span><span class="n">StartTime</span><span class="p">,</span><span class="w"> </span><span class="n">sample</span><span class="p">.</span><span class="n">Buffer</span><span class="p">.</span><span class="n">Start</span><span class="p">,</span><span class="w"> </span><span class="n">sample</span><span class="p">.</span><span class="n">Buffer</span><span class="p">.</span><span class="n">DataSize</span><span class="p">);</span>
+<span class="w">            </span><span class="n">sampleIndex</span><span class="o">++</span><span class="p">;</span>
 <span class="w">        </span><span class="p">}</span>
 
-<span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">DecodeH264Stream</span><span class="p">(</span><span class="n">Transcoder</span><span class="w"> </span><span class="n">transcoder</span><span class="p">)</span>
+<span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">DecodeAACStream</span><span class="p">(</span><span class="n">Transcoder</span><span class="w"> </span><span class="n">transcoder</span><span class="p">)</span>
 <span class="w">        </span><span class="p">{</span>
-<span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">inputIndex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">;</span>
-<span class="w">            </span><span class="kt">var</span><span class="w"> </span><span class="n">yuvFrame</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MediaSample</span><span class="p">();</span>
+<span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">outputIndex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">;</span>
+<span class="w">            </span><span class="kt">var</span><span class="w"> </span><span class="n">audioSample</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MediaSample</span><span class="p">();</span>
 
-<span class="w">            </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">transcoder</span><span class="p">.</span><span class="n">Pull</span><span class="p">(</span><span class="k">out</span><span class="w"> </span><span class="n">inputIndex</span><span class="p">,</span><span class="w"> </span><span class="n">yuvFrame</span><span class="p">))</span>
+<span class="w">            </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">transcoder</span><span class="p">.</span><span class="n">Pull</span><span class="p">(</span><span class="k">out</span><span class="w"> </span><span class="n">outputIndex</span><span class="p">,</span><span class="w"> </span><span class="n">audioSample</span><span class="p">))</span>
 <span class="w">            </span><span class="p">{</span>
-<span class="w">                </span><span class="c1">// Each call to Transcoder::pull returns a raw YUV 4:2:0 frame. </span>
-<span class="w">                </span><span class="n">ProcessYUVFrame</span><span class="p">(</span><span class="n">yuvFrame</span><span class="p">.</span><span class="n">Buffer</span><span class="p">);</span>
+<span class="w">                </span><span class="c1">// Each call to Transcoder::pull returns one audio frame. </span>
+<span class="w">                </span><span class="c1">// One audio frame typically contains 512 audio samples.  </span>
+<span class="w">                </span><span class="n">ProcessAudioFrame</span><span class="p">(</span><span class="n">audioSample</span><span class="p">);</span>
 <span class="w">            </span><span class="p">}</span>
 <span class="w">        </span><span class="p">}</span>
 
-<span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">DecodeH264Stream</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">inputFile</span><span class="p">)</span>
+<span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">DecodeAACStream</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">inputFile</span><span class="p">)</span>
 <span class="w">        </span><span class="p">{</span>
 <span class="w">            </span><span class="c1">// Create an input socket from file</span>
-<span class="w">            </span><span class="kt">var</span><span class="w"> </span><span class="n">inSocket</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MediaSocket</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="kt">var</span><span class="w"> </span><span class="n">inSocket</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MediaSocket</span><span class="p">()</span>
+<span class="w">            </span><span class="p">{</span>
 <span class="w">                </span><span class="n">File</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">inputFile</span>
 <span class="w">            </span><span class="p">};</span>
 
 <span class="w">            </span><span class="c1">// Create an output socket with one YUV 4:2:0 video pin</span>
-<span class="w">            </span><span class="kt">var</span><span class="w"> </span><span class="n">outSocket</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MediaSocket</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                </span><span class="n">StreamType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">StreamType</span><span class="p">.</span><span class="n">UncompressedVideo</span>
+<span class="w">            </span><span class="kt">var</span><span class="w"> </span><span class="n">outSocket</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MediaSocket</span><span class="p">()</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="n">StreamType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">StreamType</span><span class="p">.</span><span class="n">LPCM</span>
 <span class="w">            </span><span class="p">};</span>
 
-<span class="w">            </span><span class="n">outSocket</span><span class="p">.</span><span class="n">Pins</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">MediaPin</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                </span><span class="n">StreamInfo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">VideoStreamInfo</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                    </span><span class="n">StreamType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">StreamType</span><span class="p">.</span><span class="n">UncompressedVideo</span><span class="p">,</span>
-<span class="w">                    </span><span class="n">ColorFormat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ColorFormat</span><span class="p">.</span><span class="n">YUV420</span><span class="p">,</span>
-<span class="w">                    </span><span class="n">ScanType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ScanType</span><span class="p">.</span><span class="n">Progressive</span>
+<span class="w">            </span><span class="n">outSocket</span><span class="p">.</span><span class="n">Pins</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">MediaPin</span><span class="p">()</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="n">StreamInfo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">AudioStreamInfo</span><span class="p">()</span>
+<span class="w">                </span><span class="p">{</span>
+<span class="w">                    </span><span class="n">StreamType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">StreamType</span><span class="p">.</span><span class="n">LPCM</span><span class="p">,</span>
+<span class="w">                    </span><span class="n">SampleRate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">44100</span><span class="p">,</span>
+<span class="w">                    </span><span class="n">Channels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="p">,</span>
+<span class="w">                    </span><span class="n">BitsPerSample</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">16</span>
 <span class="w">                </span><span class="p">}</span>
 <span class="w">            </span><span class="p">});</span>
 
@@ -809,25 +823,25 @@ title="Print to PDF"
 
 <span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">transcoder</span><span class="p">.</span><span class="n">Open</span><span class="p">())</span>
 <span class="w">                </span><span class="p">{</span>
-<span class="w">                    </span><span class="n">DecodeH264Stream</span><span class="p">(</span><span class="n">transcoder</span><span class="p">);</span>
+<span class="w">                    </span><span class="n">DecodeAACStream</span><span class="p">(</span><span class="n">transcoder</span><span class="p">);</span>
 
 <span class="w">                    </span><span class="n">transcoder</span><span class="p">.</span><span class="n">Close</span><span class="p">();</span>
 <span class="w">                </span><span class="p">}</span>
 <span class="w">            </span><span class="p">}</span>
 <span class="w">        </span><span class="p">}</span>
 
-<span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">DecodeH264Stream</span><span class="p">()</span>
+<span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">DecodeAACStream</span><span class="p">()</span>
 <span class="w">        </span><span class="p">{</span>
 <span class="w">            </span><span class="n">Library</span><span class="p">.</span><span class="n">Initialize</span><span class="p">();</span>
 
-<span class="w">            </span><span class="n">DecodeH264Stream</span><span class="p">(</span><span class="s">&quot;foreman_qcif.h264&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="n">DecodeAACStream</span><span class="p">(</span><span class="s">&quot;Hydrate-Kenny_Beltrey.aac&quot;</span><span class="p">);</span>
 
 <span class="w">            </span><span class="n">Library</span><span class="p">.</span><span class="n">Shutdown</span><span class="p">();</span>
 <span class="w">        </span><span class="p">}</span>
 
 <span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
 <span class="w">        </span><span class="p">{</span>
-<span class="w">            </span><span class="n">DecodeH264Stream</span><span class="p">();</span>
+<span class="w">            </span><span class="n">DecodeAACStream</span><span class="p">();</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
@@ -837,7 +851,7 @@ title="Print to PDF"
 <section id="how-to-run">
 <h2>How to run<a class="headerlink" href="#how-to-run" title="Permalink to this headline">#</a></h2>
 <p>Follow the steps to <a class="reference internal" href="../../getting-started-windows/create-a-c-sharp-console-app-in-visual-studio/"><span class="doc std std-doc">create a C# console application in Visual Studio</span></a> but in <code class="docutils literal notranslate"><span class="pre">Program.cs</span></code> use the code from this article.</p>
-<p>Copy the <code class="docutils literal notranslate"><span class="pre">foreman_qcif.h264</span></code> file from the assets archive to <code class="docutils literal notranslate"><span class="pre">bin/x64/Debug/net6.0</span></code> under the project’s directory.</p>
+<p>Copy the <code class="docutils literal notranslate"><span class="pre">Hydrate-Kenny_Beltrey.aac</span></code> file from the assets archive to <code class="docutils literal notranslate"><span class="pre">bin/x64/Debug/net6.0</span></code> under the project’s directory.</p>
 <p>Run the application in Visual Studio.</p>
 </section>
 </section>
@@ -869,17 +883,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../aac-decoder/" title="previous page">
+    <a class='left-prev' id="prev-link" href="../" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">AAC Decoder</p>
+            <p class="prev-next-title">Transcoder as Decoder</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../avc-h-264-annex-b-parser/" title="next page">
+    <a class='right-next' id="next-link" href="../avc-h-264-decoder/" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">AVC / H.264 Annex B Parser</p>
+        <p class="prev-next-title">AVC / H.264 Decoder</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

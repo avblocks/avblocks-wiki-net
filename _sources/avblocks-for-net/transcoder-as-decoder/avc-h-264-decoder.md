@@ -8,7 +8,7 @@ taxonomy:
 
 # AVC / H.264 Decoder
 
-How to use Transcoder to decode an AVC / H.264 elementary stream.
+How to use [Transcoder.Pull](https://doc.avblocks.com/net/latest/class_primo_software_1_1_a_v_blocks_1_1_transcoder.html#adcea55e196dc32689f98e91fa154a0eb) to decode an AVC / H.264 elementary stream
 
 
 ## Video Input
@@ -91,9 +91,6 @@ static void DecodeH264Stream(Transcoder transcoder)
 ## Complete Program
 
 ``` csharp
-using System;
-using System.Linq;
-
 using PrimoSoftware.AVBlocks;
 
 namespace H264Decoder
@@ -178,7 +175,7 @@ namespace H264Decoder
 
 Follow the steps to [create a C# console application in Visual Studio](../getting-started-windows/create-a-c-sharp-console-app-in-visual-studio) but in `Program.cs` use the code from this article. 
 
-Copy the `foreman_qcif.h264` file from the assets archive to `bin\x64\Debug\net6.0` under the project's directory.
+Copy the `foreman_qcif.h264` file from the assets archive to `bin/x64/Debug/net6.0` under the project's directory.
 
 Run the application in Visual Studio.
 

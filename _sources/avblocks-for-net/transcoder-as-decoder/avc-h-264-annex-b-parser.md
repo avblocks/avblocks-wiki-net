@@ -8,7 +8,7 @@ taxonomy:
 
 # AVC / H.264 Annex B Parser
 
-How to use Transcoder to parse an AVC / H.264 Annex B elementary stream.
+How to use [Transcoder.Pull](https://doc.avblocks.com/net/latest/class_primo_software_1_1_a_v_blocks_1_1_transcoder.html#adcea55e196dc32689f98e91fa154a0eb) to parse an AVC / H.264 Annex B elementary stream.
 
 ## Video Input
 

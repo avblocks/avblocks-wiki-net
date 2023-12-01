@@ -8,7 +8,7 @@ taxonomy:
 
 # AVC / H.264 Encoder
 
-How to use Transcoder.Push to encode an AVC / H.264 elementary stream from raw YUV frames.
+How to use [Transcoder.Push](https://doc.avblocks.com/net/latest/class_primo_software_1_1_a_v_blocks_1_1_transcoder.html#a60429623c9613c8e6f0c0f3cf6ec598c) to encode an AVC / H.264 elementary stream from raw YUV frames.
 
 ## Video Input
 
