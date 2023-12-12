@@ -86,7 +86,7 @@ Add the following Visual Studio Code specific files to the `.vscode` subdir:
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "dotnet: build",
-            "program": "${workspaceFolder}/bin/Debug/net6.0/simple.dll",
+            "program": "${workspaceFolder}/bin/Debug/net6.0/simple-converter.dll",
             "args": [],
             "cwd": "${workspaceFolder}",
             "console": "internalConsole",
