@@ -17,7 +17,7 @@ As video input we use the `foreman_qcif.yuv` file from the [AVBlocks Assets](htt
 
 ## Code
 
-This code shows how you can encode raw uncompressed YUV frames into an H.264 stream. Two Transcoder objects are used, one to read the raw YUV frames from a file, and another to encode the raw frames to AVC / H.264 Annex B stream. The encoding is done via the Transcoder.Push (Transcoder::push) method.   
+This code shows how you can encode raw uncompressed YUV frames into an H.264 stream. Two Transcoder objects are used, one to read the raw YUV frames from a file, and another to encode the raw frames to AVC / H.264 Annex B stream. The encoding is done via the `Transcoder.Push` method.   
 
 ### Initialize AVBlocks
 
@@ -389,7 +389,7 @@ namespace H264Encoder
 
 Follow the steps to [create a C# console application in Visual Studio](../getting-started-windows/create-a-c-sharp-console-app-in-visual-studio) but in `Program.cs` use the code from this article. 
 
-Copy the `foreman_qcif.yuv` file from the assets archive to `bin\x64\Debug\net6.0` under the project's directory.
+Copy the `foreman_qcif.yuv` file from the assets archive to `bin/x64/Debug/net6.0` under the project's directory.
 
 Run the application in Visual Studio.
 

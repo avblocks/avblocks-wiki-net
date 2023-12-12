@@ -66,11 +66,11 @@ This topic describes the steps needed to configure a C# console application in V
 
 ## Run the application
 
-1. Download the `Wildlife.wmv` HD movie from the [Internet Archive](https://archive.org/download/WildlifeHd/Wildlife.wmv) and save it in `bin\x64\Debug\net6.0` under the project's directory.
-2. Run the application in Visual Studio. Wait a few seconds for the Transcoder to finish. The converted file `Wildlife.mp4` will be in the `bin\x64\Debug\net6.0` directory.   
+1. Download the `Wildlife.wmv` HD movie from the [Internet Archive](https://archive.org/download/WildlifeHd/Wildlife.wmv) and save it in `bin/x64/Debug/net6.0` under the project's directory.
+2. Run the application in Visual Studio. Wait a few seconds for the Transcoder to finish. The converted file `Wildlife.mp4` will be in the `bin/x64/Debug/net6.0` directory.   
 
 ## Troubleshooting
 
-* You may get a `'DllNotFoundException' exception: Unable to load DLL 'AVBlocks64.dll': The specified module could not be found.` To fix that, copy the file `AVBlocks64.dll` to `bin\x64\Debug\net6.0` under the project's directory.
+* You may get a `'DllNotFoundException' exception: Unable to load DLL 'AVBlocks64.dll': The specified module could not be found.` To fix that, copy the file `AVBlocks64.dll` to `bin/x64/Debug/net6.0` under the project's directory.
 
-* Transcoder.Open may fail if there is already a file `Wildlife.mp4` in the `bin\x64\Debug\net6.0` directory. Delete `Wildlife.mp4` to solve that.         
+* Transcoder.Open may fail if there is already a file `Wildlife.mp4` in the `bin/x64/Debug/net6.0` directory. Delete `Wildlife.mp4` to solve that.         

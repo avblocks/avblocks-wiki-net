@@ -273,6 +273,11 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
+    <a class="reference internal" href="../../transcoder-as-encoder/aac-encoder/">
+     AAC Encoder
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../../transcoder-as-encoder/avc-h-264-encoder/">
      AVC / H.264 Encoder
     </a>
@@ -696,15 +701,15 @@ title="Print to PDF"
 <section id="run-the-application">
 <h2>Run the application<a class="headerlink" href="#run-the-application" title="Permalink to this headline">#</a></h2>
 <ol class="simple">
-<li><p>Download the <code class="docutils literal notranslate"><span class="pre">Wildlife.wmv</span></code> HD movie from the <a class="reference external" href="https://archive.org/download/WildlifeHd/Wildlife.wmv">Internet Archive</a> and save it in <code class="docutils literal notranslate"><span class="pre">bin\x64\Debug\net6.0</span></code> under the project’s directory.</p></li>
-<li><p>Run the application in Visual Studio. Wait a few seconds for the Transcoder to finish. The converted file <code class="docutils literal notranslate"><span class="pre">Wildlife.mp4</span></code> will be in the <code class="docutils literal notranslate"><span class="pre">bin\x64\Debug\net6.0</span></code> directory.</p></li>
+<li><p>Download the <code class="docutils literal notranslate"><span class="pre">Wildlife.wmv</span></code> HD movie from the <a class="reference external" href="https://archive.org/download/WildlifeHd/Wildlife.wmv">Internet Archive</a> and save it in <code class="docutils literal notranslate"><span class="pre">bin/x64/Debug/net6.0</span></code> under the project’s directory.</p></li>
+<li><p>Run the application in Visual Studio. Wait a few seconds for the Transcoder to finish. The converted file <code class="docutils literal notranslate"><span class="pre">Wildlife.mp4</span></code> will be in the <code class="docutils literal notranslate"><span class="pre">bin/x64/Debug/net6.0</span></code> directory.</p></li>
 </ol>
 </section>
 <section id="troubleshooting">
 <h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
-<li><p>You may get a <code class="docutils literal notranslate"><span class="pre">'DllNotFoundException'</span> <span class="pre">exception:</span> <span class="pre">Unable</span> <span class="pre">to</span> <span class="pre">load</span> <span class="pre">DLL</span> <span class="pre">'AVBlocks64.dll':</span> <span class="pre">The</span> <span class="pre">specified</span> <span class="pre">module</span> <span class="pre">could</span> <span class="pre">not</span> <span class="pre">be</span> <span class="pre">found.</span></code> To fix that, copy the file <code class="docutils literal notranslate"><span class="pre">AVBlocks64.dll</span></code> to <code class="docutils literal notranslate"><span class="pre">bin\x64\Debug\net6.0</span></code> under the project’s directory.</p></li>
-<li><p>Transcoder.Open may fail if there is already a file <code class="docutils literal notranslate"><span class="pre">Wildlife.mp4</span></code> in the <code class="docutils literal notranslate"><span class="pre">bin\x64\Debug\net6.0</span></code> directory. Delete <code class="docutils literal notranslate"><span class="pre">Wildlife.mp4</span></code> to solve that.</p></li>
+<li><p>You may get a <code class="docutils literal notranslate"><span class="pre">'DllNotFoundException'</span> <span class="pre">exception:</span> <span class="pre">Unable</span> <span class="pre">to</span> <span class="pre">load</span> <span class="pre">DLL</span> <span class="pre">'AVBlocks64.dll':</span> <span class="pre">The</span> <span class="pre">specified</span> <span class="pre">module</span> <span class="pre">could</span> <span class="pre">not</span> <span class="pre">be</span> <span class="pre">found.</span></code> To fix that, copy the file <code class="docutils literal notranslate"><span class="pre">AVBlocks64.dll</span></code> to <code class="docutils literal notranslate"><span class="pre">bin/x64/Debug/net6.0</span></code> under the project’s directory.</p></li>
+<li><p>Transcoder.Open may fail if there is already a file <code class="docutils literal notranslate"><span class="pre">Wildlife.mp4</span></code> in the <code class="docutils literal notranslate"><span class="pre">bin/x64/Debug/net6.0</span></code> directory. Delete <code class="docutils literal notranslate"><span class="pre">Wildlife.mp4</span></code> to solve that.</p></li>
 </ul>
 </section>
 </section>

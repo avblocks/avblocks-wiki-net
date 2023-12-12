@@ -53,7 +53,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../../../genindex/" />
     <link rel="search" title="Search" href="../../../search/" />
     <link rel="next" title="Working with Video" href="../../working-video/" />
-    <link rel="prev" title="Transcoder as Encoder" href="../" />
+    <link rel="prev" title="AAC Encoder" href="../aac-encoder/" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -272,6 +272,11 @@ const thebe_selector_output = ".output, .cell_output"
    </i>
   </label>
   <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../aac-encoder/">
+     AAC Encoder
+    </a>
+   </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
      AVC / H.264 Encoder
@@ -705,7 +710,7 @@ title="Print to PDF"
 </section>
 <section id="code">
 <h2>Code<a class="headerlink" href="#code" title="Permalink to this headline">#</a></h2>
-<p>This code shows how you can encode raw uncompressed YUV frames into an H.264 stream. Two Transcoder objects are used, one to read the raw YUV frames from a file, and another to encode the raw frames to AVC / H.264 Annex B stream. The encoding is done via the Transcoder.Push (Transcoder::push) method.</p>
+<p>This code shows how you can encode raw uncompressed YUV frames into an H.264 stream. Two Transcoder objects are used, one to read the raw YUV frames from a file, and another to encode the raw frames to AVC / H.264 Annex B stream. The encoding is done via the <code class="docutils literal notranslate"><span class="pre">Transcoder.Push</span></code> method.</p>
 <section id="initialize-avblocks">
 <h3>Initialize AVBlocks<a class="headerlink" href="#initialize-avblocks" title="Permalink to this headline">#</a></h3>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">EncodeH264Stream</span><span class="p">()</span>
@@ -1076,7 +1081,7 @@ title="Print to PDF"
 <section id="how-to-run">
 <h2>How to run<a class="headerlink" href="#how-to-run" title="Permalink to this headline">#</a></h2>
 <p>Follow the steps to <a class="reference internal" href="../../getting-started-windows/create-a-c-sharp-console-app-in-visual-studio/"><span class="doc std std-doc">create a C# console application in Visual Studio</span></a> but in <code class="docutils literal notranslate"><span class="pre">Program.cs</span></code> use the code from this article.</p>
-<p>Copy the <code class="docutils literal notranslate"><span class="pre">foreman_qcif.yuv</span></code> file from the assets archive to <code class="docutils literal notranslate"><span class="pre">bin\x64\Debug\net6.0</span></code> under the project’s directory.</p>
+<p>Copy the <code class="docutils literal notranslate"><span class="pre">foreman_qcif.yuv</span></code> file from the assets archive to <code class="docutils literal notranslate"><span class="pre">bin/x64/Debug/net6.0</span></code> under the project’s directory.</p>
 <p>Run the application in Visual Studio.</p>
 </section>
 </section>
@@ -1108,11 +1113,11 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../" title="previous page">
+    <a class='left-prev' id="prev-link" href="../aac-encoder/" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Transcoder as Encoder</p>
+            <p class="prev-next-title">AAC Encoder</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="../../working-video/" title="next page">
