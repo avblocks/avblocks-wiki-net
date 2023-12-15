@@ -186,4 +186,4 @@ Set a breakpoint on the first line of `static void Main(string[] args)` inside `
 
 * You may get a `'DllNotFoundException' exception: Unable to load DLL 'libAVBlocks64.so': The specified module could not be found.` To fix that, copy the file `libAVBlocks64.so` into `bin/Debug/net6.0` under the project's directory.
 
-* Transcoder.Open may fail if there is already a file `AAP.mp4` in the project directory. Delete `AAP.mp4` to solve that.         
+* `Transcoder.Open` may fail if there is already a file `AAP.mp4` in the project directory. Delete `AAP.mp4` to solve that.         

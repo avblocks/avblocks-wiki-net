@@ -12,7 +12,7 @@ This topic describes the steps needed to setup Visual Studio Code for AVBlocks .
 
 ## .NET
 
-If you don't have .NET installed follow the steps in the [Setup .NET development environment on macOS](https://blog.primosoftware.com/setup-net-development-environment-macos/) post to configure a .NET development environment. 
+If you don't have .NET installed follow the steps in the [Setup .NET development environment on Windows](https://blog.primosoftware.com/setup-net-development-environment-windows/) post to configure a .NET development environment. 
 
 ## Visual Studio Code
 
@@ -26,8 +26,8 @@ Close Visual Studio Code.
 
 ## Create the .NET project 
 
-```bash
-mkdir -p ~/avblocks/net/simple-converter
+```powershell
+mkdir ~/avblocks/net/simple-converter
 cd ~/avblocks/net/simple-converter
 
 # needed so that we can run the dotnet CLI
@@ -121,12 +121,12 @@ Set a breakpoint on the first line of `static void Main(string[] args)` inside `
 
                 var inputInfo = new MediaInfo();
 
-                inputInfo.Inputs[0].File = "AAP.m4v";
+                inputInfo.Inputs[0].File = "Wildlife.wmv";
                 if (inputInfo.Open())
                 {
                     var inputSocket = MediaSocket.FromMediaInfo(inputInfo);
                     var outputSocket = MediaSocket.FromPreset(Preset.Video.Generic.MP4.Base_H264_AAC);
-                    outputSocket.File = "AAP.mp4";
+                    outputSocket.File = "Wildlife.mp4";
 
                     using (var transcoder = new Transcoder())
                     {
@@ -147,9 +147,9 @@ Set a breakpoint on the first line of `static void Main(string[] args)` inside `
     }
     ```
 
-2. [Download](https://github.com/avblocks/avblocks-net-core/releases/) the Darwin version of AVBlocks for .NET (net60). The file you need will have a name similar to `avblocks-net60-v3.0.0-demo.1-darwin.zip` - the version number may differ. 
+2. [Download](https://github.com/avblocks/avblocks-net-core/releases/) the Windows version of AVBlocks for .NET (net60). The file you need will have a name similar to `avblocks-net60-v3.0.0-demo.1-windows.zip` - the version number may differ. 
 
-3. Unzip in a location of your choice, then copy the file `AVBlocks.clrcore.x64.dll` and `libAVBlocks.dylib` to the project's directory. 
+3. Unzip in a location of your choice, then copy the file `AVBlocks.clrcore.x64.dll` and `AVBlocks64.dll` to the project's directory.
 
 4. Add a reference to `AVBlocks.clrcore.x64.dll` 
 
@@ -178,12 +178,12 @@ Set a breakpoint on the first line of `static void Main(string[] args)` inside `
 
 ## Run the application
 
-1. Download the `AAP.m4v` HD movie from the [Internet Archive](https://archive.org/details/Wildlife-filming) and and save it in the project directory.
+1. Download the `Wildlife.wmv` HD movie from the [Internet Archive](https://archive.org/download/WildlifeHd/Wildlife.wmv) and save it in the project directory.
 
-2. Run the application in Visual Studio. Wait a few seconds for the Transcoder to finish. The converted file `AAP.mp4` will be in the project directory.   
+2. Run the application in Visual Studio Code. Wait a few seconds for the Transcoder to finish. The converted file `Wildlife.mp4` will be in the project directory.   
 
 ## Troubleshooting
 
-* You may get a `'DllNotFoundException' exception: Unable to load DLL 'libAVBlocks.dylib': The specified module could not be found.` To fix that, copy the file `libAVBlocks.dylib` to the project directory.
+* You may get a `'DllNotFoundException' exception: Unable to load DLL 'AVBlocks64.dll': The specified module could not be found.` To fix that, copy the file `AVBlocks64.dll` to the project directory.
 
-* `Transcoder.Open` may fail if there is already a file `AAP.mp4` in the project directory. Delete `AAP.mp4` to solve that.         
+* `Transcoder.Open` may fail if there is already a file `Wildlife.mp4` in the project directory. Delete `Wildlife.mp4` to solve that.         

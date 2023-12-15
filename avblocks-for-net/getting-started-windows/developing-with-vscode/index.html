@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Hardware Acceleration &#8212; AVBlocks for .NET</title>
+    <title>Developing with Visual Studio Code &#8212; AVBlocks for .NET</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,8 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../../genindex/" />
     <link rel="search" title="Search" href="../../../search/" />
-    <link rel="next" title="Handling Errors" href="../../handling-errors/" />
-    <link rel="prev" title="Simple Video Converter" href="../simple-video-converter/" />
+    <link rel="next" title="Initialization and Termination" href="../../initialization-and-termination/" />
+    <link rel="prev" title="Create a C# Console App in Visual Studio" href="../create-a-c-sharp-console-app-in-visual-studio/" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -126,7 +126,7 @@ const thebe_selector_output = ".output, .cell_output"
   Getting Started
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../getting-started-linux/">
    Getting Started - Linux
@@ -166,23 +166,23 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../getting-started-windows/">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../">
    Getting Started - Windows
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
-    <a class="reference internal" href="../../getting-started-windows/create-a-c-sharp-console-app-in-visual-studio/">
+    <a class="reference internal" href="../create-a-c-sharp-console-app-in-visual-studio/">
      Create a C# Console App in Visual Studio
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../getting-started-windows/developing-with-vscode/">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      Developing with Visual Studio Code
     </a>
    </li>
@@ -204,7 +204,7 @@ const thebe_selector_output = ".output, .cell_output"
   Blocks
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../using-mediainfo/">
    MediaInfo
@@ -232,33 +232,33 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="../">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../using-transcoder/">
    Transcoder
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
   <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
+  <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../overview/">
+    <a class="reference internal" href="../../using-transcoder/overview/">
      Overview
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../simple-audio-converter/">
+    <a class="reference internal" href="../../using-transcoder/simple-audio-converter/">
      Simple Audio Converter
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../simple-video-converter/">
+    <a class="reference internal" href="../../using-transcoder/simple-video-converter/">
      Simple Video Converter
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../using-transcoder/hardware-acceleration/">
      Hardware Acceleration
     </a>
    </li>
@@ -569,7 +569,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../../_sources/avblocks-for-net/using-transcoder/hardware-acceleration.md"
+        <a href="../../../_sources/avblocks-for-net/getting-started-windows/developing-with-vscode.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -629,13 +629,77 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#example">
-   Example
+  <a class="reference internal nav-link" href="#net">
+   .NET
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#complete-program">
-   Complete Program
+  <a class="reference internal nav-link" href="#visual-studio-code">
+   Visual Studio Code
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#create-the-net-project">
+   Create the .NET project
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#automate-the-build">
+     Automate the build
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#vscode-tasks-json">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         .vscode/tasks.json
+        </span>
+       </code>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#setup-debugging">
+     Setup Debugging
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#vscode-launch-json">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         .vscode/launch.json
+        </span>
+       </code>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#test-the-build">
+     Test the build
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#test-the-debugging">
+     Test the debugging
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#update-for-avblocks-net">
+   Update for AVBlocks .NET
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#run-the-application">
+   Run the application
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#troubleshooting">
+   Troubleshooting
   </a>
  </li>
 </ul>
@@ -647,7 +711,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Hardware Acceleration</h1>
+                <h1>Developing with Visual Studio Code</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -658,13 +722,77 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#example">
-   Example
+  <a class="reference internal nav-link" href="#net">
+   .NET
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#complete-program">
-   Complete Program
+  <a class="reference internal nav-link" href="#visual-studio-code">
+   Visual Studio Code
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#create-the-net-project">
+   Create the .NET project
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#automate-the-build">
+     Automate the build
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#vscode-tasks-json">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         .vscode/tasks.json
+        </span>
+       </code>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#setup-debugging">
+     Setup Debugging
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#vscode-launch-json">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         .vscode/launch.json
+        </span>
+       </code>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#test-the-build">
+     Test the build
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#test-the-debugging">
+     Test the debugging
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#update-for-avblocks-net">
+   Update for AVBlocks .NET
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#run-the-application">
+   Run the application
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#troubleshooting">
+   Troubleshooting
   </a>
  </li>
 </ul>
@@ -677,27 +805,107 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="hardware-acceleration">
-<h1>Hardware Acceleration<a class="headerlink" href="#hardware-acceleration" title="Permalink to this headline">#</a></h1>
-<p>How to enable Intel Graphics, AMD, or NVIDIA hardware acceleration.</p>
-<p>For detailed information about the supported hardware platforms, see <a class="reference internal" href="../../../about-avblocks/about-hardware-acceleration/"><span class="doc std std-doc">About Hardware Acceleration</span></a>.</p>
-<p>To enable hardware encoding, on the output MediaPin, set the <code class="docutils literal notranslate"><span class="pre">HardwareEncoder</span></code> parameter to <code class="docutils literal notranslate"><span class="pre">HardwareEncoder.Auto</span></code>. This must be done before calling <code class="docutils literal notranslate"><span class="pre">Transcoder.Open</span></code>:</p>
-<section id="example">
-<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">#</a></h2>
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="c1">// create output socket</span>
-<span class="kt">var</span><span class="w"> </span><span class="n">outputSocket</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MediaSocket</span><span class="p">.</span><span class="n">FromPreset</span><span class="p">(</span><span class="n">Preset</span><span class="p">.</span><span class="n">Video</span><span class="p">.</span><span class="n">iPad</span><span class="p">.</span><span class="n">H264_720p</span><span class="p">);</span>
+  <section class="tex2jax_ignore mathjax_ignore" id="developing-with-visual-studio-code">
+<h1>Developing with Visual Studio Code<a class="headerlink" href="#developing-with-visual-studio-code" title="Permalink to this headline">#</a></h1>
+<p>This topic describes the steps needed to setup Visual Studio Code for AVBlocks .NET development on macOS. These steps have been verified to work on macOS Ventura 13.5.2.</p>
+<section id="net">
+<h2>.NET<a class="headerlink" href="#net" title="Permalink to this headline">#</a></h2>
+<p>If you don’t have .NET installed follow the steps in the <a class="reference external" href="https://blog.primosoftware.com/setup-net-development-environment-windows/">Setup .NET development environment on Windows</a> post to configure a .NET development environment.</p>
+</section>
+<section id="visual-studio-code">
+<h2>Visual Studio Code<a class="headerlink" href="#visual-studio-code" title="Permalink to this headline">#</a></h2>
+<p>Download and install from <a class="reference external" href="https://code.visualstudio.com/download">Visual Studio Code</a> site.</p>
+<p>Open Visual Studio Code and press <code class="docutils literal notranslate"><span class="pre">Cmd</span> <span class="pre">+</span> <span class="pre">Shift</span> <span class="pre">+</span> <span class="pre">p</span></code>. Select <code class="docutils literal notranslate"><span class="pre">Shell</span> <span class="pre">Command:</span> <span class="pre">Install</span> <span class="pre">'code'</span> <span class="pre">command</span> <span class="pre">in</span> <span class="pre">PATH</span></code>.</p>
+<p>Also install the <a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit">C# Dev Kit extension</a>.</p>
+<p>Close Visual Studio Code.</p>
+</section>
+<section id="create-the-net-project">
+<h2>Create the .NET project<a class="headerlink" href="#create-the-net-project" title="Permalink to this headline">#</a></h2>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="p">~/</span><span class="n">avblocks</span><span class="p">/</span><span class="n">net</span><span class="p">/</span><span class="n">simple-converter</span>
+<span class="nb">cd </span><span class="p">~/</span><span class="n">avblocks</span><span class="p">/</span><span class="n">net</span><span class="p">/</span><span class="n">simple-converter</span>
 
-<span class="c1">// enable hardware acceleration</span>
-<span class="kt">var</span><span class="w"> </span><span class="n">outVideoPin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">outputSocket</span><span class="p">.</span><span class="n">Pins</span><span class="p">[</span><span class="m">0</span><span class="p">];</span>
-<span class="n">outVideoPin</span><span class="p">.</span><span class="n">Params</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">Param</span><span class="p">.</span><span class="n">HardwareEncoder</span><span class="p">,</span><span class="w"> </span><span class="n">HardwareEncoder</span><span class="p">.</span><span class="n">Auto</span><span class="p">);</span>
+<span class="c"># needed so that we can run the dotnet CLI</span>
+<span class="n">export</span> <span class="n">PATH</span><span class="p">=</span><span class="s2">&quot;$HOME/.dotnet:$PATH&quot;</span>
+
+<span class="c"># We use 8.0 here but give the commands for other versions</span>
+<span class="c"># see: https://learn.microsoft.com/en-us/dotnet/core/tools/global-json </span>
+<span class="n">dotnet</span> <span class="n">new</span> <span class="n">globaljson</span> <span class="p">-</span><span class="n">-sdk-version</span> <span class="n">8</span><span class="p">.</span><span class="n">0</span><span class="p">.</span><span class="n">100</span> <span class="p">-</span><span class="n">-roll-forward</span> <span class="n">latestPatch</span>
+<span class="c"># dotnet new globaljson --sdk-version 7.0.404 --roll-forward latestPatch</span>
+<span class="c"># dotnet new globaljson --sdk-version 6.0.417 --roll-forward latestPatch</span>
+
+<span class="c"># create new console application and project</span>
+<span class="n">dotnet</span> <span class="n">new</span> <span class="n">console</span> <span class="p">-</span><span class="n">-framework</span> <span class="n">net6</span><span class="p">.</span><span class="n">0</span> <span class="p">-</span><span class="n">-use-program-main</span> 
+
+<span class="c"># create new solution and add the project to it</span>
+<span class="n">dotnet</span> <span class="n">new</span> <span class="n">sln</span>
+<span class="n">dotnet</span> <span class="n">sln</span> <span class="n">add</span> <span class="n">simple-converter</span><span class="p">.</span><span class="n">csproj</span>
+
+<span class="c"># add .gitignore</span>
+<span class="n">dotnet</span> <span class="n">new</span> <span class="n">gitignore</span>
+</pre></div>
+</div>
+<section id="automate-the-build">
+<h3>Automate the build<a class="headerlink" href="#automate-the-build" title="Permalink to this headline">#</a></h3>
+<p>Add the following Visual Studio Code specific files to the <code class="docutils literal notranslate"><span class="pre">.vscode</span></code> subdir:</p>
+<section id="vscode-tasks-json">
+<h4><code class="docutils literal notranslate"><span class="pre">.vscode/tasks.json</span></code><a class="headerlink" href="#vscode-tasks-json" title="Permalink to this headline">#</a></h4>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2.0.0&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;tasks&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;dotnet&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;task&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;build&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;group&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;build&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;problemMatcher&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
+<span class="w">            </span><span class="nt">&quot;label&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;dotnet: build&quot;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 </section>
-<section id="complete-program">
-<h2>Complete Program<a class="headerlink" href="#complete-program" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="setup-debugging">
+<h3>Setup Debugging<a class="headerlink" href="#setup-debugging" title="Permalink to this headline">#</a></h3>
+<p>Add the following Visual Studio Code specific files to the <code class="docutils literal notranslate"><span class="pre">.vscode</span></code> subdir:</p>
+<section id="vscode-launch-json">
+<h4><code class="docutils literal notranslate"><span class="pre">.vscode/launch.json</span></code><a class="headerlink" href="#vscode-launch-json" title="Permalink to this headline">#</a></h4>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0.2.0&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;configurations&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;.NET Core Launch (console)&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;coreclr&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;request&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;launch&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;preLaunchTask&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;dotnet: build&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;program&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;${workspaceFolder}/bin/Debug/net6.0/simple-converter.dll&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;args&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
+<span class="w">            </span><span class="nt">&quot;cwd&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;${workspaceFolder}&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;console&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;internalConsole&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;stopAtEntry&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="test-the-build">
+<h3>Test the build<a class="headerlink" href="#test-the-build" title="Permalink to this headline">#</a></h3>
+<p>Test the build by pressing <code class="docutils literal notranslate"><span class="pre">Cmd</span> <span class="pre">+</span> <span class="pre">B</span></code>. Visual Studio Code should execute the <code class="docutils literal notranslate"><span class="pre">dotnet</span> <span class="pre">build</span></code> command automatically.</p>
+</section>
+<section id="test-the-debugging">
+<h3>Test the debugging<a class="headerlink" href="#test-the-debugging" title="Permalink to this headline">#</a></h3>
+<p>Set a breakpoint on the first line of <code class="docutils literal notranslate"><span class="pre">static</span> <span class="pre">void</span> <span class="pre">Main(string[]</span> <span class="pre">args)</span></code> inside <code class="docutils literal notranslate"><span class="pre">Program.cs</span></code>. Press <code class="docutils literal notranslate"><span class="pre">F5</span></code> to launch the debugger. It should stop at the breakpoint.</p>
+</section>
+</section>
+<section id="update-for-avblocks-net">
+<h2>Update for AVBlocks .NET<a class="headerlink" href="#update-for-avblocks-net" title="Permalink to this headline">#</a></h2>
+<ol>
+<li><p>Replace the contents of <code class="docutils literal notranslate"><span class="pre">Program.cs</span></code> with this code:</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="nn">PrimoSoftware.AVBlocks</span><span class="p">;</span>
 
-<span class="k">namespace</span><span class="w"> </span><span class="nn">HardwareEncoding</span>
+<span class="k">namespace</span><span class="w"> </span><span class="nn">SimpleConverter</span>
 <span class="p">{</span>
 <span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">Program</span>
 <span class="w">    </span><span class="p">{</span>
@@ -705,29 +913,17 @@ title="Print to PDF"
 <span class="w">        </span><span class="p">{</span>
 <span class="w">            </span><span class="n">Library</span><span class="p">.</span><span class="n">Initialize</span><span class="p">();</span>
 
-<span class="w">            </span><span class="kt">var</span><span class="w"> </span><span class="n">inputInfo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MediaInfo</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                </span><span class="n">InputFile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Wildlife.wmv&quot;</span>
-<span class="w">            </span><span class="p">};</span>
+<span class="w">            </span><span class="kt">var</span><span class="w"> </span><span class="n">inputInfo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MediaInfo</span><span class="p">();</span>
 
-<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">inputInfo</span><span class="p">.</span><span class="n">Load</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-
-<span class="w">                </span><span class="c1">// create input socket</span>
+<span class="w">            </span><span class="n">inputInfo</span><span class="p">.</span><span class="n">Inputs</span><span class="p">[</span><span class="m">0</span><span class="p">].</span><span class="n">File</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Wildlife.wmv&quot;</span><span class="p">;</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">inputInfo</span><span class="p">.</span><span class="n">Open</span><span class="p">())</span>
+<span class="w">            </span><span class="p">{</span>
 <span class="w">                </span><span class="kt">var</span><span class="w"> </span><span class="n">inputSocket</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MediaSocket</span><span class="p">.</span><span class="n">FromMediaInfo</span><span class="p">(</span><span class="n">inputInfo</span><span class="p">);</span>
-
-<span class="w">                </span><span class="c1">// create output socket</span>
-<span class="w">                </span><span class="kt">var</span><span class="w"> </span><span class="n">outputSocket</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MediaSocket</span><span class="p">.</span><span class="n">FromPreset</span><span class="p">(</span><span class="n">Preset</span><span class="p">.</span><span class="n">Video</span><span class="p">.</span><span class="n">iPad</span><span class="p">.</span><span class="n">H264_720p</span><span class="p">);</span>
-
-<span class="w">                </span><span class="c1">// enable hardware acceleration</span>
-<span class="w">                </span><span class="kt">var</span><span class="w"> </span><span class="n">outVideoPin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">outputSocket</span><span class="p">.</span><span class="n">Pins</span><span class="p">[</span><span class="m">0</span><span class="p">];</span>
-<span class="w">                </span><span class="n">outVideoPin</span><span class="p">.</span><span class="n">Params</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">Param</span><span class="p">.</span><span class="n">HardwareEncoder</span><span class="p">,</span><span class="w"> </span><span class="n">HardwareEncoder</span><span class="p">.</span><span class="n">Auto</span><span class="p">);</span>
-
+<span class="w">                </span><span class="kt">var</span><span class="w"> </span><span class="n">outputSocket</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MediaSocket</span><span class="p">.</span><span class="n">FromPreset</span><span class="p">(</span><span class="n">Preset</span><span class="p">.</span><span class="n">Video</span><span class="p">.</span><span class="n">Generic</span><span class="p">.</span><span class="n">MP4</span><span class="p">.</span><span class="n">Base_H264_AAC</span><span class="p">);</span>
 <span class="w">                </span><span class="n">outputSocket</span><span class="p">.</span><span class="n">File</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Wildlife.mp4&quot;</span><span class="p">;</span>
 
-<span class="w">                </span><span class="c1">// configure Transcoder and run </span>
 <span class="w">                </span><span class="k">using</span><span class="w"> </span><span class="p">(</span><span class="kt">var</span><span class="w"> </span><span class="n">transcoder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Transcoder</span><span class="p">())</span>
 <span class="w">                </span><span class="p">{</span>
-<span class="w">                    </span><span class="n">transcoder</span><span class="p">.</span><span class="n">AllowDemoMode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">true</span><span class="p">;</span>
-
 <span class="w">                    </span><span class="n">transcoder</span><span class="p">.</span><span class="n">Inputs</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">inputSocket</span><span class="p">);</span>
 <span class="w">                    </span><span class="n">transcoder</span><span class="p">.</span><span class="n">Outputs</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">outputSocket</span><span class="p">);</span>
 
@@ -745,6 +941,47 @@ title="Print to PDF"
 <span class="p">}</span>
 </pre></div>
 </div>
+</li>
+<li><p><a class="reference external" href="https://github.com/avblocks/avblocks-net-core/releases/">Download</a> the Windows version of AVBlocks for .NET (net60). The file you need will have a name similar to <code class="docutils literal notranslate"><span class="pre">avblocks-net60-v3.0.0-demo.1-windows.zip</span></code> - the version number may differ.</p></li>
+<li><p>Unzip in a location of your choice, then copy the file <code class="docutils literal notranslate"><span class="pre">AVBlocks.clrcore.x64.dll</span></code> and <code class="docutils literal notranslate"><span class="pre">AVBlocks64.dll</span></code> to the project’s directory.</p></li>
+<li><p>Add a reference to <code class="docutils literal notranslate"><span class="pre">AVBlocks.clrcore.x64.dll</span></code></p>
+<p>Replace the contents of the <code class="docutils literal notranslate"><span class="pre">simple-converter.csproj</span></code> project file with this code:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;Project</span><span class="w"> </span><span class="na">Sdk=</span><span class="s">&quot;Microsoft.NET.Sdk&quot;</span><span class="nt">&gt;</span>
+
+<span class="nt">&lt;PropertyGroup&gt;</span>
+<span class="w">    </span><span class="nt">&lt;OutputType&gt;</span>Exe<span class="nt">&lt;/OutputType&gt;</span>
+<span class="w">    </span><span class="nt">&lt;TargetFramework&gt;</span>net6.0<span class="nt">&lt;/TargetFramework&gt;</span>
+<span class="w">    </span><span class="nt">&lt;RootNamespace&gt;</span>SimpleConverter<span class="nt">&lt;/RootNamespace&gt;</span>
+<span class="w">    </span><span class="nt">&lt;ImplicitUsings&gt;</span>enable<span class="nt">&lt;/ImplicitUsings&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Nullable&gt;</span>enable<span class="nt">&lt;/Nullable&gt;</span>
+<span class="nt">&lt;/PropertyGroup&gt;</span>
+
+<span class="cm">&lt;!-- This adds a reference to AVBlocks .NET dll--&gt;</span>
+<span class="nt">&lt;ItemGroup&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Reference</span><span class="w"> </span><span class="na">Include=</span><span class="s">&quot;AVBlocks.clrcore.x64&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;HintPath&gt;</span>AVBlocks.clrcore.x64.dll<span class="nt">&lt;/HintPath&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/Reference&gt;</span><span class="w">  </span>
+<span class="nt">&lt;/ItemGroup&gt;</span>
+
+<span class="nt">&lt;/Project&gt;</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+<section id="run-the-application">
+<h2>Run the application<a class="headerlink" href="#run-the-application" title="Permalink to this headline">#</a></h2>
+<ol class="simple">
+<li><p>Download the <code class="docutils literal notranslate"><span class="pre">Wildlife.wmv</span></code> HD movie from the <a class="reference external" href="https://archive.org/download/WildlifeHd/Wildlife.wmv">Internet Archive</a> and save it in the project directory.</p></li>
+<li><p>Run the application in Visual Studio Code. Wait a few seconds for the Transcoder to finish. The converted file <code class="docutils literal notranslate"><span class="pre">Wildlife.mp4</span></code> will be in the project directory.</p></li>
+</ol>
+</section>
+<section id="troubleshooting">
+<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>You may get a <code class="docutils literal notranslate"><span class="pre">'DllNotFoundException'</span> <span class="pre">exception:</span> <span class="pre">Unable</span> <span class="pre">to</span> <span class="pre">load</span> <span class="pre">DLL</span> <span class="pre">'AVBlocks64.dll':</span> <span class="pre">The</span> <span class="pre">specified</span> <span class="pre">module</span> <span class="pre">could</span> <span class="pre">not</span> <span class="pre">be</span> <span class="pre">found.</span></code> To fix that, copy the file <code class="docutils literal notranslate"><span class="pre">AVBlocks64.dll</span></code> to the project directory.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Transcoder.Open</span></code> may fail if there is already a file <code class="docutils literal notranslate"><span class="pre">Wildlife.mp4</span></code> in the project directory. Delete <code class="docutils literal notranslate"><span class="pre">Wildlife.mp4</span></code> to solve that.</p></li>
+</ul>
 </section>
 </section>
 
@@ -761,7 +998,7 @@ title="Print to PDF"
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./avblocks-for-net\using-transcoder"
+            path: "./avblocks-for-net\getting-started-windows"
         },
         predefinedOutput: true
     }
@@ -775,17 +1012,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../simple-video-converter/" title="previous page">
+    <a class='left-prev' id="prev-link" href="../create-a-c-sharp-console-app-in-visual-studio/" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Simple Video Converter</p>
+            <p class="prev-next-title">Create a C# Console App in Visual Studio</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../../handling-errors/" title="next page">
+    <a class='right-next' id="next-link" href="../../initialization-and-termination/" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Handling Errors</p>
+        <p class="prev-next-title">Initialization and Termination</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
