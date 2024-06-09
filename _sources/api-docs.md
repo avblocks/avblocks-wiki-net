@@ -1,6 +1,6 @@
 ---
 title: API Docs
-metadata:
+html_meta:
     description: Links to the AVBlocks API documentation for .NET / C#  and C++.
 taxonomy:
     category: docs

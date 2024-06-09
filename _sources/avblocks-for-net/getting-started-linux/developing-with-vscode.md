@@ -1,6 +1,6 @@
 ---
 title: Developing with Visual Studio Code
-metadata:
+html_meta:
     description: This page describes the steps needed to setup Visual Studio Code for AVBlocks .NET development on Ubuntu
 taxonomy:
     category: docs

@@ -1,6 +1,6 @@
 ---
 title: Release Notes
-metadata:
+html_meta:
     description: This topic describes the changes in each version of AVBlocks.
 taxonomy:
     category: docs
@@ -837,7 +837,7 @@ This release has been tested on **Windows 10 Insider Preview**.
 ### Improvement
 
 - [AVB-5] - API: Inconsistent collections
-- [AVB-6] - API: setStream doesn’t go well with setStreamType
+- [AVB-6] - API: setStream doesn't go well with setStreamType
 - [AVB-7] - API: Expose an interface (not a class) for setting parameters
 - [AVB-8] - The MediaSample::endTime property is used for two different purposes
 - [AVB-9] - Extend the transcoder, so that it is possible to set only the input and output file names.
