@@ -104,7 +104,7 @@ namespace SetLicense
             // This must be done before calling Library.SetLicense
             Library.SetLicenseTls(true);
 
-            // Pass the license XML to Library::setLicense
+            // Pass the license XML as string to Library.SetLicense
             // NOTE: If the license expireDate is in the past, 
             // this will trigger a license verification call 
             // to Primo Software over the Internet. 
@@ -161,7 +161,7 @@ Class Program
         ' This must be done before calling Library.SetLicense
         Library.SetLicenseTls(True)
         
-        ' Pass the license XML to Library::setLicense
+        ' Pass the license XML as string to Library.SetLicense
         ' NOTE: If the license expireDate is in the past, 
         ' this will trigger a license verification call 
         ' to Primo Software over the Internet. 
