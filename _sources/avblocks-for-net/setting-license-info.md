@@ -63,6 +63,8 @@ namespace SetLicense
 {
     class Program
     {
+        // Primo Software License in XML format. 
+        // You will have this after obtaining a commercial license 
         private const string licenseXml = 
             @"
             <!-- 
@@ -98,7 +100,16 @@ namespace SetLicense
         {
             Library.Initialize();
 
+            // Optionally enable TLS for license verification. 
+            // This must be done before calling Library.SetLicense
+            Library.SetLicenseTls(true);
+
+            // Pass the license XML to Library::setLicense
+            // NOTE: If the license expireDate is in the past, 
+            // this will trigger a license verification call 
+            // to Primo Software over the Internet. 
             Library.SetLicense(licenseXml);
+
             Debug.Assert(LicenseStatusFlags.Ready == Library.LicenseStatus);
 
             Library.Shutdown();
@@ -117,6 +128,8 @@ Imports PrimoSoftware.AVBlocks
 
 Class Program
 
+    ' Primo Software License in XML format. 
+    ' You will have this after obtaining a commercial license 
     Private Shared licenseXml As XElement =
             <primoSoftware>
                 <license version='1.0'>
@@ -144,7 +157,16 @@ Class Program
     Public Shared Sub Main()
         Library.Initialize()
 
+        ' Optionally enable TLS for license verification. 
+        ' This must be done before calling Library.SetLicense
+        Library.SetLicenseTls(True)
+        
+        ' Pass the license XML to Library::setLicense
+        ' NOTE: If the license expireDate is in the past, 
+        ' this will trigger a license verification call 
+        ' to Primo Software over the Internet. 
         Library.SetLicense(licenseXml.ToString())
+        
         Debug.Assert(LicenseStatusFlags.Ready = Library.LicenseStatus)
 
         Library.Shutdown()

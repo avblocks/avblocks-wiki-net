@@ -58,7 +58,7 @@ This topic describes the steps needed to configure a C# console application in V
     }
     ```
 
-4. [Download](https://github.com/avblocks/avblocks-net-core/releases/) the Darwin version of AVBlocks for .NET (net60). The file you need will have a name similar to `avblocks-net60-v3.0.1-demo.1-darwin.zip` - the version number may differ. 
+4. [Download](https://github.com/avblocks/avblocks-net-core/releases/) the Darwin version of AVBlocks for .NET (net60). The file you need will have a name similar to `avblocks-net60-v3.1.0-demo.1-darwin.zip` - the version number may differ. 
 5. Unzip in a location of your choice, then copy the file `AVBlocks.clrcore.x64.dll` and `libAVBlocks.dylib` to the project's directory. 
 6. Switch to the project in Visual Studio and add a reference to `AVBlocks.clrcore.x64.dll`. To do this right click the `simple-converter` project, select `Add | Reference | .NET Assembly | Browse` then select `AVBlocks.clrcore.x64.dll`. 
 7. Add the `libAVBlocks.dylib` to your project simply as a file, open file properties, and set the 'Copy to Output Directory' to 'Copy if newer', so it is copied to the output directory automatically. The `AVBlocks.clrcore.x64.dll` needs `libAVBlocks.dylib` and will not work without it.

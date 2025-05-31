@@ -717,8 +717,8 @@ title="Print to PDF"
 <section id="example">
 <h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">#</a></h2>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="f9a3d09e-fcd6-44c7-a42f-225f7ce87866" name="88de413e-ccfe-4af3-9e11-5a59b30711f3" type="radio">
-</input><label class="sd-tab-label" for="f9a3d09e-fcd6-44c7-a42f-225f7ce87866">
+<input checked="checked" id="0751595b-d743-4b5d-aaa3-d2e593d2e62c" name="1639b97b-6034-43ea-a48d-ce019a60e192" type="radio">
+</input><label class="sd-tab-label" for="0751595b-d743-4b5d-aaa3-d2e593d2e62c">
 C#</label><div class="sd-tab-content docutils">
 <p>In C#, it is possible to use a string literal, e.g. <code class="docutils literal notranslate"><span class="pre">&#64;&quot;xml</span> <span class="pre">goes</span> <span class="pre">here&quot;</span></code>:</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span>
@@ -730,6 +730,8 @@ C#</label><div class="sd-tab-content docutils">
 <span class="p">{</span>
 <span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">Program</span>
 <span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Primo Software License in XML format. </span>
+<span class="w">        </span><span class="c1">// You will have this after obtaining a commercial license </span>
 <span class="w">        </span><span class="k">private</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">licenseXml</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>
 <span class="w">            </span><span class="s">@&quot;</span>
 <span class="s">            &lt;!-- </span>
@@ -765,7 +767,16 @@ C#</label><div class="sd-tab-content docutils">
 <span class="w">        </span><span class="p">{</span>
 <span class="w">            </span><span class="n">Library</span><span class="p">.</span><span class="n">Initialize</span><span class="p">();</span>
 
+<span class="w">            </span><span class="c1">// Optionally enable TLS for license verification. </span>
+<span class="w">            </span><span class="c1">// This must be done before calling Library.SetLicense</span>
+<span class="w">            </span><span class="n">Library</span><span class="p">.</span><span class="n">SetLicenseTls</span><span class="p">(</span><span class="k">true</span><span class="p">);</span>
+
+<span class="w">            </span><span class="c1">// Pass the license XML to Library::setLicense</span>
+<span class="w">            </span><span class="c1">// NOTE: If the license expireDate is in the past, </span>
+<span class="w">            </span><span class="c1">// this will trigger a license verification call </span>
+<span class="w">            </span><span class="c1">// to Primo Software over the Internet. </span>
 <span class="w">            </span><span class="n">Library</span><span class="p">.</span><span class="n">SetLicense</span><span class="p">(</span><span class="n">licenseXml</span><span class="p">);</span>
+
 <span class="w">            </span><span class="n">Debug</span><span class="p">.</span><span class="n">Assert</span><span class="p">(</span><span class="n">LicenseStatusFlags</span><span class="p">.</span><span class="n">Ready</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">Library</span><span class="p">.</span><span class="n">LicenseStatus</span><span class="p">);</span>
 
 <span class="w">            </span><span class="n">Library</span><span class="p">.</span><span class="n">Shutdown</span><span class="p">();</span>
@@ -775,14 +786,16 @@ C#</label><div class="sd-tab-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="c4a86801-80ff-4c2c-8c9e-8eba73851306" name="88de413e-ccfe-4af3-9e11-5a59b30711f3" type="radio">
-</input><label class="sd-tab-label" for="c4a86801-80ff-4c2c-8c9e-8eba73851306">
+<input id="833147eb-f2aa-4904-97b9-17bed4e88211" name="1639b97b-6034-43ea-a48d-ce019a60e192" type="radio">
+</input><label class="sd-tab-label" for="833147eb-f2aa-4904-97b9-17bed4e88211">
 Visual Basic</label><div class="sd-tab-content docutils">
 <p>In VB, you can use XElement and <a class="reference external" href="https://msdn.microsoft.com/en-us/library/bb384629.aspx">XML literals</a>. Note that, in order for this to work, you have to remove the comment from the top of the XML text:</p>
 <div class="highlight-vbnet notranslate"><div class="highlight"><pre><span></span><span class="k">Imports</span><span class="w"> </span><span class="nn">PrimoSoftware.AVBlocks</span>
 
 <span class="k">Class</span><span class="w"> </span><span class="nc">Program</span>
 
+<span class="w">    </span><span class="c">&#39; Primo Software License in XML format. </span>
+<span class="w">    </span><span class="c">&#39; You will have this after obtaining a commercial license </span>
 <span class="w">    </span><span class="k">Private</span><span class="w"> </span><span class="k">Shared</span><span class="w"> </span><span class="n">licenseXml</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="n">XElement</span><span class="w"> </span><span class="o">=</span>
 <span class="w">            </span><span class="o">&lt;</span><span class="n">primoSoftware</span><span class="o">&gt;</span>
 <span class="w">                </span><span class="o">&lt;</span><span class="n">license</span><span class="w"> </span><span class="n">version</span><span class="o">=</span><span class="c">&#39;1.0&#39;&gt;</span>
@@ -810,7 +823,16 @@ Visual Basic</label><div class="sd-tab-content docutils">
 <span class="w">    </span><span class="k">Public</span><span class="w"> </span><span class="k">Shared</span><span class="w"> </span><span class="k">Sub</span><span class="w"> </span><span class="nf">Main</span><span class="p">()</span>
 <span class="w">        </span><span class="n">Library</span><span class="p">.</span><span class="n">Initialize</span><span class="p">()</span>
 
+<span class="w">        </span><span class="c">&#39; Optionally enable TLS for license verification. </span>
+<span class="w">        </span><span class="c">&#39; This must be done before calling Library.SetLicense</span>
+<span class="w">        </span><span class="n">Library</span><span class="p">.</span><span class="n">SetLicenseTls</span><span class="p">(</span><span class="k">True</span><span class="p">)</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="c">&#39; Pass the license XML to Library::setLicense</span>
+<span class="w">        </span><span class="c">&#39; NOTE: If the license expireDate is in the past, </span>
+<span class="w">        </span><span class="c">&#39; this will trigger a license verification call </span>
+<span class="w">        </span><span class="c">&#39; to Primo Software over the Internet. </span>
 <span class="w">        </span><span class="n">Library</span><span class="p">.</span><span class="n">SetLicense</span><span class="p">(</span><span class="n">licenseXml</span><span class="p">.</span><span class="n">ToString</span><span class="p">())</span>
+<span class="w">        </span>
 <span class="w">        </span><span class="n">Debug</span><span class="p">.</span><span class="n">Assert</span><span class="p">(</span><span class="n">LicenseStatusFlags</span><span class="p">.</span><span class="n">Ready</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Library</span><span class="p">.</span><span class="n">LicenseStatus</span><span class="p">)</span>
 
 <span class="w">        </span><span class="n">Library</span><span class="p">.</span><span class="n">Shutdown</span><span class="p">()</span>

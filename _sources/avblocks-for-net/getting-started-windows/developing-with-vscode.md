@@ -147,7 +147,7 @@ Set a breakpoint on the first line of `static void Main(string[] args)` inside `
     }
     ```
 
-2. [Download](https://github.com/avblocks/avblocks-net-core/releases/) the Windows version of AVBlocks for .NET (net60). The file you need will have a name similar to `avblocks-net60-v3.0.1-demo.1-windows.zip` - the version number may differ. 
+2. [Download](https://github.com/avblocks/avblocks-net-core/releases/) the Windows version of AVBlocks for .NET (net60). The file you need will have a name similar to `avblocks-net60-v3.1.0-demo.1-windows.zip` - the version number may differ. 
 
 3. Unzip in a location of your choice, then copy the file `AVBlocks.clrcore.x64.dll` and `AVBlocks64.dll` to the project's directory.
 
