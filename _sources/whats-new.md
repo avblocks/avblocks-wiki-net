@@ -31,6 +31,8 @@ toc:
 
 * Updated .NET samples for .NET 8.0
 
+---
+
 ## AVBlocks 3.1
 
 ### API
