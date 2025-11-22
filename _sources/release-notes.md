@@ -11,6 +11,15 @@ toc:
 
 # Release Notes
 
+## Version 3.2.0
+
+### New
+
+- [AVB-1386] - G.711: Voice Activity Detection and Comfort Noise Generation 
+- [AVB-1332] - .NET: Build for .NET Core 8 LTS \(Windows, macOS, Linux\)
+- [AVB-1312] - Samples: .NET: Update for .NET 8.0 
+- [AVB-1331] - Wiki: .NET: Page for MP3 encoder
+
 ## Version 3.1.0
 
 ### New

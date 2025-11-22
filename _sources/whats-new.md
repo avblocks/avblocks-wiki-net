@@ -11,6 +11,26 @@ toc:
 
 # What's New
 
+## AVBlocks 3.2
+
+### API
+
+* Support for .NET Core 8 LTS on Windows, macOS, and Linux
+
+### Codecs
+
+#### G.711
+
+* Voice Activity Detection (VAD) and Comfort Noise Generation (CNG) for G.711 codec
+
+### Documentation
+
+* New wiki page for MP3 encoder
+
+### Samples
+
+* Updated .NET samples for .NET 8.0
+
 ## AVBlocks 3.1
 
 ### API
