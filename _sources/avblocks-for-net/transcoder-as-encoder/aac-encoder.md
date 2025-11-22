@@ -351,6 +351,6 @@ namespace AacEncoder
 
 Follow the steps to [create a C# console application in Visual Studio](../getting-started-windows/create-a-c-sharp-console-app-in-visual-studio) but in `Program.cs` use the code from this article. 
 
-Copy the `equinox-48KHz.wav` file from the assets archive to `bin/x64/Debug/net6.0` under the project's directory.
+Copy the `equinox-48KHz.wav` file from the assets archive to `bin/x64/Debug/net8.0` under the project's directory.
 
 Run the application in Visual Studio.

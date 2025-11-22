@@ -827,14 +827,14 @@ title="Print to PDF"
 <span class="c"># needed so that we can run the dotnet CLI</span>
 <span class="n">export</span> <span class="n">PATH</span><span class="p">=</span><span class="s2">&quot;$HOME/.dotnet:$PATH&quot;</span>
 
-<span class="c"># We use 8.0 here but give the commands for other versions</span>
+<span class="c"># We use 9.0 here but give the commands for other versions</span>
 <span class="c"># see: https://learn.microsoft.com/en-us/dotnet/core/tools/global-json </span>
-<span class="n">dotnet</span> <span class="n">new</span> <span class="n">globaljson</span> <span class="p">-</span><span class="n">-sdk-version</span> <span class="n">8</span><span class="p">.</span><span class="n">0</span><span class="p">.</span><span class="n">100</span> <span class="p">-</span><span class="n">-roll-forward</span> <span class="n">latestPatch</span>
-<span class="c"># dotnet new globaljson --sdk-version 7.0.404 --roll-forward latestPatch</span>
-<span class="c"># dotnet new globaljson --sdk-version 6.0.417 --roll-forward latestPatch</span>
+<span class="n">dotnet</span> <span class="n">new</span> <span class="n">globaljson</span> <span class="p">-</span><span class="n">-sdk-version</span> <span class="n">9</span><span class="p">.</span><span class="n">0</span><span class="p">.</span><span class="n">308</span> <span class="p">-</span><span class="n">-roll-forward</span> <span class="n">latestPatch</span>
+<span class="c"># dotnet new globaljson --sdk-version 8.0.416 --roll-forward latestPatch</span>
+<span class="c"># dotnet new globaljson --sdk-version 6.0.428 --roll-forward latestPatch</span>
 
 <span class="c"># create new console application and project</span>
-<span class="n">dotnet</span> <span class="n">new</span> <span class="n">console</span> <span class="p">-</span><span class="n">-framework</span> <span class="n">net6</span><span class="p">.</span><span class="n">0</span> <span class="p">-</span><span class="n">-use-program-main</span> 
+<span class="n">dotnet</span> <span class="n">new</span> <span class="n">console</span> <span class="p">-</span><span class="n">-framework</span> <span class="n">net8</span><span class="p">.</span><span class="n">0</span> <span class="p">-</span><span class="n">-use-program-main</span> 
 
 <span class="c"># create new solution and add the project to it</span>
 <span class="n">dotnet</span> <span class="n">new</span> <span class="n">sln</span>
@@ -878,7 +878,7 @@ title="Print to PDF"
 <span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;coreclr&quot;</span><span class="p">,</span>
 <span class="w">            </span><span class="nt">&quot;request&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;launch&quot;</span><span class="p">,</span>
 <span class="w">            </span><span class="nt">&quot;preLaunchTask&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;dotnet: build&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;program&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;${workspaceFolder}/bin/Debug/net6.0/simple-converter.dll&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;program&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;${workspaceFolder}/bin/Debug/net8.0/simple-converter.dll&quot;</span><span class="p">,</span>
 <span class="w">            </span><span class="nt">&quot;args&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
 <span class="w">            </span><span class="nt">&quot;cwd&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;${workspaceFolder}&quot;</span><span class="p">,</span>
 <span class="w">            </span><span class="nt">&quot;console&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;internalConsole&quot;</span><span class="p">,</span>
@@ -942,7 +942,7 @@ title="Print to PDF"
 </pre></div>
 </div>
 </li>
-<li><p><a class="reference external" href="https://github.com/avblocks/avblocks-net-core/releases/">Download</a> the Windows version of AVBlocks for .NET (net60). The file you need will have a name similar to <code class="docutils literal notranslate"><span class="pre">avblocks-net60-v3.1.0-demo.1-windows.zip</span></code> - the version number may differ.</p></li>
+<li><p><a class="reference external" href="https://github.com/avblocks/avblocks-net-core/releases/">Download</a> the Windows version of AVBlocks for .NET (net80). The file you need will have a name similar to <code class="docutils literal notranslate"><span class="pre">avblocks-net80-v3.2.0-demo.1-windows.zip</span></code> - the version number may differ.</p></li>
 <li><p>Unzip in a location of your choice, then copy the file <code class="docutils literal notranslate"><span class="pre">AVBlocks.clrcore.x64.dll</span></code> and <code class="docutils literal notranslate"><span class="pre">AVBlocks64.dll</span></code> to the project’s directory.</p></li>
 <li><p>Add a reference to <code class="docutils literal notranslate"><span class="pre">AVBlocks.clrcore.x64.dll</span></code></p>
 <p>Replace the contents of the <code class="docutils literal notranslate"><span class="pre">simple-converter.csproj</span></code> project file with this code:</p>
@@ -950,7 +950,7 @@ title="Print to PDF"
 
 <span class="nt">&lt;PropertyGroup&gt;</span>
 <span class="w">    </span><span class="nt">&lt;OutputType&gt;</span>Exe<span class="nt">&lt;/OutputType&gt;</span>
-<span class="w">    </span><span class="nt">&lt;TargetFramework&gt;</span>net6.0<span class="nt">&lt;/TargetFramework&gt;</span>
+<span class="w">    </span><span class="nt">&lt;TargetFramework&gt;</span>net8.0<span class="nt">&lt;/TargetFramework&gt;</span>
 <span class="w">    </span><span class="nt">&lt;RootNamespace&gt;</span>SimpleConverter<span class="nt">&lt;/RootNamespace&gt;</span>
 <span class="w">    </span><span class="nt">&lt;ImplicitUsings&gt;</span>enable<span class="nt">&lt;/ImplicitUsings&gt;</span>
 <span class="w">    </span><span class="nt">&lt;Nullable&gt;</span>enable<span class="nt">&lt;/Nullable&gt;</span>

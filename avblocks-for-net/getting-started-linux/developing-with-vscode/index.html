@@ -827,14 +827,14 @@ title="Print to PDF"
 <span class="c1"># needed so that we can run the dotnet CLI</span>
 <span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$HOME</span><span class="s2">/.dotnet:</span><span class="nv">$PATH</span><span class="s2">&quot;</span>
 
-<span class="c1"># We use 8.0 here but give the commands for other versions</span>
+<span class="c1"># We use 9.0 here but give the commands for other versions</span>
 <span class="c1"># see: https://learn.microsoft.com/en-us/dotnet/core/tools/global-json </span>
-dotnet<span class="w"> </span>new<span class="w"> </span>globaljson<span class="w"> </span>--sdk-version<span class="w"> </span><span class="m">8</span>.0.100<span class="w"> </span>--roll-forward<span class="w"> </span>latestPatch
-<span class="c1"># dotnet new globaljson --sdk-version 7.0.404 --roll-forward latestPatch</span>
-<span class="c1"># dotnet new globaljson --sdk-version 6.0.417 --roll-forward latestPatch</span>
+dotnet<span class="w"> </span>new<span class="w"> </span>globaljson<span class="w"> </span>--sdk-version<span class="w"> </span><span class="m">9</span>.0.308<span class="w"> </span>--roll-forward<span class="w"> </span>latestPatch
+<span class="c1"># dotnet new globaljson --sdk-version 8.0.416 --roll-forward latestPatch</span>
+<span class="c1"># dotnet new globaljson --sdk-version 6.0.428 --roll-forward latestPatch</span>
 
 <span class="c1"># create new console application and project</span>
-dotnet<span class="w"> </span>new<span class="w"> </span>console<span class="w"> </span>--framework<span class="w"> </span>net6.0<span class="w"> </span>--use-program-main<span class="w"> </span>
+dotnet<span class="w"> </span>new<span class="w"> </span>console<span class="w"> </span>--framework<span class="w"> </span>net8.0<span class="w"> </span>--use-program-main<span class="w"> </span>
 
 <span class="c1"># create new solution and add the project to it</span>
 dotnet<span class="w"> </span>new<span class="w"> </span>sln
@@ -878,7 +878,7 @@ dotnet<span class="w"> </span>new<span class="w"> </span>gitignore
 <span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;coreclr&quot;</span><span class="p">,</span>
 <span class="w">            </span><span class="nt">&quot;request&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;launch&quot;</span><span class="p">,</span>
 <span class="w">            </span><span class="nt">&quot;preLaunchTask&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;dotnet: build&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;program&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;${workspaceFolder}/bin/Debug/net6.0/simple-converter.dll&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;program&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;${workspaceFolder}/bin/Debug/net8.0/simple-converter.dll&quot;</span><span class="p">,</span>
 <span class="w">            </span><span class="nt">&quot;args&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
 <span class="w">            </span><span class="nt">&quot;cwd&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;${workspaceFolder}&quot;</span><span class="p">,</span>
 <span class="w">            </span><span class="nt">&quot;console&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;internalConsole&quot;</span><span class="p">,</span>
@@ -942,15 +942,15 @@ dotnet<span class="w"> </span>new<span class="w"> </span>gitignore
 </pre></div>
 </div>
 </li>
-<li><p><a class="reference external" href="https://github.com/avblocks/avblocks-net-core/releases/">Download</a> the Darwin version of AVBlocks for .NET (net60). The file you need will have a name similar to <code class="docutils literal notranslate"><span class="pre">avblocks-net60-v3.1.0-demo.1-linux.tar.gz</span></code> - the version number may differ.</p></li>
-<li><p>Unzip in a location of your choice, then copy the file <code class="docutils literal notranslate"><span class="pre">AVBlocks.clrcore.x64.dll</span></code> and <code class="docutils literal notranslate"><span class="pre">libAVBlocks64.so</span></code> to the project’s directory. Also copy the file <code class="docutils literal notranslate"><span class="pre">libAVBlocks64.so</span></code> into <code class="docutils literal notranslate"><span class="pre">bin/Debug/net6.0</span></code> under the project’s directory.</p></li>
+<li><p><a class="reference external" href="https://github.com/avblocks/avblocks-net-core/releases/">Download</a> the Darwin version of AVBlocks for .NET (net80). The file you need will have a name similar to <code class="docutils literal notranslate"><span class="pre">avblocks-net80-v3.2.0-demo.1-linux.tar.gz</span></code> - the version number may differ.</p></li>
+<li><p>Unzip in a location of your choice, then copy the file <code class="docutils literal notranslate"><span class="pre">AVBlocks.clrcore.x64.dll</span></code> and <code class="docutils literal notranslate"><span class="pre">libAVBlocks64.so</span></code> to the project’s directory. Also copy the file <code class="docutils literal notranslate"><span class="pre">libAVBlocks64.so</span></code> into <code class="docutils literal notranslate"><span class="pre">bin/Debug/net8.0</span></code> under the project’s directory.</p></li>
 <li><p>Add a reference to <code class="docutils literal notranslate"><span class="pre">AVBlocks.clrcore.x64.dll</span></code></p>
 <p>Replace the contents of the <code class="docutils literal notranslate"><span class="pre">simple-converter.csproj</span></code> project file with this code:</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;Project</span><span class="w"> </span><span class="na">Sdk=</span><span class="s">&quot;Microsoft.NET.Sdk&quot;</span><span class="nt">&gt;</span>
 
 <span class="nt">&lt;PropertyGroup&gt;</span>
 <span class="w">    </span><span class="nt">&lt;OutputType&gt;</span>Exe<span class="nt">&lt;/OutputType&gt;</span>
-<span class="w">    </span><span class="nt">&lt;TargetFramework&gt;</span>net6.0<span class="nt">&lt;/TargetFramework&gt;</span>
+<span class="w">    </span><span class="nt">&lt;TargetFramework&gt;</span>net8.0<span class="nt">&lt;/TargetFramework&gt;</span>
 <span class="w">    </span><span class="nt">&lt;RootNamespace&gt;</span>SimpleConverter<span class="nt">&lt;/RootNamespace&gt;</span>
 <span class="w">    </span><span class="nt">&lt;ImplicitUsings&gt;</span>enable<span class="nt">&lt;/ImplicitUsings&gt;</span>
 <span class="w">    </span><span class="nt">&lt;Nullable&gt;</span>enable<span class="nt">&lt;/Nullable&gt;</span>
@@ -979,7 +979,7 @@ dotnet<span class="w"> </span>new<span class="w"> </span>gitignore
 <section id="troubleshooting">
 <h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
-<li><p>You may get a <code class="docutils literal notranslate"><span class="pre">'DllNotFoundException'</span> <span class="pre">exception:</span> <span class="pre">Unable</span> <span class="pre">to</span> <span class="pre">load</span> <span class="pre">DLL</span> <span class="pre">'libAVBlocks64.so':</span> <span class="pre">The</span> <span class="pre">specified</span> <span class="pre">module</span> <span class="pre">could</span> <span class="pre">not</span> <span class="pre">be</span> <span class="pre">found.</span></code> To fix that, copy the file <code class="docutils literal notranslate"><span class="pre">libAVBlocks64.so</span></code> into <code class="docutils literal notranslate"><span class="pre">bin/Debug/net6.0</span></code> under the project’s directory.</p></li>
+<li><p>You may get a <code class="docutils literal notranslate"><span class="pre">'DllNotFoundException'</span> <span class="pre">exception:</span> <span class="pre">Unable</span> <span class="pre">to</span> <span class="pre">load</span> <span class="pre">DLL</span> <span class="pre">'libAVBlocks64.so':</span> <span class="pre">The</span> <span class="pre">specified</span> <span class="pre">module</span> <span class="pre">could</span> <span class="pre">not</span> <span class="pre">be</span> <span class="pre">found.</span></code> To fix that, copy the file <code class="docutils literal notranslate"><span class="pre">libAVBlocks64.so</span></code> into <code class="docutils literal notranslate"><span class="pre">bin/Debug/net8.0</span></code> under the project’s directory.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Transcoder.Open</span></code> may fail if there is already a file <code class="docutils literal notranslate"><span class="pre">AAP.mp4</span></code> in the project directory. Delete <code class="docutils literal notranslate"><span class="pre">AAP.mp4</span></code> to solve that.</p></li>
 </ul>
 </section>

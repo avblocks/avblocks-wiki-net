@@ -101,7 +101,7 @@ namespace PadVideo
 
 Follow the [steps](../getting-started-windows/create-a-c-sharp-console-app-in-visual-studio) to create a C# console application in Visual Studio, but in `Program.cs` use the code from this article. 
 
-Download the `AndrewConnolly_2014.mp4` MPEG4 file from the [Internet Archive](https://archive.org/details/AndrewConnolly_2014) and save it in `bin/x64/Debug/net6.0` under the project's directory.
+Download the `AndrewConnolly_2014.mp4` MPEG4 file from the [Internet Archive](https://archive.org/details/AndrewConnolly_2014) and save it in `bin/x64/Debug/net8.0` under the project's directory.
 
-Run the application in Visual Studio. Wait a few seconds for the Transcoder to finish. The converted file `AndrewConnolly_2014_640x480_Padded.mp4` will be in the `bin/x64/Debug/net6.0` directory.
+Run the application in Visual Studio. Wait a few seconds for the Transcoder to finish. The converted file `AndrewConnolly_2014_640x480_Padded.mp4` will be in the `bin/x64/Debug/net8.0` directory.
 

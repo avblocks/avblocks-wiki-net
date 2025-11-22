@@ -697,7 +697,7 @@ title="Print to PDF"
 <ul class="simple">
 <li><p>Name the project <code class="docutils literal notranslate"><span class="pre">simple-converter</span></code>.</p></li>
 <li><p>Select <code class="docutils literal notranslate"><span class="pre">Place</span> <span class="pre">solution</span> <span class="pre">and</span> <span class="pre">project</span> <span class="pre">in</span> <span class="pre">the</span> <span class="pre">same</span> <span class="pre">directory</span></code></p></li>
-<li><p>Choose <code class="docutils literal notranslate"><span class="pre">.NET</span> <span class="pre">6.0</span> <span class="pre">(Long-term</span> <span class="pre">support)</span></code> for Framework</p></li>
+<li><p>Choose <code class="docutils literal notranslate"><span class="pre">.NET</span> <span class="pre">8.0</span> <span class="pre">(Long-term</span> <span class="pre">support)</span></code> for Framework</p></li>
 </ul>
 </li>
 <li><p>In Visual Studio, select <code class="docutils literal notranslate"><span class="pre">Build</span> <span class="pre">|</span> <span class="pre">Configuration</span> <span class="pre">Manager</span></code> from the menu, then add the <code class="docutils literal notranslate"><span class="pre">x64</span></code> platform to the solution platforms.</p></li>
@@ -741,7 +741,7 @@ title="Print to PDF"
 </pre></div>
 </div>
 </li>
-<li><p><a class="reference external" href="https://github.com/avblocks/avblocks-net-core/releases/">Download</a> the Windows version of AVBlocks for .NET (net60). The file you need will have a name similar to <code class="docutils literal notranslate"><span class="pre">avblocks-net60-v3.1.0-demo.1-windows.zip</span></code> - the version number may differ.</p></li>
+<li><p><a class="reference external" href="https://github.com/avblocks/avblocks-net-core/releases/">Download</a> the Windows version of AVBlocks for .NET (net80). The file you need will have a name similar to <code class="docutils literal notranslate"><span class="pre">avblocks-net80-v3.2.0-demo.1-windows.zip</span></code> - the version number may differ.</p></li>
 <li><p>Unzip in a location of your choice, then copy the file <code class="docutils literal notranslate"><span class="pre">AVBlocks.clrcore.x64.dll</span></code> and <code class="docutils literal notranslate"><span class="pre">AVBlocks64.dll</span></code> to the project’s directory.</p></li>
 <li><p>Switch to the project in Visual Studio and add a reference to <code class="docutils literal notranslate"><span class="pre">AVBlocks.clrcore.x64.dll</span></code>.</p></li>
 <li><p>Add the <code class="docutils literal notranslate"><span class="pre">AVBlocks64.dll</span></code> to your project simply as a file, open file properties, and set the ‘Copy to Output Directory’ to ‘Copy if newer’, so it is copied to the output directory automatically. The <code class="docutils literal notranslate"><span class="pre">AVBlocks.clrcore.x64.dll</span></code> needs <code class="docutils literal notranslate"><span class="pre">AVBlocks64.dll</span></code> and will not work without it.</p></li>
@@ -751,15 +751,15 @@ title="Print to PDF"
 <section id="run-the-application">
 <h2>Run the application<a class="headerlink" href="#run-the-application" title="Permalink to this headline">#</a></h2>
 <ol class="simple">
-<li><p>Download the <code class="docutils literal notranslate"><span class="pre">Wildlife.wmv</span></code> HD movie from the <a class="reference external" href="https://archive.org/download/WildlifeHd/Wildlife.wmv">Internet Archive</a> and save it in <code class="docutils literal notranslate"><span class="pre">bin/x64/Debug/net6.0</span></code> under the project’s directory.</p></li>
-<li><p>Run the application in Visual Studio. Wait a few seconds for the Transcoder to finish. The converted file <code class="docutils literal notranslate"><span class="pre">Wildlife.mp4</span></code> will be in the <code class="docutils literal notranslate"><span class="pre">bin/x64/Debug/net6.0</span></code> directory.</p></li>
+<li><p>Download the <code class="docutils literal notranslate"><span class="pre">Wildlife.wmv</span></code> HD movie from the <a class="reference external" href="https://archive.org/download/WildlifeHd/Wildlife.wmv">Internet Archive</a> and save it in <code class="docutils literal notranslate"><span class="pre">bin/x64/Debug/net8.0</span></code> under the project’s directory.</p></li>
+<li><p>Run the application in Visual Studio. Wait a few seconds for the Transcoder to finish. The converted file <code class="docutils literal notranslate"><span class="pre">Wildlife.mp4</span></code> will be in the <code class="docutils literal notranslate"><span class="pre">bin/x64/Debug/net8.0</span></code> directory.</p></li>
 </ol>
 </section>
 <section id="troubleshooting">
 <h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
-<li><p>You may get a <code class="docutils literal notranslate"><span class="pre">'DllNotFoundException'</span> <span class="pre">exception:</span> <span class="pre">Unable</span> <span class="pre">to</span> <span class="pre">load</span> <span class="pre">DLL</span> <span class="pre">'AVBlocks64.dll':</span> <span class="pre">The</span> <span class="pre">specified</span> <span class="pre">module</span> <span class="pre">could</span> <span class="pre">not</span> <span class="pre">be</span> <span class="pre">found.</span></code> To fix that, copy the file <code class="docutils literal notranslate"><span class="pre">AVBlocks64.dll</span></code> to <code class="docutils literal notranslate"><span class="pre">bin/x64/Debug/net6.0</span></code> under the project’s directory.</p></li>
-<li><p>Transcoder.Open may fail if there is already a file <code class="docutils literal notranslate"><span class="pre">Wildlife.mp4</span></code> in the <code class="docutils literal notranslate"><span class="pre">bin/x64/Debug/net6.0</span></code> directory. Delete <code class="docutils literal notranslate"><span class="pre">Wildlife.mp4</span></code> to solve that.</p></li>
+<li><p>You may get a <code class="docutils literal notranslate"><span class="pre">'DllNotFoundException'</span> <span class="pre">exception:</span> <span class="pre">Unable</span> <span class="pre">to</span> <span class="pre">load</span> <span class="pre">DLL</span> <span class="pre">'AVBlocks64.dll':</span> <span class="pre">The</span> <span class="pre">specified</span> <span class="pre">module</span> <span class="pre">could</span> <span class="pre">not</span> <span class="pre">be</span> <span class="pre">found.</span></code> To fix that, copy the file <code class="docutils literal notranslate"><span class="pre">AVBlocks64.dll</span></code> to <code class="docutils literal notranslate"><span class="pre">bin/x64/Debug/net8.0</span></code> under the project’s directory.</p></li>
+<li><p>Transcoder.Open may fail if there is already a file <code class="docutils literal notranslate"><span class="pre">Wildlife.mp4</span></code> in the <code class="docutils literal notranslate"><span class="pre">bin/x64/Debug/net8.0</span></code> directory. Delete <code class="docutils literal notranslate"><span class="pre">Wildlife.mp4</span></code> to solve that.</p></li>
 </ul>
 </section>
 </section>
