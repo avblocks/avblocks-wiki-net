@@ -33,7 +33,7 @@ cd ~/avblocks/net/simple-converter
 # needed so that we can run the dotnet CLI
 export PATH="$HOME/.dotnet:$PATH"
 
-# We use 9.0 here but give the commands for other versions
+# We use 10.0 here but give the commands for other versions
 # see: https://learn.microsoft.com/en-us/dotnet/core/tools/global-json
 dotnet new globaljson --sdk-version 10.0.102 --roll-forward latestPatch
 # dotnet new globaljson --sdk-version 9.0.308 --roll-forward latestPatch
