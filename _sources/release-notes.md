@@ -11,6 +11,29 @@ toc:
 
 # Release Notes
 
+## Version 3.3.0
+
+### New
+
+- [AVB-668] - VP9 video encoding
+- [AVB-669] - VP9 video decoding
+- [AVB-1409] - Opus audio encoding and decoding
+- [AVB-1410] - WebM: Mux and demux Opus in WebM
+- [AVB-1416] - WebM: Mux and demux VP9 in WebM
+- [AVB-1412] - IVF: VP8 / VP9 video in Duck IVF container
+- [AVB-1391] - Improve stream reading. Read 2048 bytes at a time for better efficiency 
+
+### Samples
+
+- [AVB-1385] - Samples: .NET: Update samples to include all samples from the C++ SDK
+- [AVB-1420] - Samples: .NET: Switch to .NET 10.0
+
+### Fix
+
+- [AVB-1411] - Vorbis: MediaInfo reports bitsPerSample = 0 for Vorbis streams in WebM container
+
+---
+
 ## Version 3.2.0
 
 ### New
@@ -20,6 +43,8 @@ toc:
 - [AVB-1312] - Samples: .NET: Update for .NET 8.0 
 - [AVB-1331] - Wiki: .NET: Page for MP3 encoder
 
+---
+
 ## Version 3.1.0
 
 ### New
@@ -27,6 +52,7 @@ toc:
 - [AVB-1365] - Use TLS/HTTPS for license verification
 
 ---
+
 ## Version 3.0.1
 
 ### Fix

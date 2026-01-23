@@ -34,13 +34,14 @@ cd ~/avblocks/net/simple-converter
 export PATH="$HOME/.dotnet:$PATH"
 
 # We use 9.0 here but give the commands for other versions
-# see: https://learn.microsoft.com/en-us/dotnet/core/tools/global-json 
-dotnet new globaljson --sdk-version 9.0.308 --roll-forward latestPatch
+# see: https://learn.microsoft.com/en-us/dotnet/core/tools/global-json
+dotnet new globaljson --sdk-version 10.0.102 --roll-forward latestPatch
+# dotnet new globaljson --sdk-version 9.0.308 --roll-forward latestPatch
 # dotnet new globaljson --sdk-version 8.0.416 --roll-forward latestPatch
 # dotnet new globaljson --sdk-version 6.0.428 --roll-forward latestPatch
 
 # create new console application and project
-dotnet new console --framework net8.0 --use-program-main 
+dotnet new console --framework net10.0 --use-program-main
 
 # create new solution and add the project to it
 dotnet new sln
@@ -86,7 +87,7 @@ Add the following Visual Studio Code specific files to the `.vscode` subdir:
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "dotnet: build",
-            "program": "${workspaceFolder}/bin/Debug/net8.0/simple-converter.dll",
+            "program": "${workspaceFolder}/bin/Debug/net10.0/simple-converter.dll",
             "args": [],
             "cwd": "${workspaceFolder}",
             "console": "internalConsole",
@@ -147,9 +148,9 @@ Set a breakpoint on the first line of `static void Main(string[] args)` inside `
     }
     ```
 
-2. [Download](https://github.com/avblocks/avblocks-net-core/releases/) the Darwin version of AVBlocks for .NET (net80). The file you need will have a name similar to `avblocks-net80-v3.2.0-demo.1-linux.tar.gz` - the version number may differ. 
+2. [Download](https://github.com/avblocks/avblocks-net-core/releases/) the Darwin version of AVBlocks for .NET (net10.0). The file you need will have a name similar to `avblocks-net10.0-v3.3.0-demo.1-linux.tar.gz` - the version number may differ. 
 
-3. Unzip in a location of your choice, then copy the file `AVBlocks.clrcore.x64.dll` and `libAVBlocks64.so` to the project's directory. Also copy the file `libAVBlocks64.so` into `bin/Debug/net8.0` under the project's directory.
+3. Unzip in a location of your choice, then copy the file `AVBlocks.clrcore.x64.dll` and `libAVBlocks64.so` to the project's directory. Also copy the file `libAVBlocks64.so` into `bin/Debug/net10.0` under the project's directory.
 
 4. Add a reference to `AVBlocks.clrcore.x64.dll` 
 
@@ -160,7 +161,7 @@ Set a breakpoint on the first line of `static void Main(string[] args)` inside `
 
     <PropertyGroup>
         <OutputType>Exe</OutputType>
-        <TargetFramework>net8.0</TargetFramework>
+        <TargetFramework>net10.0</TargetFramework>
         <RootNamespace>SimpleConverter</RootNamespace>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
@@ -184,6 +185,6 @@ Set a breakpoint on the first line of `static void Main(string[] args)` inside `
 
 ## Troubleshooting
 
-* You may get a `'DllNotFoundException' exception: Unable to load DLL 'libAVBlocks64.so': The specified module could not be found.` To fix that, copy the file `libAVBlocks64.so` into `bin/Debug/net8.0` under the project's directory.
+* You may get a `'DllNotFoundException' exception: Unable to load DLL 'libAVBlocks64.so': The specified module could not be found.` To fix that, copy the file `libAVBlocks64.so` into `bin/Debug/net10.0` under the project's directory.
 
 * `Transcoder.Open` may fail if there is already a file `AAP.mp4` in the project directory. Delete `AAP.mp4` to solve that.         
