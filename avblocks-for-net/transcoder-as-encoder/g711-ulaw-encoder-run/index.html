@@ -3,17 +3,17 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta content="This article explains how you can use Transcoder to encode a WAV file to AAC (Advanced Audio Coding) ADTS (Audio Data Transport Stream) elementary stream." name="description" />
-<meta property="og:title" content="AAC ADTS Encoder (Run)" />
+<meta content="This article explains how you can use Transcoder to encode a WAV file to G.711 μ-law compressed audio format." name="description" />
+<meta property="og:title" content="G.711 μ-law Encoder (Run)" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://wiki-net.avblocks.com/avblocks-for-net/transcoder-as-encoder/aac-encoder-run/" />
+<meta property="og:url" content="https://wiki-net.avblocks.com/avblocks-for-net/transcoder-as-encoder/g711-ulaw-encoder-run/" />
 <meta property="og:site_name" content="AVBlocks for .NET" />
-<meta property="og:description" content="This article explains how you can use Transcoder.Run to encode a WAV file to AAC (Advanced Audio Coding) ADTS (Audio Data Transport Stream) elementary stream. The code snippets in this article are ..." />
+<meta property="og:description" content="This article explains how you can use Transcoder.Run to encode a WAV file to G.711 μ-law compressed audio format. The code snippets in this article are from the enc_g711_ulaw_file sample. Source Au..." />
 <meta name="twitter:card" content="summary">
-<link rel="search" title="Search" href="../../../search/" /><link rel="next" title="AAC ADTS Encoder (Pull)" href="../aac-encoder-pull/" /><link rel="prev" title="Transcoder as Encoder" href="../" />
-        <link rel="canonical" href="https://wiki-net.avblocks.com/avblocks-for-net/transcoder-as-encoder/aac-encoder-run/" />
+<link rel="search" title="Search" href="../../../search/" /><link rel="next" title="MP3 Encoder (Run)" href="../mp3-encoder-run/" /><link rel="prev" title="G.711 A-law Encoder (Run)" href="../g711-alaw-encoder-run/" />
+        <link rel="canonical" href="https://wiki-net.avblocks.com/avblocks-for-net/transcoder-as-encoder/g711-ulaw-encoder-run/" />
 
-    <link rel="shortcut icon" href="../../../_static/favicon.ico"/><!-- Generated with Sphinx 7.4.7 and Furo 2024.08.06 --><title>AAC ADTS Encoder (Run) - AVBlocks for .NET</title><link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/><!-- Generated with Sphinx 7.4.7 and Furo 2024.08.06 --><title>G.711 μ-law Encoder (Run) - AVBlocks for .NET</title><link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?v=354aac6f" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?v=302659d7" />
@@ -266,13 +266,13 @@
 <p class="caption" role="heading"><span class="caption-text">Encoding &amp; Decoding</span></p>
 <ul class="current">
 <li class="toctree-l1 current has-children"><a class="reference internal" href="../">Transcoder as Encoder</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of Transcoder as Encoder</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">AAC ADTS Encoder (Run)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aac-encoder-run/">AAC ADTS Encoder (Run)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../aac-encoder-pull/">AAC ADTS Encoder (Pull)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../aac-encoder/">AAC Encoder (Push)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../avc-h-264-encoder-run/">AVC / H.264 Annex B Encoder (Run)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../avc-h-264-encoder/">AVC / H.264 Annex B Encoder (Push)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../g711-alaw-encoder-run/">G.711 A-law Encoder (Run)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../g711-ulaw-encoder-run/">G.711 μ-law Encoder (Run)</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">G.711 μ-law Encoder (Run)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../mp3-encoder-run/">MP3 Encoder (Run)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../mp3-encoder/">MP3 Encoder (Push)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../opus-encoder-run/">Opus Encoder (Run)</a></li>
@@ -367,17 +367,17 @@
           </label>
         </div>
         <article role="main" id="furo-main-content">
-          <section id="aac-adts-encoder-run">
-<h1>AAC ADTS Encoder (Run)<a class="headerlink" href="#aac-adts-encoder-run" title="Link to this heading">¶</a></h1>
-<p>This article explains how you can use <a class="reference external" href="https://doc.avblocks.com/net/latest/class_primo_software_1_1_a_v_blocks_1_1_transcoder.html#a654a03e4b2af6fc42e1e911caeddd5a5">Transcoder.Run</a> to encode a WAV file to AAC (Advanced Audio Coding) ADTS (Audio Data Transport Stream) elementary stream.</p>
-<p>The code snippets in this article are from the <a class="reference external" href="https://github.com/avblocks/avblocks-net/tree/main/samples/enc_aac_adts_file">enc_aac_adts_file</a> sample.</p>
+          <section id="g-711-law-encoder-run">
+<h1>G.711 μ-law Encoder (Run)<a class="headerlink" href="#g-711-law-encoder-run" title="Link to this heading">¶</a></h1>
+<p>This article explains how you can use <a class="reference external" href="https://doc.avblocks.com/net/latest/class_primo_software_1_1_a_v_blocks_1_1_transcoder.html#a654a03e4b2af6fc42e1e911caeddd5a5">Transcoder.Run</a> to encode a WAV file to G.711 μ-law compressed audio format.</p>
+<p>The code snippets in this article are from the <a class="reference external" href="https://github.com/avblocks/avblocks-net/tree/main/samples/enc_g711_ulaw_file">enc_g711_ulaw_file</a> sample.</p>
 <section id="source-audio">
 <h2>Source Audio<a class="headerlink" href="#source-audio" title="Link to this heading">¶</a></h2>
-<p>For source we use the <code class="docutils literal notranslate"><span class="pre">equinox-48KHz.wav</span></code> file from the <a class="reference external" href="https://github.com/avblocks/avblocks-assets/releases">AVBlocks Assets</a> repository. After downloading and unzipping you will find <code class="docutils literal notranslate"><span class="pre">equinox-48KHz.wav</span></code> in the <code class="docutils literal notranslate"><span class="pre">aud</span></code> subdirectory.</p>
+<p>For source we use the <code class="docutils literal notranslate"><span class="pre">express-dictate_8000_s16_1ch_pcm.wav</span></code> file from the <a class="reference external" href="https://github.com/avblocks/avblocks-assets/releases">AVBlocks Assets</a> repository. After downloading and unzipping you will find <code class="docutils literal notranslate"><span class="pre">express-dictate_8000_s16_1ch_pcm.wav</span></code> in the <code class="docutils literal notranslate"><span class="pre">aud</span></code> subdirectory.</p>
 </section>
 <section id="code">
 <h2>Code<a class="headerlink" href="#code" title="Link to this heading">¶</a></h2>
-<p>This code takes a WAV file and encodes it to compressed AAC ADTS format.</p>
+<p>This code takes a WAV file and encodes it to compressed G.711 μ-law format.</p>
 <section id="initialize-avblocks">
 <h3>Initialize AVBlocks<a class="headerlink" href="#initialize-avblocks" title="Link to this heading">¶</a></h3>
 <p>The first step in any AVBlocks application is to initialize the library. This must be done before using any other AVBlocks functionality. The <code class="docutils literal notranslate"><span class="pre">Library.Initialize()</span></code> method sets up the internal state and loads necessary codecs. Always remember to call <code class="docutils literal notranslate"><span class="pre">Library.Shutdown()</span></code> at the end of your program to properly clean up resources and release any allocated memory.</p>
@@ -393,36 +393,34 @@
 <span class="w">    </span><span class="c1">// Set license information. Without this AVBlocks runs in Demo mode.</span>
 <span class="w">    </span><span class="c1">// Library.SetLicense(&quot;&lt;license-string&gt;&quot;);</span>
 
-<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Encode</span><span class="p">(</span><span class="n">opt</span><span class="p">);</span>
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">encodeResult</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Encode</span><span class="p">(</span><span class="n">opt</span><span class="p">);</span>
 
 <span class="w">    </span><span class="n">Library</span><span class="p">.</span><span class="n">Shutdown</span><span class="p">();</span>
 
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">ExitCodes</span><span class="p">.</span><span class="n">Success</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">ExitCodes</span><span class="p">.</span><span class="n">EncodingError</span><span class="p">;</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">encodeResult</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">ExitCodes</span><span class="p">.</span><span class="n">Success</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">ExitCodes</span><span class="p">.</span><span class="n">EncodingError</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 </section>
 <section id="configure-output-socket">
 <h3>Configure Output Socket<a class="headerlink" href="#configure-output-socket" title="Link to this heading">¶</a></h3>
-<p>The output socket defines where and how the encoded audio data will be written. In this case, we’re configuring it to output an AAC file with ADTS (Audio Data Transport Stream) format. The socket represents the output destination, while the pin represents the specific audio stream within that destination. The <code class="docutils literal notranslate"><span class="pre">AudioStreamInfo</span></code> object specifies the audio format parameters - you can customize the number of channels or sampling rate by uncommenting the relevant lines.</p>
+<p>The output socket defines where and how the encoded audio data will be written. In this case, we’re configuring it to output a G.711 μ-law WAV file. The socket represents the output destination, while the pin represents the specific audio stream within that destination. The <code class="docutils literal notranslate"><span class="pre">AudioStreamInfo</span></code> object specifies the audio format parameters - G.711 μ-law typically uses 8000 Hz sample rate and mono channel, which are set explicitly in this example.</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">static</span><span class="w"> </span><span class="n">MediaSocket</span><span class="w"> </span><span class="nf">CreateOutputSocket</span><span class="p">(</span><span class="n">Options</span><span class="w"> </span><span class="n">opt</span><span class="p">)</span>
 <span class="p">{</span>
 <span class="w">    </span><span class="n">MediaSocket</span><span class="w"> </span><span class="n">socket</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MediaSocket</span><span class="p">();</span>
 <span class="w">    </span><span class="n">socket</span><span class="p">.</span><span class="n">File</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">opt</span><span class="p">.</span><span class="n">OutputFile</span><span class="p">;</span>
-<span class="w">    </span><span class="n">socket</span><span class="p">.</span><span class="n">StreamType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">StreamType</span><span class="p">.</span><span class="n">Aac</span><span class="p">;</span>
-<span class="w">    </span><span class="n">socket</span><span class="p">.</span><span class="n">StreamSubType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">StreamSubType</span><span class="p">.</span><span class="n">AacAdts</span><span class="p">;</span>
+<span class="w">    </span><span class="n">socket</span><span class="p">.</span><span class="n">StreamType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">StreamType</span><span class="p">.</span><span class="n">Wave</span><span class="p">;</span>
 
 <span class="w">    </span><span class="n">MediaPin</span><span class="w"> </span><span class="n">pin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MediaPin</span><span class="p">();</span>
 <span class="w">    </span><span class="n">socket</span><span class="p">.</span><span class="n">Pins</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">pin</span><span class="p">);</span>
+
 <span class="w">    </span><span class="n">AudioStreamInfo</span><span class="w"> </span><span class="n">asi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">AudioStreamInfo</span><span class="p">();</span>
 <span class="w">    </span><span class="n">pin</span><span class="p">.</span><span class="n">StreamInfo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">asi</span><span class="p">;</span>
 
-<span class="w">    </span><span class="n">asi</span><span class="p">.</span><span class="n">StreamType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">StreamType</span><span class="p">.</span><span class="n">Aac</span><span class="p">;</span>
-<span class="w">    </span><span class="n">asi</span><span class="p">.</span><span class="n">StreamSubType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">StreamSubType</span><span class="p">.</span><span class="n">AacAdts</span><span class="p">;</span>
-
-<span class="w">    </span><span class="c1">// You can change the sampling rate and the number of the channels</span>
-<span class="w">    </span><span class="c1">//asi.Channels = 1;</span>
-<span class="w">    </span><span class="c1">//asi.SampleRate = 44100;</span>
+<span class="w">    </span><span class="n">asi</span><span class="p">.</span><span class="n">StreamType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">StreamType</span><span class="p">.</span><span class="n">MuLawPCM</span><span class="p">;</span>
+<span class="w">    </span><span class="c1">// G.711 μ-law typically uses 8000 Hz sample rate and mono channel</span>
+<span class="w">    </span><span class="n">asi</span><span class="p">.</span><span class="n">SampleRate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8000</span><span class="p">;</span>
+<span class="w">    </span><span class="n">asi</span><span class="p">.</span><span class="n">Channels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
 
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">socket</span><span class="p">;</span>
 <span class="p">}</span>
@@ -431,15 +429,23 @@
 </section>
 <section id="configure-transcoder-and-encode">
 <h3>Configure Transcoder and Encode<a class="headerlink" href="#configure-transcoder-and-encode" title="Link to this heading">¶</a></h3>
-<p>This is the main encoding function that ties everything together. First, we create an input socket that points to the WAV file we want to encode. Then we create the output socket using our helper method. The transcoder is the core component that performs the actual encoding - it takes the uncompressed LPCM data from the input and converts it to compressed AAC data for the output.</p>
+<p>This is the main encoding function that ties everything together. First, we create an input socket that points to the WAV file we want to encode. Then we create the output socket using our helper method. The transcoder is the core component that performs the actual encoding - it takes the uncompressed PCM data from the input and converts it to compressed G.711 μ-law data for the output.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">AllowDemoMode</span> <span class="pre">=</span> <span class="pre">true</span></code> setting allows the transcoder to work even without a valid license (useful for testing, but not recommended for production). We then add our input and output sockets to the transcoder, open it to prepare for processing, run the actual transcoding operation, and finally close it to clean up.</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">static</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="nf">Encode</span><span class="p">(</span><span class="n">Options</span><span class="w"> </span><span class="n">opt</span><span class="p">)</span>
 <span class="p">{</span>
+<span class="w">    </span><span class="c1">// transcoder will fail if output exists (by design)</span>
 <span class="w">    </span><span class="n">DeleteFile</span><span class="p">(</span><span class="n">opt</span><span class="p">.</span><span class="n">OutputFile</span><span class="p">);</span>
 
+<span class="w">    </span><span class="c1">// Create output directory if needed</span>
+<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">outputDir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="n">IO</span><span class="p">.</span><span class="n">Path</span><span class="p">.</span><span class="n">GetDirectoryName</span><span class="p">(</span><span class="n">opt</span><span class="p">.</span><span class="n">OutputFile</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="kt">string</span><span class="p">.</span><span class="n">IsNullOrEmpty</span><span class="p">(</span><span class="n">outputDir</span><span class="p">))</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="n">IO</span><span class="p">.</span><span class="n">Directory</span><span class="p">.</span><span class="n">CreateDirectory</span><span class="p">(</span><span class="n">outputDir</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// create input socket</span>
 <span class="w">    </span><span class="n">MediaSocket</span><span class="w"> </span><span class="n">inSocket</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MediaSocket</span><span class="p">();</span>
 <span class="w">    </span><span class="n">inSocket</span><span class="p">.</span><span class="n">File</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">opt</span><span class="p">.</span><span class="n">InputFile</span><span class="p">;</span>
 
+<span class="w">    </span><span class="c1">// create output socket</span>
 <span class="w">    </span><span class="n">MediaSocket</span><span class="w"> </span><span class="n">outSocket</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CreateOutputSocket</span><span class="p">(</span><span class="n">opt</span><span class="p">);</span>
 
 <span class="w">    </span><span class="c1">// create Transcoder</span>
@@ -449,18 +455,15 @@
 <span class="w">        </span><span class="n">transcoder</span><span class="p">.</span><span class="n">Inputs</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">inSocket</span><span class="p">);</span>
 <span class="w">        </span><span class="n">transcoder</span><span class="p">.</span><span class="n">Outputs</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">outSocket</span><span class="p">);</span>
 
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">transcoder</span><span class="p">.</span><span class="n">Open</span><span class="p">())</span>
-<span class="w">        </span><span class="p">{</span>
-<span class="w">            </span><span class="n">PrintError</span><span class="p">(</span><span class="s">&quot;Transcoder open&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">transcoder</span><span class="p">.</span><span class="n">Error</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">bool</span><span class="w"> </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">transcoder</span><span class="p">.</span><span class="n">Open</span><span class="p">();</span>
+<span class="w">        </span><span class="n">PrintError</span><span class="p">(</span><span class="s">&quot;Transcoder open&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">transcoder</span><span class="p">.</span><span class="n">Error</span><span class="p">);</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">res</span><span class="p">)</span>
 <span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="k">false</span><span class="p">;</span>
 
-<span class="w">        </span><span class="p">}</span>
-
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">transcoder</span><span class="p">.</span><span class="n">Run</span><span class="p">())</span>
-<span class="w">        </span><span class="p">{</span>
-<span class="w">            </span><span class="n">PrintError</span><span class="p">(</span><span class="s">&quot;Transcoder run&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">transcoder</span><span class="p">.</span><span class="n">Error</span><span class="p">);</span>
+<span class="w">        </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">transcoder</span><span class="p">.</span><span class="n">Run</span><span class="p">();</span>
+<span class="w">        </span><span class="n">PrintError</span><span class="p">(</span><span class="s">&quot;Transcoder run&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">transcoder</span><span class="p">.</span><span class="n">Error</span><span class="p">);</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">res</span><span class="p">)</span>
 <span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="k">false</span><span class="p">;</span>
-<span class="w">        </span><span class="p">}</span>
 
 <span class="w">        </span><span class="n">transcoder</span><span class="p">.</span><span class="n">Close</span><span class="p">();</span>
 <span class="w">    </span><span class="p">}</span>
@@ -472,7 +475,7 @@
 </section>
 <section id="complete-c-code">
 <h3>Complete C# Code<a class="headerlink" href="#complete-c-code" title="Link to this heading">¶</a></h3>
-<p>Here’s the complete working example that demonstrates AAC ADTS encoding using AVBlocks. This code combines all the previous snippets into a functional program that can be compiled and run. The <code class="docutils literal notranslate"><span class="pre">Main</span></code> method handles command-line argument parsing, initializes AVBlocks, performs the encoding operation, and properly shuts down the library before exiting.</p>
+<p>Here’s the complete working example that demonstrates G.711 μ-law encoding using AVBlocks. This code combines all the previous snippets into a functional program that can be compiled and run. The <code class="docutils literal notranslate"><span class="pre">Main</span></code> method handles command-line argument parsing, initializes AVBlocks, performs the encoding operation, and properly shuts down the library before exiting.</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span>
 <span class="k">using</span><span class="w"> </span><span class="nn">PrimoSoftware.AVBlocks</span><span class="p">;</span>
 
@@ -492,20 +495,28 @@
 <span class="w">            </span><span class="c1">// Set license information. Without this AVBlocks runs in Demo mode.</span>
 <span class="w">            </span><span class="c1">// Library.SetLicense(&quot;&lt;license-string&gt;&quot;);</span>
 
-<span class="w">            </span><span class="kt">bool</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Encode</span><span class="p">(</span><span class="n">opt</span><span class="p">);</span>
+<span class="w">            </span><span class="kt">bool</span><span class="w"> </span><span class="n">encodeResult</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Encode</span><span class="p">(</span><span class="n">opt</span><span class="p">);</span>
 
 <span class="w">            </span><span class="n">Library</span><span class="p">.</span><span class="n">Shutdown</span><span class="p">();</span>
 
-<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">ExitCodes</span><span class="p">.</span><span class="n">Success</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">ExitCodes</span><span class="p">.</span><span class="n">EncodingError</span><span class="p">;</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">encodeResult</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">ExitCodes</span><span class="p">.</span><span class="n">Success</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">ExitCodes</span><span class="p">.</span><span class="n">EncodingError</span><span class="p">;</span>
 <span class="w">        </span><span class="p">}</span>
 
 <span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="nf">Encode</span><span class="p">(</span><span class="n">Options</span><span class="w"> </span><span class="n">opt</span><span class="p">)</span>
 <span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="c1">// transcoder will fail if output exists (by design)</span>
 <span class="w">            </span><span class="n">DeleteFile</span><span class="p">(</span><span class="n">opt</span><span class="p">.</span><span class="n">OutputFile</span><span class="p">);</span>
 
+<span class="w">            </span><span class="c1">// Create output directory if needed</span>
+<span class="w">            </span><span class="kt">string</span><span class="w"> </span><span class="n">outputDir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="n">IO</span><span class="p">.</span><span class="n">Path</span><span class="p">.</span><span class="n">GetDirectoryName</span><span class="p">(</span><span class="n">opt</span><span class="p">.</span><span class="n">OutputFile</span><span class="p">);</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="kt">string</span><span class="p">.</span><span class="n">IsNullOrEmpty</span><span class="p">(</span><span class="n">outputDir</span><span class="p">))</span>
+<span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="n">IO</span><span class="p">.</span><span class="n">Directory</span><span class="p">.</span><span class="n">CreateDirectory</span><span class="p">(</span><span class="n">outputDir</span><span class="p">);</span>
+
+<span class="w">            </span><span class="c1">// create input socket</span>
 <span class="w">            </span><span class="n">MediaSocket</span><span class="w"> </span><span class="n">inSocket</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MediaSocket</span><span class="p">();</span>
 <span class="w">            </span><span class="n">inSocket</span><span class="p">.</span><span class="n">File</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">opt</span><span class="p">.</span><span class="n">InputFile</span><span class="p">;</span>
 
+<span class="w">            </span><span class="c1">// create output socket</span>
 <span class="w">            </span><span class="n">MediaSocket</span><span class="w"> </span><span class="n">outSocket</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CreateOutputSocket</span><span class="p">(</span><span class="n">opt</span><span class="p">);</span>
 
 <span class="w">            </span><span class="c1">// create Transcoder</span>
@@ -515,18 +526,15 @@
 <span class="w">                </span><span class="n">transcoder</span><span class="p">.</span><span class="n">Inputs</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">inSocket</span><span class="p">);</span>
 <span class="w">                </span><span class="n">transcoder</span><span class="p">.</span><span class="n">Outputs</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">outSocket</span><span class="p">);</span>
 
-<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">transcoder</span><span class="p">.</span><span class="n">Open</span><span class="p">())</span>
-<span class="w">                </span><span class="p">{</span>
-<span class="w">                    </span><span class="n">PrintError</span><span class="p">(</span><span class="s">&quot;Transcoder open&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">transcoder</span><span class="p">.</span><span class="n">Error</span><span class="p">);</span>
+<span class="w">                </span><span class="kt">bool</span><span class="w"> </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">transcoder</span><span class="p">.</span><span class="n">Open</span><span class="p">();</span>
+<span class="w">                </span><span class="n">PrintError</span><span class="p">(</span><span class="s">&quot;Transcoder open&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">transcoder</span><span class="p">.</span><span class="n">Error</span><span class="p">);</span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">res</span><span class="p">)</span>
 <span class="w">                    </span><span class="k">return</span><span class="w"> </span><span class="k">false</span><span class="p">;</span>
 
-<span class="w">                </span><span class="p">}</span>
-
-<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">transcoder</span><span class="p">.</span><span class="n">Run</span><span class="p">())</span>
-<span class="w">                </span><span class="p">{</span>
-<span class="w">                    </span><span class="n">PrintError</span><span class="p">(</span><span class="s">&quot;Transcoder run&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">transcoder</span><span class="p">.</span><span class="n">Error</span><span class="p">);</span>
+<span class="w">                </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">transcoder</span><span class="p">.</span><span class="n">Run</span><span class="p">();</span>
+<span class="w">                </span><span class="n">PrintError</span><span class="p">(</span><span class="s">&quot;Transcoder run&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">transcoder</span><span class="p">.</span><span class="n">Error</span><span class="p">);</span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">res</span><span class="p">)</span>
 <span class="w">                    </span><span class="k">return</span><span class="w"> </span><span class="k">false</span><span class="p">;</span>
-<span class="w">                </span><span class="p">}</span>
 
 <span class="w">                </span><span class="n">transcoder</span><span class="p">.</span><span class="n">Close</span><span class="p">();</span>
 <span class="w">            </span><span class="p">}</span>
@@ -548,20 +556,18 @@
 <span class="w">        </span><span class="p">{</span>
 <span class="w">            </span><span class="n">MediaSocket</span><span class="w"> </span><span class="n">socket</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MediaSocket</span><span class="p">();</span>
 <span class="w">            </span><span class="n">socket</span><span class="p">.</span><span class="n">File</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">opt</span><span class="p">.</span><span class="n">OutputFile</span><span class="p">;</span>
-<span class="w">            </span><span class="n">socket</span><span class="p">.</span><span class="n">StreamType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">StreamType</span><span class="p">.</span><span class="n">Aac</span><span class="p">;</span>
-<span class="w">            </span><span class="n">socket</span><span class="p">.</span><span class="n">StreamSubType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">StreamSubType</span><span class="p">.</span><span class="n">AacAdts</span><span class="p">;</span>
+<span class="w">            </span><span class="n">socket</span><span class="p">.</span><span class="n">StreamType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">StreamType</span><span class="p">.</span><span class="n">Wave</span><span class="p">;</span>
 
 <span class="w">            </span><span class="n">MediaPin</span><span class="w"> </span><span class="n">pin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MediaPin</span><span class="p">();</span>
 <span class="w">            </span><span class="n">socket</span><span class="p">.</span><span class="n">Pins</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">pin</span><span class="p">);</span>
+
 <span class="w">            </span><span class="n">AudioStreamInfo</span><span class="w"> </span><span class="n">asi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">AudioStreamInfo</span><span class="p">();</span>
 <span class="w">            </span><span class="n">pin</span><span class="p">.</span><span class="n">StreamInfo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">asi</span><span class="p">;</span>
 
-<span class="w">            </span><span class="n">asi</span><span class="p">.</span><span class="n">StreamType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">StreamType</span><span class="p">.</span><span class="n">Aac</span><span class="p">;</span>
-<span class="w">            </span><span class="n">asi</span><span class="p">.</span><span class="n">StreamSubType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">StreamSubType</span><span class="p">.</span><span class="n">AacAdts</span><span class="p">;</span>
-
-<span class="w">            </span><span class="c1">// You can change the sampling rate and the number of the channels</span>
-<span class="w">            </span><span class="c1">//asi.Channels = 1;</span>
-<span class="w">            </span><span class="c1">//asi.SampleRate = 44100;</span>
+<span class="w">            </span><span class="n">asi</span><span class="p">.</span><span class="n">StreamType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">StreamType</span><span class="p">.</span><span class="n">MuLawPCM</span><span class="p">;</span>
+<span class="w">            </span><span class="c1">// G.711 μ-law typically uses 8000 Hz sample rate and mono channel</span>
+<span class="w">            </span><span class="n">asi</span><span class="p">.</span><span class="n">SampleRate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8000</span><span class="p">;</span>
+<span class="w">            </span><span class="n">asi</span><span class="p">.</span><span class="n">Channels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
 
 <span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">socket</span><span class="p">;</span>
 <span class="w">        </span><span class="p">}</span>
@@ -598,44 +604,44 @@
 </section>
 <section id="how-to-run">
 <h2>How to Run<a class="headerlink" href="#how-to-run" title="Link to this heading">¶</a></h2>
-<p>See the build instructions for <a class="reference external" href="https://github.com/avblocks/avblocks-net/blob/main/docs/build-windows.md">Windows</a>, <a class="reference external" href="https://github.com/avblocks/avblocks-net/blob/main/docs/build-mac.md">macOS</a>, and <a class="reference external" href="https://github.com/avblocks/avblocks-net/blob/main/docs/build-linux.md">Linux</a>, and the <a class="reference external" href="https://github.com/avblocks/avblocks-net/tree/main/samples/enc_aac_adts_file">enc_aac_adts_file</a> sample for details.</p>
+<p>See the build instructions for <a class="reference external" href="https://github.com/avblocks/avblocks-net/blob/main/docs/build-windows.md">Windows</a>, <a class="reference external" href="https://github.com/avblocks/avblocks-net/blob/main/docs/build-mac.md">macOS</a>, and <a class="reference external" href="https://github.com/avblocks/avblocks-net/blob/main/docs/build-linux.md">Linux</a>, and the <a class="reference external" href="https://github.com/avblocks/avblocks-net/tree/main/samples/enc_g711_ulaw_file">enc_g711_ulaw_file</a> sample for details.</p>
 <section id="command-line">
 <h3>Command Line<a class="headerlink" href="#command-line" title="Link to this heading">¶</a></h3>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>enc_aac_adts_file<span class="w"> </span>--input<span class="w"> </span>&lt;wav<span class="w"> </span>file&gt;<span class="w"> </span>--output<span class="w"> </span>&lt;aac<span class="w"> </span>file&gt;
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>enc_g711_ulaw_file<span class="w"> </span>--input<span class="w"> </span>&lt;wav<span class="w"> </span>file&gt;<span class="w"> </span>--output<span class="w"> </span>&lt;g711<span class="w"> </span>ulaw<span class="w"> </span>wav<span class="w"> </span>file&gt;
 </pre></div>
 </div>
 </section>
 <section id="examples">
 <h3>Examples<a class="headerlink" href="#examples" title="Link to this heading">¶</a></h3>
 <p>List options:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>./bin/net10.0/enc_aac_adts_file<span class="w"> </span>--help
-enc_aac_adts_file<span class="w"> </span><span class="m">1</span>.0.0.0
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>./bin/net10.0/enc_g711_ulaw_file<span class="w"> </span>--help
+enc_g711_ulaw_file<span class="w"> </span><span class="m">1</span>.0.0.0
 Copyright<span class="w"> </span><span class="o">(</span>C<span class="o">)</span><span class="w"> </span><span class="m">2023</span><span class="w"> </span>Primo<span class="w"> </span>Software
 
 <span class="w">  </span>-i,<span class="w"> </span>--input<span class="w">     </span>input<span class="w"> </span>WAV<span class="w"> </span>file
 
-<span class="w">  </span>-o,<span class="w"> </span>--output<span class="w">    </span>output<span class="w"> </span>AAC<span class="w"> </span>file
+<span class="w">  </span>-o,<span class="w"> </span>--output<span class="w">    </span>output<span class="w"> </span>G.711<span class="w"> </span>μ-law<span class="w"> </span>WAV<span class="w"> </span>file
 
 <span class="w">  </span>--help<span class="w">          </span>Display<span class="w"> </span>this<span class="w"> </span><span class="nb">help</span><span class="w"> </span>screen.
 
 <span class="w">  </span>--version<span class="w">       </span>Display<span class="w"> </span>version<span class="w"> </span>information.
 </pre></div>
 </div>
-<p>The following example encodes input file <code class="docutils literal notranslate"><span class="pre">./assets/aud/equinox-48KHz.wav</span></code> into output file <code class="docutils literal notranslate"><span class="pre">equinox-48KHz.adts.aac</span></code>:</p>
+<p>The following example encodes input file <code class="docutils literal notranslate"><span class="pre">./assets/aud/express-dictate_8000_s16_1ch_pcm.wav</span></code> into output file <code class="docutils literal notranslate"><span class="pre">express-dictate_g711_ulaw.wav</span></code>:</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="c1"># Linux and macOS</span>
-mkdir<span class="w"> </span>-p<span class="w"> </span>./output/enc_aac_adts_file
+mkdir<span class="w"> </span>-p<span class="w"> </span>./output/enc_g711_ulaw_file
 
-./bin/net10.0/enc_aac_adts_file<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--input<span class="w"> </span>./assets/aud/equinox-48KHz.wav<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--output<span class="w"> </span>./output/enc_aac_adts_file/equinox-48KHz.adts.aac
+./bin/net10.0/enc_g711_ulaw_file<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--input<span class="w"> </span>./assets/aud/express-dictate_8000_s16_1ch_pcm.wav<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--output<span class="w"> </span>./output/enc_g711_ulaw_file/express-dictate_g711_ulaw.wav
 </pre></div>
 </div>
 <div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="c"># Windows</span>
-<span class="n">mkdir</span> <span class="n">-Force</span> <span class="n">-Path</span> <span class="p">./</span><span class="n">output</span><span class="p">/</span><span class="n">enc_aac_adts_file</span>
+<span class="n">mkdir</span> <span class="n">-Force</span> <span class="n">-Path</span> <span class="p">./</span><span class="n">output</span><span class="p">/</span><span class="n">enc_g711_ulaw_file</span>
 
-<span class="p">./</span><span class="n">bin</span><span class="p">/</span><span class="n">net10</span><span class="p">.</span><span class="n">0</span><span class="p">/</span><span class="n">enc_aac_adts_file</span> <span class="p">`</span>
-    <span class="p">-</span><span class="n">-input</span> <span class="p">./</span><span class="n">assets</span><span class="p">/</span><span class="n">aud</span><span class="p">/</span><span class="n">equinox</span><span class="p">-</span><span class="n">48KHz</span><span class="p">.</span><span class="n">wav</span> <span class="p">`</span>
-    <span class="p">-</span><span class="n">-output</span> <span class="p">./</span><span class="n">output</span><span class="p">/</span><span class="n">enc_aac_adts_file</span><span class="p">/</span><span class="n">equinox</span><span class="p">-</span><span class="n">48KHz</span><span class="p">.</span><span class="n">adts</span><span class="p">.</span><span class="n">aac</span>
+<span class="p">./</span><span class="n">bin</span><span class="p">/</span><span class="n">net10</span><span class="p">.</span><span class="n">0</span><span class="p">/</span><span class="n">enc_g711_ulaw_file</span> <span class="p">`</span>
+    <span class="p">-</span><span class="n">-input</span> <span class="p">./</span><span class="n">assets</span><span class="p">/</span><span class="n">aud</span><span class="p">/</span><span class="n">express-dictate_8000_s16_1ch_pcm</span><span class="p">.</span><span class="n">wav</span> <span class="p">`</span>
+    <span class="p">-</span><span class="n">-output</span> <span class="p">./</span><span class="n">output</span><span class="p">/</span><span class="n">enc_g711_ulaw_file</span><span class="p">/</span><span class="n">express-dictate_g711_ulaw</span><span class="p">.</span><span class="n">wav</span>
 </pre></div>
 </div>
 </section>
@@ -647,23 +653,23 @@ mkdir<span class="w"> </span>-p<span class="w"> </span>./output/enc_aac_adts_fil
       <footer>
         
 <div class="related-pages">
-  <a class="next-page" href="../aac-encoder-pull/">
+  <a class="next-page" href="../mp3-encoder-run/">
       <div class="page-info">
         <div class="context">
           <span>Next</span>
         </div>
-        <div class="title">AAC ADTS Encoder (Pull)</div>
+        <div class="title">MP3 Encoder (Run)</div>
       </div>
       <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
     </a>
-  <a class="prev-page" href="../">
+  <a class="prev-page" href="../g711-alaw-encoder-run/">
       <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
       <div class="page-info">
         <div class="context">
           <span>Previous</span>
         </div>
         
-        <div class="title">Transcoder as Encoder</div>
+        <div class="title">G.711 A-law Encoder (Run)</div>
         
       </div>
     </a>
@@ -702,7 +708,7 @@ mkdir<span class="w"> </span>-p<span class="w"> </span>./output/enc_aac_adts_fil
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">AAC ADTS Encoder (Run)</a><ul>
+<li><a class="reference internal" href="#">G.711 μ-law Encoder (Run)</a><ul>
 <li><a class="reference internal" href="#source-audio">Source Audio</a></li>
 <li><a class="reference internal" href="#code">Code</a><ul>
 <li><a class="reference internal" href="#initialize-avblocks">Initialize AVBlocks</a></li>

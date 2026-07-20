@@ -8,7 +8,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://wiki-net.avblocks.com/avblocks-for-net/transcoder-as-encoder/" />
 <meta property="og:site_name" content="AVBlocks for .NET" />
-<meta property="og:description" content="How to use Transcoder for encoding audio and video elementary streams. AAC: AAC ADTS Encoder (Run), AAC ADTS Encoder (Push). AVC / H.264: AVC / H.264 Encoder (Push)." />
+<meta property="og:description" content="How to use Transcoder for encoding audio and video elementary streams. AAC: AAC ADTS Encoder (Run), AAC ADTS Encoder (Pull), AAC ADTS Encoder (Push). AVC / H.264: AVC / H.264 Annex B Encoder (Run),..." />
 <meta name="twitter:card" content="summary">
 <link rel="search" title="Search" href="../../search/" /><link rel="next" title="AAC ADTS Encoder (Run)" href="aac-encoder-run/" /><link rel="prev" title="Handling Errors" href="../handling-errors/" />
         <link rel="canonical" href="https://wiki-net.avblocks.com/avblocks-for-net/transcoder-as-encoder/" />
@@ -267,8 +267,15 @@
 <ul class="current">
 <li class="toctree-l1 current has-children current-page"><a class="current reference internal" href="#">Transcoder as Encoder</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of Transcoder as Encoder</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="aac-encoder-run/">AAC ADTS Encoder (Run)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="aac-encoder/">AAC Encoder</a></li>
-<li class="toctree-l2"><a class="reference internal" href="avc-h-264-encoder/">AVC / H.264 Encoder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aac-encoder-pull/">AAC ADTS Encoder (Pull)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aac-encoder/">AAC Encoder (Push)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="avc-h-264-encoder-run/">AVC / H.264 Annex B Encoder (Run)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="avc-h-264-encoder/">AVC / H.264 Annex B Encoder (Push)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="g711-alaw-encoder-run/">G.711 A-law Encoder (Run)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="g711-ulaw-encoder-run/">G.711 μ-law Encoder (Run)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mp3-encoder-run/">MP3 Encoder (Run)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mp3-encoder/">MP3 Encoder (Push)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="opus-encoder-run/">Opus Encoder (Run)</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../transcoder-as-decoder/">Transcoder as Decoder</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of Transcoder as Decoder</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -367,13 +374,35 @@
 <h2>AAC<a class="headerlink" href="#aac" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="aac-encoder-run/"><span class="doc std std-doc">AAC ADTS Encoder (Run)</span></a></p></li>
+<li><p><a class="reference internal" href="aac-encoder-pull/"><span class="doc std std-doc">AAC ADTS Encoder (Pull)</span></a></p></li>
 <li><p><a class="reference internal" href="aac-encoder/"><span class="doc std std-doc">AAC ADTS Encoder (Push)</span></a></p></li>
 </ul>
 </section>
 <section id="avc-h-264">
 <h2>AVC / H.264<a class="headerlink" href="#avc-h-264" title="Link to this heading">¶</a></h2>
 <ul class="simple">
-<li><p><a class="reference internal" href="avc-h-264-encoder/"><span class="doc std std-doc">AVC / H.264 Encoder (Push)</span></a></p></li>
+<li><p><a class="reference internal" href="avc-h-264-encoder-run/"><span class="doc std std-doc">AVC / H.264 Annex B Encoder (Run)</span></a></p></li>
+<li><p><a class="reference internal" href="avc-h-264-encoder/"><span class="doc std std-doc">AVC / H.264 Annex B Encoder (Push)</span></a></p></li>
+</ul>
+</section>
+<section id="g-711">
+<h2>G.711<a class="headerlink" href="#g-711" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="g711-alaw-encoder-run/"><span class="doc std std-doc">G.711 A-law Encoder (Run)</span></a></p></li>
+<li><p><a class="reference internal" href="g711-ulaw-encoder-run/"><span class="doc std std-doc">G.711 μ-law Encoder (Run)</span></a></p></li>
+</ul>
+</section>
+<section id="mp3">
+<h2>MP3<a class="headerlink" href="#mp3" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="mp3-encoder-run/"><span class="doc std std-doc">MP3 Encoder (Run)</span></a></p></li>
+<li><p><a class="reference internal" href="mp3-encoder/"><span class="doc std std-doc">MP3 Encoder (Push)</span></a></p></li>
+</ul>
+</section>
+<section id="opus">
+<h2>Opus<a class="headerlink" href="#opus" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="opus-encoder-run/"><span class="doc std std-doc">Opus Encoder (Run)</span></a></p></li>
 </ul>
 <div class="toctree-wrapper compound">
 </div>
@@ -443,6 +472,9 @@
 <li><a class="reference internal" href="#">Transcoder as Encoder</a><ul>
 <li><a class="reference internal" href="#aac">AAC</a></li>
 <li><a class="reference internal" href="#avc-h-264">AVC / H.264</a></li>
+<li><a class="reference internal" href="#g-711">G.711</a></li>
+<li><a class="reference internal" href="#mp3">MP3</a></li>
+<li><a class="reference internal" href="#opus">Opus</a></li>
 </ul>
 </li>
 </ul>

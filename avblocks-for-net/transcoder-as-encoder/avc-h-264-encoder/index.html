@@ -4,16 +4,16 @@
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta content="This article explains how you can use Transcoder.Push to encode an AVC / H.264 elementary stream from raw video frames." name="description" />
-<meta property="og:title" content="AVC / H.264 Encoder" />
+<meta property="og:title" content="AVC / H.264 Annex B Encoder (Push)" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://wiki-net.avblocks.com/avblocks-for-net/transcoder-as-encoder/avc-h-264-encoder/" />
 <meta property="og:site_name" content="AVBlocks for .NET" />
 <meta property="og:description" content="How to use Transcoder.Push to encode an AVC / H.264 elementary stream from raw YUV frames. Video Input: As video input we use the foreman_qcif.yuv file from the AVBlocks Assets archive. After downl..." />
 <meta name="twitter:card" content="summary">
-<link rel="search" title="Search" href="../../../search/" /><link rel="next" title="Transcoder as Decoder" href="../../transcoder-as-decoder/" /><link rel="prev" title="AAC Encoder" href="../aac-encoder/" />
+<link rel="search" title="Search" href="../../../search/" /><link rel="next" title="G.711 A-law Encoder (Run)" href="../g711-alaw-encoder-run/" /><link rel="prev" title="AVC / H.264 Annex B Encoder (Run)" href="../avc-h-264-encoder-run/" />
         <link rel="canonical" href="https://wiki-net.avblocks.com/avblocks-for-net/transcoder-as-encoder/avc-h-264-encoder/" />
 
-    <link rel="shortcut icon" href="../../../_static/favicon.ico"/><!-- Generated with Sphinx 7.4.7 and Furo 2024.08.06 --><title>AVC / H.264 Encoder - AVBlocks for .NET</title><link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/><!-- Generated with Sphinx 7.4.7 and Furo 2024.08.06 --><title>AVC / H.264 Annex B Encoder (Push) - AVBlocks for .NET</title><link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?v=354aac6f" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?v=302659d7" />
@@ -267,8 +267,15 @@
 <ul class="current">
 <li class="toctree-l1 current has-children"><a class="reference internal" href="../">Transcoder as Encoder</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of Transcoder as Encoder</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../aac-encoder-run/">AAC ADTS Encoder (Run)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aac-encoder/">AAC Encoder</a></li>
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">AVC / H.264 Encoder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aac-encoder-pull/">AAC ADTS Encoder (Pull)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aac-encoder/">AAC Encoder (Push)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../avc-h-264-encoder-run/">AVC / H.264 Annex B Encoder (Run)</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">AVC / H.264 Annex B Encoder (Push)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../g711-alaw-encoder-run/">G.711 A-law Encoder (Run)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../g711-ulaw-encoder-run/">G.711 μ-law Encoder (Run)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mp3-encoder-run/">MP3 Encoder (Run)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mp3-encoder/">MP3 Encoder (Push)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../opus-encoder-run/">Opus Encoder (Run)</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../transcoder-as-decoder/">Transcoder as Decoder</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of Transcoder as Decoder</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -360,8 +367,8 @@
           </label>
         </div>
         <article role="main" id="furo-main-content">
-          <section id="avc-h-264-encoder">
-<h1>AVC / H.264 Encoder<a class="headerlink" href="#avc-h-264-encoder" title="Link to this heading">¶</a></h1>
+          <section id="avc-h-264-annex-b-encoder-push">
+<h1>AVC / H.264 Annex B Encoder (Push)<a class="headerlink" href="#avc-h-264-annex-b-encoder-push" title="Link to this heading">¶</a></h1>
 <p>How to use <a class="reference external" href="https://doc.avblocks.com/net/latest/class_primo_software_1_1_a_v_blocks_1_1_transcoder.html#a60429623c9613c8e6f0c0f3cf6ec598c">Transcoder.Push</a> to encode an AVC / H.264 elementary stream from raw YUV frames.</p>
 <section id="video-input">
 <h2>Video Input<a class="headerlink" href="#video-input" title="Link to this heading">¶</a></h2>
@@ -750,23 +757,23 @@
       <footer>
         
 <div class="related-pages">
-  <a class="next-page" href="../../transcoder-as-decoder/">
+  <a class="next-page" href="../g711-alaw-encoder-run/">
       <div class="page-info">
         <div class="context">
           <span>Next</span>
         </div>
-        <div class="title">Transcoder as Decoder</div>
+        <div class="title">G.711 A-law Encoder (Run)</div>
       </div>
       <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
     </a>
-  <a class="prev-page" href="../aac-encoder/">
+  <a class="prev-page" href="../avc-h-264-encoder-run/">
       <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
       <div class="page-info">
         <div class="context">
           <span>Previous</span>
         </div>
         
-        <div class="title">AAC Encoder</div>
+        <div class="title">AVC / H.264 Annex B Encoder (Run)</div>
         
       </div>
     </a>
@@ -805,7 +812,7 @@
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">AVC / H.264 Encoder</a><ul>
+<li><a class="reference internal" href="#">AVC / H.264 Annex B Encoder (Push)</a><ul>
 <li><a class="reference internal" href="#video-input">Video Input</a></li>
 <li><a class="reference internal" href="#code">Code</a><ul>
 <li><a class="reference internal" href="#initialize-avblocks">Initialize AVBlocks</a></li>
