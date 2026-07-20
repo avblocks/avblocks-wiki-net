@@ -4,16 +4,16 @@
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta content="This article explains how you can use Transcoder to decode an AVC / H.264 elementary stream." name="description" />
-<meta property="og:title" content="AVC / H.264 Decoder" />
+<meta property="og:title" content="AVC / H.264 Annex B Decoder (Pull)" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://wiki-net.avblocks.com/avblocks-for-net/transcoder-as-decoder/avc-h-264-decoder/" />
 <meta property="og:site_name" content="AVBlocks for .NET" />
 <meta property="og:description" content="How to use Transcoder.Pull to decode an AVC / H.264 elementary stream Video Input: As video input we use the foreman_qcif.h264 file from the AVBlocks Assets archive. After downloading and unzipping..." />
 <meta name="twitter:card" content="summary">
-<link rel="search" title="Search" href="../../../search/" /><link rel="next" title="AVC / H.264 Annex B Parser" href="../avc-h-264-annex-b-parser/" /><link rel="prev" title="AAC Decoder" href="../aac-decoder/" />
+<link rel="search" title="Search" href="../../../search/" /><link rel="next" title="AVC / H.264 Annex B Parser" href="../avc-h-264-annex-b-parser/" /><link rel="prev" title="AVC / H.264 Annex B Decoder (Run)" href="../avc-h-264-decoder-run/" />
         <link rel="canonical" href="https://wiki-net.avblocks.com/avblocks-for-net/transcoder-as-decoder/avc-h-264-decoder/" />
 
-    <link rel="shortcut icon" href="../../../_static/favicon.ico"/><!-- Generated with Sphinx 7.4.7 and Furo 2024.08.06 --><title>AVC / H.264 Decoder - AVBlocks for .NET</title><link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/><!-- Generated with Sphinx 7.4.7 and Furo 2024.08.06 --><title>AVC / H.264 Annex B Decoder (Pull) - AVBlocks for .NET</title><link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?v=354aac6f" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?v=302659d7" />
@@ -271,9 +271,15 @@
 </ul>
 </li>
 <li class="toctree-l1 current has-children"><a class="reference internal" href="../">Transcoder as Decoder</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of Transcoder as Decoder</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../aac-decoder/">AAC Decoder</a></li>
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">AVC / H.264 Decoder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aac-decoder-run/">AAC ADTS Decoder (Run)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aac-decoder/">AAC ADTS Decoder (Pull)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../avc-h-264-decoder-run/">AVC / H.264 Annex B Decoder (Run)</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">AVC / H.264 Annex B Decoder (Pull)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../avc-h-264-annex-b-parser/">AVC / H.264 Annex B Parser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../g711-alaw-decoder-run/">G.711 A-law Decoder (Run)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../g711-ulaw-decoder-run/">G.711 μ-law Decoder (Run)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mp3-decoder-run/">MP3 Decoder (Run)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../opus-decoder-run/">Opus Decoder (Run)</a></li>
 </ul>
 </li>
 </ul>
@@ -353,8 +359,8 @@
           </label>
         </div>
         <article role="main" id="furo-main-content">
-          <section id="avc-h-264-decoder">
-<h1>AVC / H.264 Decoder<a class="headerlink" href="#avc-h-264-decoder" title="Link to this heading">¶</a></h1>
+          <section id="avc-h-264-annex-b-decoder-pull">
+<h1>AVC / H.264 Annex B Decoder (Pull)<a class="headerlink" href="#avc-h-264-annex-b-decoder-pull" title="Link to this heading">¶</a></h1>
 <p>How to use <a class="reference external" href="https://doc.avblocks.com/net/latest/class_primo_software_1_1_a_v_blocks_1_1_transcoder.html#adcea55e196dc32689f98e91fa154a0eb">Transcoder.Pull</a> to decode an AVC / H.264 elementary stream</p>
 <section id="video-input">
 <h2>Video Input<a class="headerlink" href="#video-input" title="Link to this heading">¶</a></h2>
@@ -538,14 +544,14 @@
       </div>
       <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
     </a>
-  <a class="prev-page" href="../aac-decoder/">
+  <a class="prev-page" href="../avc-h-264-decoder-run/">
       <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
       <div class="page-info">
         <div class="context">
           <span>Previous</span>
         </div>
         
-        <div class="title">AAC Decoder</div>
+        <div class="title">AVC / H.264 Annex B Decoder (Run)</div>
         
       </div>
     </a>
@@ -584,7 +590,7 @@
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">AVC / H.264 Decoder</a><ul>
+<li><a class="reference internal" href="#">AVC / H.264 Annex B Decoder (Pull)</a><ul>
 <li><a class="reference internal" href="#video-input">Video Input</a></li>
 <li><a class="reference internal" href="#code">Code</a><ul>
 <li><a class="reference internal" href="#initialize-avblocks">Initialize AVBlocks</a></li>
