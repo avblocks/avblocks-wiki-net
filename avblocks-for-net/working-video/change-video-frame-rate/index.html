@@ -8,12 +8,12 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://wiki-net.avblocks.com/avblocks-for-net/working-video/change-video-frame-rate/" />
 <meta property="og:site_name" content="AVBlocks for .NET" />
-<meta property="og:description" content="How to change the frame rate of a video from 24 fps to 30 fps. Source Video: For a source video we use the MP4 file from the TED talk video What’s the next window into our universe? by Andrew Conno..." />
+<meta property="og:description" content="How to change the frame rate of a video from 24 fps to 30 fps. The code snippets in this article are from the simple_video_framerate.NET sample. Source Video: For a source video we use the MP4 file..." />
 <meta property="og:image" content="https://wiki-net.avblocks.com/_static/og-image.png" />
 <meta property="og:image:alt" content="AVBlocks for .NET" />
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://wiki-net.avblocks.com/_static/og-image.png">
-<link rel="search" title="Search" href="../../../search/" /><link rel="next" title="Convert Raw Video To Compressed Video" href="../convert-raw-video-compressed-video/" /><link rel="prev" title="Pad Video" href="../pad-video/" />
+<link rel="search" title="Search" href="../../../search/" /><link rel="next" title="Using Video Presets" href="../convert-raw-video-compressed-video/" /><link rel="prev" title="Pad Video" href="../pad-video/" />
         <link rel="canonical" href="https://wiki-net.avblocks.com/avblocks-for-net/working-video/change-video-frame-rate/" />
 
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/><!-- Generated with Sphinx 7.4.7 and Furo 2024.08.06 --><title>Change Video Frame Rate - AVBlocks Wiki for .NET</title><link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
@@ -274,9 +274,9 @@
 <li class="toctree-l3"><a class="reference internal" href="../../transcoder-as-encoder/hevc-encoder-run/">HEVC / H.265 Annex B Encoder (Run)</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../transcoder-as-encoder/avc-h-264-index/">AVC / H.264 Video Encoding</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of AVC / H.264 Video Encoding</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../transcoder-as-encoder/avc-h-264-encoder-run/">AVC / H.264 Annex B Encoder (Run)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../transcoder-as-encoder/avc-h-264-encoder/">AVC / H.264 Annex B Encoder (Push)</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../transcoder-as-encoder/avc-h264-index/">AVC / H.264 Video Encoding</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of AVC / H.264 Video Encoding</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../transcoder-as-encoder/avc-h264-encoder-run/">AVC / H.264 Annex B Encoder (Run)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../transcoder-as-encoder/avc-h264-encoder/">AVC / H.264 Annex B Encoder (Push)</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../transcoder-as-encoder/vp9-index/">VP9 Video Encoding</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of VP9 Video Encoding</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -319,12 +319,15 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../transcoder-as-decoder/">Transcoder as Decoder</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" role="switch" type="checkbox"/><label for="toctree-checkbox-17"><div class="visually-hidden">Toggle navigation of Transcoder as Decoder</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../transcoder-as-decoder/hevc-h265-index/">HEVC / H.265 Video Decoding</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" role="switch" type="checkbox"/><label for="toctree-checkbox-18"><div class="visually-hidden">Toggle navigation of HEVC / H.265 Video Decoding</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../transcoder-as-decoder/hevc-decoder-run/">HEVC / H.265 Annex B Decoder (Run)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../transcoder-as-decoder/hevc-decoder-access-unit/">HEVC / H.265 Access Unit Decoder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../transcoder-as-decoder/hevc-h265-annex-b-parser/">HEVC / H.265 Annex B Parser</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../transcoder-as-decoder/avc-h-264-index/">AVC / H.264 Video Decoding</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" role="switch" type="checkbox"/><label for="toctree-checkbox-19"><div class="visually-hidden">Toggle navigation of AVC / H.264 Video Decoding</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../transcoder-as-decoder/avc-h-264-decoder-run/">AVC / H.264 Annex B Decoder (Run)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../transcoder-as-decoder/avc-h-264-decoder/">AVC / H.264 Annex B Decoder (Pull)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../transcoder-as-decoder/avc-h-264-annex-b-parser/">AVC / H.264 Annex B Parser</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../transcoder-as-decoder/avc-h264-index/">AVC / H.264 Video Decoding</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" role="switch" type="checkbox"/><label for="toctree-checkbox-19"><div class="visually-hidden">Toggle navigation of AVC / H.264 Video Decoding</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../transcoder-as-decoder/avc-h264-decoder-run/">AVC / H.264 Annex B Decoder (Run)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../transcoder-as-decoder/avc-h264-decoder-access-unit/">AVC / H.264 Access Unit Decoder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../transcoder-as-decoder/avc-h264-decoder/">AVC / H.264 Annex B Decoder (Pull)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../transcoder-as-decoder/avc-h264-annex-b-parser/">AVC / H.264 Annex B Parser</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../transcoder-as-decoder/vp9-index/">VP9 Video Decoding</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" role="switch" type="checkbox"/><label for="toctree-checkbox-20"><div class="visually-hidden">Toggle navigation of VP9 Video Decoding</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -365,24 +368,24 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Muxing &amp; Demuxing</span></p>
 <ul>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../transcoder-as-demuxer/">Transcoder as Demuxer</a><input class="toctree-checkbox" id="toctree-checkbox-28" name="toctree-checkbox-28" role="switch" type="checkbox"/><label for="toctree-checkbox-28"><div class="visually-hidden">Toggle navigation of Transcoder as Demuxer</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../transcoder-as-demuxer/mp4-index/">MP4 Demuxing</a><input class="toctree-checkbox" id="toctree-checkbox-29" name="toctree-checkbox-29" role="switch" type="checkbox"/><label for="toctree-checkbox-29"><div class="visually-hidden">Toggle navigation of MP4 Demuxing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../transcoder-as-demuxer/demux-audio-video-mp4/">Demux Audio and Video From MP4</a></li>
-</ul>
-</li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../transcoder-as-demuxer/webm-index/">WebM Demuxing</a><input class="toctree-checkbox" id="toctree-checkbox-30" name="toctree-checkbox-30" role="switch" type="checkbox"/><label for="toctree-checkbox-30"><div class="visually-hidden">Toggle navigation of WebM Demuxing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../transcoder-as-demuxer/demux-audio-video-webm/">Demux Audio and Video From WebM</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../transcoder-as-muxer/">Transcoder as Muxer</a><input class="toctree-checkbox" id="toctree-checkbox-31" name="toctree-checkbox-31" role="switch" type="checkbox"/><label for="toctree-checkbox-31"><div class="visually-hidden">Toggle navigation of Transcoder as Muxer</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../transcoder-as-muxer/mp4-index/">MP4 Muxing</a><input class="toctree-checkbox" id="toctree-checkbox-32" name="toctree-checkbox-32" role="switch" type="checkbox"/><label for="toctree-checkbox-32"><div class="visually-hidden">Toggle navigation of MP4 Muxing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../transcoder-as-muxer/">Transcoder as Muxer</a><input class="toctree-checkbox" id="toctree-checkbox-28" name="toctree-checkbox-28" role="switch" type="checkbox"/><label for="toctree-checkbox-28"><div class="visually-hidden">Toggle navigation of Transcoder as Muxer</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../transcoder-as-muxer/mp4-index/">MP4 Muxing</a><input class="toctree-checkbox" id="toctree-checkbox-29" name="toctree-checkbox-29" role="switch" type="checkbox"/><label for="toctree-checkbox-29"><div class="visually-hidden">Toggle navigation of MP4 Muxing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../transcoder-as-muxer/mux-audio-video-mp4/">Mux Audio and Video Into MP4</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../transcoder-as-muxer/webm-index/">WebM Muxing</a><input class="toctree-checkbox" id="toctree-checkbox-33" name="toctree-checkbox-33" role="switch" type="checkbox"/><label for="toctree-checkbox-33"><div class="visually-hidden">Toggle navigation of WebM Muxing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../transcoder-as-muxer/webm-index/">WebM Muxing</a><input class="toctree-checkbox" id="toctree-checkbox-30" name="toctree-checkbox-30" role="switch" type="checkbox"/><label for="toctree-checkbox-30"><div class="visually-hidden">Toggle navigation of WebM Muxing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../transcoder-as-muxer/mux-audio-video-webm/">Mux Audio and Video Into WebM</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../transcoder-as-demuxer/">Transcoder as Demuxer</a><input class="toctree-checkbox" id="toctree-checkbox-31" name="toctree-checkbox-31" role="switch" type="checkbox"/><label for="toctree-checkbox-31"><div class="visually-hidden">Toggle navigation of Transcoder as Demuxer</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../transcoder-as-demuxer/mp4-index/">MP4 Demuxing</a><input class="toctree-checkbox" id="toctree-checkbox-32" name="toctree-checkbox-32" role="switch" type="checkbox"/><label for="toctree-checkbox-32"><div class="visually-hidden">Toggle navigation of MP4 Demuxing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../transcoder-as-demuxer/demux-audio-video-mp4/">Demux Audio and Video From MP4</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../transcoder-as-demuxer/webm-index/">WebM Demuxing</a><input class="toctree-checkbox" id="toctree-checkbox-33" name="toctree-checkbox-33" role="switch" type="checkbox"/><label for="toctree-checkbox-33"><div class="visually-hidden">Toggle navigation of WebM Demuxing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../transcoder-as-demuxer/demux-audio-video-webm/">Demux Audio and Video From WebM</a></li>
 </ul>
 </li>
 </ul>
@@ -390,18 +393,18 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Processing</span></p>
 <ul class="current">
-<li class="toctree-l1 current has-children"><a class="reference internal" href="../">Working with Video</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-34" name="toctree-checkbox-34" role="switch" type="checkbox"/><label for="toctree-checkbox-34"><div class="visually-hidden">Toggle navigation of Working with Video</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../working-audio/">Working with Audio</a><input class="toctree-checkbox" id="toctree-checkbox-34" name="toctree-checkbox-34" role="switch" type="checkbox"/><label for="toctree-checkbox-34"><div class="visually-hidden">Toggle navigation of Working with Audio</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../working-audio/upsample-audio/">Upsample Audio</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="../">Working with Video</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-35" name="toctree-checkbox-35" role="switch" type="checkbox"/><label for="toctree-checkbox-35"><div class="visually-hidden">Toggle navigation of Working with Video</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../overlay-image-on-video/">Overlay Image On Video</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../upscale-video/">Upscale Video</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../crop-video/">Crop Video</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../pad-video/">Pad Video</a></li>
 <li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Change Video Frame Rate</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../convert-raw-video-compressed-video/">Convert Raw Video To Compressed Video</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../convert-raw-video-compressed-video/">Using Video Presets</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../create-video-jpeg-images/">Create Video From JPEG Images</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../working-audio/">Working with Audio</a><input class="toctree-checkbox" id="toctree-checkbox-35" name="toctree-checkbox-35" role="switch" type="checkbox"/><label for="toctree-checkbox-35"><div class="visually-hidden">Toggle navigation of Working with Audio</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../working-audio/upsample-audio/">Upsample Audio</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../working-containers/">Working with Containers</a><input class="toctree-checkbox" id="toctree-checkbox-36" name="toctree-checkbox-36" role="switch" type="checkbox"/><label for="toctree-checkbox-36"><div class="visually-hidden">Toggle navigation of Working with Containers</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -412,7 +415,7 @@
 <p class="caption" role="heading"><span class="caption-text">Parameters</span></p>
 <ul>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../codec-parameters/">Codec Parameters</a><input class="toctree-checkbox" id="toctree-checkbox-37" name="toctree-checkbox-37" role="switch" type="checkbox"/><label for="toctree-checkbox-37"><div class="visually-hidden">Toggle navigation of Codec Parameters</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../codec-parameters/avc-h-264/">AVC / H.264</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../codec-parameters/avc-h264/">AVC / H.264</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../muxer-parameters/">Muxer Parameters</a><input class="toctree-checkbox" id="toctree-checkbox-38" name="toctree-checkbox-38" role="switch" type="checkbox"/><label for="toctree-checkbox-38"><div class="visually-hidden">Toggle navigation of Muxer Parameters</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -433,6 +436,29 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../whats-new/">What’s New</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../release-notes/">Release Notes</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Codecs</span></p>
+<ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../audio-codecs/">Audio Codecs</a><input class="toctree-checkbox" id="toctree-checkbox-39" name="toctree-checkbox-39" role="switch" type="checkbox"/><label for="toctree-checkbox-39"><div class="visually-hidden">Toggle navigation of Audio Codecs</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../aac-audio/">AAC Audio (MPEG-2 Part 7 / MPEG-4 Part 3)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../mpeg-audio/">MPEG-1 Audio and MPEG-2 Audio (Layer 1, 2 and 3)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opus-audio/">Opus Audio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vorbis-audio/">Vorbis Audio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../g711-audio/">G.711 Audio</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../video-codecs/">Video Codecs</a><input class="toctree-checkbox" id="toctree-checkbox-40" name="toctree-checkbox-40" role="switch" type="checkbox"/><label for="toctree-checkbox-40"><div class="visually-hidden">Toggle navigation of Video Codecs</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../hevc-h265-video/">High Efficiency Video Coding (HEVC / H.265 / MPEG-H Part 2)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../avc-h264-video/">Advanced Video Coding (H.264 / MPEG-4 AVC / MPEG-4 Part 10)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vp9-video/">VP9 Video</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vp8-video/">VP8 Video</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Containers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../mp4-container/">MPEG-4 Part 14 / MP4 Container</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../webm-container/">WebM Container</a></li>
 </ul>
 
 </div>
@@ -470,72 +496,258 @@
           <section id="change-video-frame-rate">
 <h1>Change Video Frame Rate<a class="headerlink" href="#change-video-frame-rate" title="Link to this heading">¶</a></h1>
 <p>How to change the frame rate of a video from 24 fps to 30 fps.</p>
+<p>The code snippets in this article are from the <a class="reference external" href="https://github.com/avblocks/avblocks-net/tree/main/samples/simple_video_framerate">simple_video_framerate</a> .NET sample.</p>
 <section id="source-video">
 <h2>Source Video<a class="headerlink" href="#source-video" title="Link to this heading">¶</a></h2>
 <p>For a source video we use the MP4 file from the TED talk video <a class="reference external" href="https://archive.org/details/AndrewConnolly_2014">What’s the next window into our universe?</a> by Andrew Connolly. The original video format is Wide 480p or 16:9, 854 x 480.</p>
 </section>
-<section id="complete-program">
-<h2>Complete Program<a class="headerlink" href="#complete-program" title="Link to this heading">¶</a></h2>
-<p>This code takes an MP4 file encoded at 24 fps, and increases the video framerate to 30 fps. The audio stream is copied from the source as is.</p>
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="nn">PrimoSoftware.AVBlocks</span><span class="p">;</span>
-<span class="k">using</span><span class="w"> </span><span class="nn">System.Collections.Generic</span><span class="p">;</span>
+<section id="code">
+<h2>Code<a class="headerlink" href="#code" title="Link to this heading">¶</a></h2>
+<p>This code takes an MP4 file encoded at 24 fps, and increases the video frame rate to 30 fps. The audio stream is copied from the source as is.</p>
+<section id="initialize-avblocks-and-configure-transcoder">
+<h3>Initialize AVBlocks and Configure Transcoder<a class="headerlink" href="#initialize-avblocks-and-configure-transcoder" title="Link to this heading">¶</a></h3>
+<p>The sample uses hardcoded input and output file paths. It creates a <code class="docutils literal notranslate"><span class="pre">MediaInfo</span></code> object to probe the input file, then creates input and output sockets. The output socket is cloned from the input socket, then the frame rate is set to 30 fps.</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">inputPath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;AndrewConnolly_2014.mp4&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">outputPath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;AndrewConnolly_2014_30fps.mp4&quot;</span><span class="p">;</span>
 
-<span class="k">namespace</span><span class="w"> </span><span class="nn">ChangeVideoFrameRate</span>
+<span class="w">    </span><span class="n">Library</span><span class="p">.</span><span class="n">Initialize</span><span class="p">();</span>
+
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ChangeFramerate</span><span class="p">(</span><span class="n">inputPath</span><span class="p">,</span><span class="w"> </span><span class="n">outputPath</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">Library</span><span class="p">.</span><span class="n">Shutdown</span><span class="p">();</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">ExitCodes</span><span class="p">.</span><span class="n">Success</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">ExitCodes</span><span class="p">.</span><span class="n">EncodeError</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">static</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="nf">ChangeFramerate</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">inputPath</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">outputPath</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">outputDir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Path</span><span class="p">.</span><span class="n">GetDirectoryName</span><span class="p">(</span><span class="n">outputPath</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="kt">string</span><span class="p">.</span><span class="n">IsNullOrEmpty</span><span class="p">(</span><span class="n">outputDir</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">!</span><span class="n">Directory</span><span class="p">.</span><span class="n">Exists</span><span class="p">(</span><span class="n">outputDir</span><span class="p">))</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Directory</span><span class="p">.</span><span class="n">CreateDirectory</span><span class="p">(</span><span class="n">outputDir</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">File</span><span class="p">.</span><span class="n">Exists</span><span class="p">(</span><span class="n">outputPath</span><span class="p">))</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">File</span><span class="p">.</span><span class="n">Delete</span><span class="p">(</span><span class="n">outputPath</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="p">(</span><span class="kt">var</span><span class="w"> </span><span class="n">mediaInfo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MediaInfo</span><span class="p">())</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">mediaInfo</span><span class="p">.</span><span class="n">Inputs</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">File</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">inputPath</span><span class="p">;</span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">mediaInfo</span><span class="p">.</span><span class="n">Open</span><span class="p">())</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">PrintError</span><span class="p">(</span><span class="s">&quot;Open MediaInfo&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">mediaInfo</span><span class="p">.</span><span class="n">Error</span><span class="p">);</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="k">false</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">inputSocket</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MediaSocket</span><span class="p">.</span><span class="n">FromMediaInfo</span><span class="p">(</span><span class="n">mediaInfo</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">outputSocket</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">MediaSocket</span><span class="p">)</span><span class="n">inputSocket</span><span class="p">.</span><span class="n">Clone</span><span class="p">();</span>
+<span class="w">        </span><span class="n">outputSocket</span><span class="p">.</span><span class="n">File</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">outputPath</span><span class="p">;</span>
+
+<span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">outVideoPin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">outputSocket</span><span class="p">.</span><span class="n">Pins</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+<span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">outVideoStream</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">outVideoPin</span><span class="p">.</span><span class="n">StreamInfo</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">VideoStreamInfo</span><span class="p">;</span>
+
+<span class="w">        </span><span class="n">outVideoStream</span><span class="p">.</span><span class="n">FrameRate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">30.0</span><span class="p">;</span>
+
+<span class="w">        </span><span class="k">using</span><span class="w"> </span><span class="p">(</span><span class="kt">var</span><span class="w"> </span><span class="n">transcoder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Transcoder</span><span class="p">())</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">transcoder</span><span class="p">.</span><span class="n">AllowDemoMode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">true</span><span class="p">;</span>
+<span class="w">            </span><span class="n">transcoder</span><span class="p">.</span><span class="n">Inputs</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">inputSocket</span><span class="p">);</span>
+<span class="w">            </span><span class="n">transcoder</span><span class="p">.</span><span class="n">Outputs</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">outputSocket</span><span class="p">);</span>
+
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">transcoder</span><span class="p">.</span><span class="n">Open</span><span class="p">())</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="n">PrintError</span><span class="p">(</span><span class="s">&quot;Transcoder open&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">transcoder</span><span class="p">.</span><span class="n">Error</span><span class="p">);</span>
+<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="k">false</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">transcoder</span><span class="p">.</span><span class="n">Run</span><span class="p">())</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="n">PrintError</span><span class="p">(</span><span class="s">&quot;Transcoder run&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">transcoder</span><span class="p">.</span><span class="n">Error</span><span class="p">);</span>
+<span class="w">                </span><span class="n">transcoder</span><span class="p">.</span><span class="n">Close</span><span class="p">();</span>
+<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="k">false</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+
+<span class="w">            </span><span class="n">transcoder</span><span class="p">.</span><span class="n">Close</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">true</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="printerror-helper">
+<h3>PrintError Helper<a class="headerlink" href="#printerror-helper" title="Link to this heading">¶</a></h3>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">PrintError</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">action</span><span class="p">,</span><span class="w"> </span><span class="n">ErrorInfo</span><span class="w"> </span><span class="n">error</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">action</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="k">null</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="s">&quot;{0}: &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">action</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">ErrorFacility</span><span class="p">.</span><span class="n">Success</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">error</span><span class="p">.</span><span class="n">Facility</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Success&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">return</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">else</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;{0}, facility:{1} code:{2} hint:{3}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">error</span><span class="p">.</span><span class="n">Message</span><span class="w"> </span><span class="o">??</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">error</span><span class="p">.</span><span class="n">Facility</span><span class="p">,</span><span class="w"> </span><span class="n">error</span><span class="p">.</span><span class="n">Code</span><span class="p">,</span><span class="w"> </span><span class="n">error</span><span class="p">.</span><span class="n">Hint</span><span class="w"> </span><span class="o">??</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="complete-code">
+<h3>Complete Code<a class="headerlink" href="#complete-code" title="Link to this heading">¶</a></h3>
+<p>Here’s the complete working example that demonstrates frame rate conversion using AVBlocks for .NET.</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">System.IO</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">PrimoSoftware.AVBlocks</span><span class="p">;</span>
+
+<span class="k">namespace</span><span class="w"> </span><span class="nn">SimpleVideoFramerate</span>
 <span class="p">{</span>
 <span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">Program</span>
 <span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
+<span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
 <span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="kt">string</span><span class="w"> </span><span class="n">inputPath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;AndrewConnolly_2014.mp4&quot;</span><span class="p">;</span>
+<span class="w">            </span><span class="kt">string</span><span class="w"> </span><span class="n">outputPath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;AndrewConnolly_2014_30fps.mp4&quot;</span><span class="p">;</span>
+
 <span class="w">            </span><span class="n">Library</span><span class="p">.</span><span class="n">Initialize</span><span class="p">();</span>
 
-<span class="w">            </span><span class="c1">// start with two identical input and output configuration</span>
-<span class="w">            </span><span class="kt">var</span><span class="w"> </span><span class="n">inputInfo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MediaInfo</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                </span><span class="n">InputFile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;AndrewConnolly_2014.mp4&quot;</span>
-<span class="w">            </span><span class="p">};</span>
+<span class="w">            </span><span class="kt">bool</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ChangeFramerate</span><span class="p">(</span><span class="n">inputPath</span><span class="p">,</span><span class="w"> </span><span class="n">outputPath</span><span class="p">);</span>
 
-<span class="w">            </span><span class="kt">var</span><span class="w"> </span><span class="n">outputInfo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MediaInfo</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                </span><span class="n">InputFile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;AndrewConnolly_2014.mp4&quot;</span>
-<span class="w">            </span><span class="p">};</span>
+<span class="w">            </span><span class="n">Library</span><span class="p">.</span><span class="n">Shutdown</span><span class="p">();</span>
 
-<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">inputInfo</span><span class="p">.</span><span class="n">Load</span><span class="p">()</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">outputInfo</span><span class="p">.</span><span class="n">Load</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                </span>
-<span class="w">                </span><span class="c1">// create input socket</span>
-<span class="w">                </span><span class="kt">var</span><span class="w"> </span><span class="n">inputSocket</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MediaSocket</span><span class="p">.</span><span class="n">FromMediaInfo</span><span class="p">(</span><span class="n">inputInfo</span><span class="p">);</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">ExitCodes</span><span class="p">.</span><span class="n">Success</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">ExitCodes</span><span class="p">.</span><span class="n">EncodeError</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
 
-<span class="w">                </span><span class="c1">// create output socket</span>
-<span class="w">                </span><span class="kt">var</span><span class="w"> </span><span class="n">outputSocket</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MediaSocket</span><span class="p">.</span><span class="n">FromMediaInfo</span><span class="p">(</span><span class="n">outputInfo</span><span class="p">);</span>
-<span class="w">                </span><span class="n">outputSocket</span><span class="p">.</span><span class="n">File</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;AndrewConnolly_2014_30fps.mp4&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="nf">ChangeFramerate</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">inputPath</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">outputPath</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="kt">string</span><span class="w"> </span><span class="n">outputDir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Path</span><span class="p">.</span><span class="n">GetDirectoryName</span><span class="p">(</span><span class="n">outputPath</span><span class="p">);</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="kt">string</span><span class="p">.</span><span class="n">IsNullOrEmpty</span><span class="p">(</span><span class="n">outputDir</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">!</span><span class="n">Directory</span><span class="p">.</span><span class="n">Exists</span><span class="p">(</span><span class="n">outputDir</span><span class="p">))</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="n">Directory</span><span class="p">.</span><span class="n">CreateDirectory</span><span class="p">(</span><span class="n">outputDir</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
 
-<span class="w">                </span><span class="c1">// change the frame rate from 24 fps to 30 fps</span>
-<span class="w">                </span><span class="kt">var</span><span class="w"> </span><span class="n">outVideoStream</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">outputSocket</span><span class="p">.</span><span class="n">Pins</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">StreamInfo</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">VideoStreamInfo</span><span class="p">;</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">File</span><span class="p">.</span><span class="n">Exists</span><span class="p">(</span><span class="n">outputPath</span><span class="p">))</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="n">File</span><span class="p">.</span><span class="n">Delete</span><span class="p">(</span><span class="n">outputPath</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+
+<span class="w">            </span><span class="k">using</span><span class="w"> </span><span class="p">(</span><span class="kt">var</span><span class="w"> </span><span class="n">mediaInfo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MediaInfo</span><span class="p">())</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="n">mediaInfo</span><span class="p">.</span><span class="n">Inputs</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">File</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">inputPath</span><span class="p">;</span>
+
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">mediaInfo</span><span class="p">.</span><span class="n">Open</span><span class="p">())</span>
+<span class="w">                </span><span class="p">{</span>
+<span class="w">                    </span><span class="n">PrintError</span><span class="p">(</span><span class="s">&quot;Open MediaInfo&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">mediaInfo</span><span class="p">.</span><span class="n">Error</span><span class="p">);</span>
+<span class="w">                    </span><span class="k">return</span><span class="w"> </span><span class="k">false</span><span class="p">;</span>
+<span class="w">                </span><span class="p">}</span>
+
+<span class="w">                </span><span class="kt">var</span><span class="w"> </span><span class="n">inputSocket</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MediaSocket</span><span class="p">.</span><span class="n">FromMediaInfo</span><span class="p">(</span><span class="n">mediaInfo</span><span class="p">);</span>
+<span class="w">                </span><span class="kt">var</span><span class="w"> </span><span class="n">outputSocket</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">MediaSocket</span><span class="p">)</span><span class="n">inputSocket</span><span class="p">.</span><span class="n">Clone</span><span class="p">();</span>
+<span class="w">                </span><span class="n">outputSocket</span><span class="p">.</span><span class="n">File</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">outputPath</span><span class="p">;</span>
+
+<span class="w">                </span><span class="kt">var</span><span class="w"> </span><span class="n">outVideoPin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">outputSocket</span><span class="p">.</span><span class="n">Pins</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+<span class="w">                </span><span class="kt">var</span><span class="w"> </span><span class="n">outVideoStream</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">outVideoPin</span><span class="p">.</span><span class="n">StreamInfo</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">VideoStreamInfo</span><span class="p">;</span>
+
 <span class="w">                </span><span class="n">outVideoStream</span><span class="p">.</span><span class="n">FrameRate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">30.0</span><span class="p">;</span>
 
-<span class="w">                </span><span class="c1">// create and run a transcoder</span>
-<span class="w">                </span><span class="k">using</span><span class="w"> </span><span class="p">(</span><span class="kt">var</span><span class="w"> </span><span class="n">transcoder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Transcoder</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="k">using</span><span class="w"> </span><span class="p">(</span><span class="kt">var</span><span class="w"> </span><span class="n">transcoder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Transcoder</span><span class="p">())</span>
+<span class="w">                </span><span class="p">{</span>
+<span class="w">                    </span><span class="n">transcoder</span><span class="p">.</span><span class="n">AllowDemoMode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">true</span><span class="p">;</span>
 <span class="w">                    </span><span class="n">transcoder</span><span class="p">.</span><span class="n">Inputs</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">inputSocket</span><span class="p">);</span>
 <span class="w">                    </span><span class="n">transcoder</span><span class="p">.</span><span class="n">Outputs</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">outputSocket</span><span class="p">);</span>
 
-<span class="w">                    </span><span class="c1">// process</span>
-<span class="w">                    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">transcoder</span><span class="p">.</span><span class="n">Open</span><span class="p">())</span>
+<span class="w">                    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">transcoder</span><span class="p">.</span><span class="n">Open</span><span class="p">())</span>
 <span class="w">                    </span><span class="p">{</span>
-<span class="w">                        </span><span class="n">transcoder</span><span class="p">.</span><span class="n">Run</span><span class="p">();</span>
-<span class="w">                        </span><span class="n">transcoder</span><span class="p">.</span><span class="n">Close</span><span class="p">();</span>
+<span class="w">                        </span><span class="n">PrintError</span><span class="p">(</span><span class="s">&quot;Transcoder open&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">transcoder</span><span class="p">.</span><span class="n">Error</span><span class="p">);</span>
+<span class="w">                        </span><span class="k">return</span><span class="w"> </span><span class="k">false</span><span class="p">;</span>
 <span class="w">                    </span><span class="p">}</span>
+
+<span class="w">                    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">transcoder</span><span class="p">.</span><span class="n">Run</span><span class="p">())</span>
+<span class="w">                    </span><span class="p">{</span>
+<span class="w">                        </span><span class="n">PrintError</span><span class="p">(</span><span class="s">&quot;Transcoder run&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">transcoder</span><span class="p">.</span><span class="n">Error</span><span class="p">);</span>
+<span class="w">                        </span><span class="n">transcoder</span><span class="p">.</span><span class="n">Close</span><span class="p">();</span>
+<span class="w">                        </span><span class="k">return</span><span class="w"> </span><span class="k">false</span><span class="p">;</span>
+<span class="w">                    </span><span class="p">}</span>
+
+<span class="w">                    </span><span class="n">transcoder</span><span class="p">.</span><span class="n">Close</span><span class="p">();</span>
 <span class="w">                </span><span class="p">}</span>
 <span class="w">            </span><span class="p">}</span>
 
-<span class="w">            </span><span class="n">Library</span><span class="p">.</span><span class="n">Shutdown</span><span class="p">();</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="k">true</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">PrintError</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">action</span><span class="p">,</span><span class="w"> </span><span class="n">ErrorInfo</span><span class="w"> </span><span class="n">error</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">action</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="k">null</span><span class="p">)</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="s">&quot;{0}: &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">action</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">ErrorFacility</span><span class="p">.</span><span class="n">Success</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">error</span><span class="p">.</span><span class="n">Facility</span><span class="p">)</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Success&quot;</span><span class="p">);</span>
+<span class="w">                </span><span class="k">return</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="k">else</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;{0}, facility:{1} code:{2} hint:{3}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">error</span><span class="p">.</span><span class="n">Message</span><span class="w"> </span><span class="o">??</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">error</span><span class="p">.</span><span class="n">Facility</span><span class="p">,</span><span class="w"> </span><span class="n">error</span><span class="p">.</span><span class="n">Code</span><span class="p">,</span><span class="w"> </span><span class="n">error</span><span class="p">.</span><span class="n">Hint</span><span class="w"> </span><span class="o">??</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="k">enum</span><span class="w"> </span><span class="n">ExitCodes</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kt">int</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">Success</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">            </span><span class="n">EncodeError</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 </section>
+</section>
 <section id="how-to-run">
-<h2>How to run<a class="headerlink" href="#how-to-run" title="Link to this heading">¶</a></h2>
-<p>Follow the <a class="reference internal" href="../../getting-started-windows/create-a-c-sharp-console-app-in-visual-studio/"><span class="doc std std-doc">steps</span></a> to create a C# console application in Visual Studio but in <code class="docutils literal notranslate"><span class="pre">Program.cs</span></code> use the code from this article.</p>
-<p>Download the <code class="docutils literal notranslate"><span class="pre">AndrewConnolly_2014.mp4</span></code> MPEG4 file from the <a class="reference external" href="https://archive.org/details/AndrewConnolly_2014">Internet Archive</a> and save it in <code class="docutils literal notranslate"><span class="pre">bin/x64/Debug/net10.0</span></code> under the project’s directory.</p>
-<p>Run the application in Visual Studio. Wait a few seconds for the Transcoder to finish. The converted file <code class="docutils literal notranslate"><span class="pre">AndrewConnolly_2014_30fps.mp4</span></code> will be in the <code class="docutils literal notranslate"><span class="pre">bin/x64/Debug/net10.0</span></code> directory.</p>
+<h2>How to Run<a class="headerlink" href="#how-to-run" title="Link to this heading">¶</a></h2>
+<p>See the <a class="reference external" href="https://github.com/avblocks/avblocks-net/tree/main/samples/simple_video_framerate">simple_video_framerate</a> .NET sample for details.</p>
+<section id="command-line">
+<h3>Command Line<a class="headerlink" href="#command-line" title="Link to this heading">¶</a></h3>
+<p>This sample uses hardcoded input and output file paths — no command line parsing.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>bin/net10.0/simple_video_framerate
+</pre></div>
+</div>
+</section>
+<section id="examples">
+<h3>Examples<a class="headerlink" href="#examples" title="Link to this heading">¶</a></h3>
+<p>Build the sample from the repository root:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>dotnet<span class="w"> </span>build<span class="w"> </span>samples.sln
+</pre></div>
+</div>
+<p>Download the sample video:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>samples/simple_video_framerate
+curl<span class="w"> </span>-L<span class="w"> </span>-o<span class="w"> </span>AndrewConnolly_2014.mp4<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>https://archive.org/download/AndrewConnolly_2014/AndrewConnolly_2014.mp4
+</pre></div>
+</div>
+<p>Run the sample (the input/output file paths are relative to the working directory):</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="c1"># Linux and macOS</span>
+../../bin/net10.0/simple_video_framerate
+</pre></div>
+</div>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="c"># Windows</span>
+<span class="p">..\..\</span><span class="n">bin</span><span class="p">\</span><span class="n">net10</span><span class="p">.</span><span class="n">0</span><span class="p">\</span><span class="n">simple_video_framerate</span><span class="p">.</span><span class="n">exe</span>
+</pre></div>
+</div>
+<p>The converted output file <code class="docutils literal notranslate"><span class="pre">AndrewConnolly_2014_30fps.mp4</span></code> will be created in the <code class="docutils literal notranslate"><span class="pre">samples/simple_video_framerate</span></code> directory.</p>
+</section>
 </section>
 </section>
 
@@ -549,7 +761,7 @@
         <div class="context">
           <span>Next</span>
         </div>
-        <div class="title">Convert Raw Video To Compressed Video</div>
+        <div class="title">Using Video Presets</div>
       </div>
       <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
     </a>
@@ -601,8 +813,17 @@
             <ul>
 <li><a class="reference internal" href="#">Change Video Frame Rate</a><ul>
 <li><a class="reference internal" href="#source-video">Source Video</a></li>
-<li><a class="reference internal" href="#complete-program">Complete Program</a></li>
-<li><a class="reference internal" href="#how-to-run">How to run</a></li>
+<li><a class="reference internal" href="#code">Code</a><ul>
+<li><a class="reference internal" href="#initialize-avblocks-and-configure-transcoder">Initialize AVBlocks and Configure Transcoder</a></li>
+<li><a class="reference internal" href="#printerror-helper">PrintError Helper</a></li>
+<li><a class="reference internal" href="#complete-code">Complete Code</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#how-to-run">How to Run</a><ul>
+<li><a class="reference internal" href="#command-line">Command Line</a></li>
+<li><a class="reference internal" href="#examples">Examples</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>

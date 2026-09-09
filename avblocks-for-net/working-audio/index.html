@@ -13,7 +13,7 @@
 <meta property="og:image:alt" content="AVBlocks for .NET" />
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://wiki-net.avblocks.com/_static/og-image.png">
-<link rel="search" title="Search" href="../../search/" /><link rel="next" title="Upsample Audio" href="upsample-audio/" /><link rel="prev" title="Create Video From JPEG Images" href="../working-video/create-video-jpeg-images/" />
+<link rel="search" title="Search" href="../../search/" /><link rel="next" title="Upsample Audio" href="upsample-audio/" /><link rel="prev" title="Demux Audio and Video From WebM" href="../transcoder-as-demuxer/demux-audio-video-webm/" />
         <link rel="canonical" href="https://wiki-net.avblocks.com/avblocks-for-net/working-audio/" />
 
     <link rel="shortcut icon" href="../../_static/favicon.ico"/><!-- Generated with Sphinx 7.4.7 and Furo 2024.08.06 --><title>Working with Audio - AVBlocks Wiki for .NET</title><link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
@@ -274,9 +274,9 @@
 <li class="toctree-l3"><a class="reference internal" href="../transcoder-as-encoder/hevc-encoder-run/">HEVC / H.265 Annex B Encoder (Run)</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../transcoder-as-encoder/avc-h-264-index/">AVC / H.264 Video Encoding</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of AVC / H.264 Video Encoding</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../transcoder-as-encoder/avc-h-264-encoder-run/">AVC / H.264 Annex B Encoder (Run)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../transcoder-as-encoder/avc-h-264-encoder/">AVC / H.264 Annex B Encoder (Push)</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../transcoder-as-encoder/avc-h264-index/">AVC / H.264 Video Encoding</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of AVC / H.264 Video Encoding</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../transcoder-as-encoder/avc-h264-encoder-run/">AVC / H.264 Annex B Encoder (Run)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../transcoder-as-encoder/avc-h264-encoder/">AVC / H.264 Annex B Encoder (Push)</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../transcoder-as-encoder/vp9-index/">VP9 Video Encoding</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of VP9 Video Encoding</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -319,12 +319,15 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../transcoder-as-decoder/">Transcoder as Decoder</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" role="switch" type="checkbox"/><label for="toctree-checkbox-17"><div class="visually-hidden">Toggle navigation of Transcoder as Decoder</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../transcoder-as-decoder/hevc-h265-index/">HEVC / H.265 Video Decoding</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" role="switch" type="checkbox"/><label for="toctree-checkbox-18"><div class="visually-hidden">Toggle navigation of HEVC / H.265 Video Decoding</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../transcoder-as-decoder/hevc-decoder-run/">HEVC / H.265 Annex B Decoder (Run)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../transcoder-as-decoder/hevc-decoder-access-unit/">HEVC / H.265 Access Unit Decoder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../transcoder-as-decoder/hevc-h265-annex-b-parser/">HEVC / H.265 Annex B Parser</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../transcoder-as-decoder/avc-h-264-index/">AVC / H.264 Video Decoding</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" role="switch" type="checkbox"/><label for="toctree-checkbox-19"><div class="visually-hidden">Toggle navigation of AVC / H.264 Video Decoding</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../transcoder-as-decoder/avc-h-264-decoder-run/">AVC / H.264 Annex B Decoder (Run)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../transcoder-as-decoder/avc-h-264-decoder/">AVC / H.264 Annex B Decoder (Pull)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../transcoder-as-decoder/avc-h-264-annex-b-parser/">AVC / H.264 Annex B Parser</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../transcoder-as-decoder/avc-h264-index/">AVC / H.264 Video Decoding</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" role="switch" type="checkbox"/><label for="toctree-checkbox-19"><div class="visually-hidden">Toggle navigation of AVC / H.264 Video Decoding</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../transcoder-as-decoder/avc-h264-decoder-run/">AVC / H.264 Annex B Decoder (Run)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../transcoder-as-decoder/avc-h264-decoder-access-unit/">AVC / H.264 Access Unit Decoder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../transcoder-as-decoder/avc-h264-decoder/">AVC / H.264 Annex B Decoder (Pull)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../transcoder-as-decoder/avc-h264-annex-b-parser/">AVC / H.264 Annex B Parser</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../transcoder-as-decoder/vp9-index/">VP9 Video Decoding</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" role="switch" type="checkbox"/><label for="toctree-checkbox-20"><div class="visually-hidden">Toggle navigation of VP9 Video Decoding</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -365,24 +368,24 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Muxing &amp; Demuxing</span></p>
 <ul>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../transcoder-as-demuxer/">Transcoder as Demuxer</a><input class="toctree-checkbox" id="toctree-checkbox-28" name="toctree-checkbox-28" role="switch" type="checkbox"/><label for="toctree-checkbox-28"><div class="visually-hidden">Toggle navigation of Transcoder as Demuxer</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../transcoder-as-demuxer/mp4-index/">MP4 Demuxing</a><input class="toctree-checkbox" id="toctree-checkbox-29" name="toctree-checkbox-29" role="switch" type="checkbox"/><label for="toctree-checkbox-29"><div class="visually-hidden">Toggle navigation of MP4 Demuxing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../transcoder-as-demuxer/demux-audio-video-mp4/">Demux Audio and Video From MP4</a></li>
-</ul>
-</li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../transcoder-as-demuxer/webm-index/">WebM Demuxing</a><input class="toctree-checkbox" id="toctree-checkbox-30" name="toctree-checkbox-30" role="switch" type="checkbox"/><label for="toctree-checkbox-30"><div class="visually-hidden">Toggle navigation of WebM Demuxing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../transcoder-as-demuxer/demux-audio-video-webm/">Demux Audio and Video From WebM</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../transcoder-as-muxer/">Transcoder as Muxer</a><input class="toctree-checkbox" id="toctree-checkbox-31" name="toctree-checkbox-31" role="switch" type="checkbox"/><label for="toctree-checkbox-31"><div class="visually-hidden">Toggle navigation of Transcoder as Muxer</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../transcoder-as-muxer/mp4-index/">MP4 Muxing</a><input class="toctree-checkbox" id="toctree-checkbox-32" name="toctree-checkbox-32" role="switch" type="checkbox"/><label for="toctree-checkbox-32"><div class="visually-hidden">Toggle navigation of MP4 Muxing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../transcoder-as-muxer/">Transcoder as Muxer</a><input class="toctree-checkbox" id="toctree-checkbox-28" name="toctree-checkbox-28" role="switch" type="checkbox"/><label for="toctree-checkbox-28"><div class="visually-hidden">Toggle navigation of Transcoder as Muxer</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../transcoder-as-muxer/mp4-index/">MP4 Muxing</a><input class="toctree-checkbox" id="toctree-checkbox-29" name="toctree-checkbox-29" role="switch" type="checkbox"/><label for="toctree-checkbox-29"><div class="visually-hidden">Toggle navigation of MP4 Muxing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../transcoder-as-muxer/mux-audio-video-mp4/">Mux Audio and Video Into MP4</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../transcoder-as-muxer/webm-index/">WebM Muxing</a><input class="toctree-checkbox" id="toctree-checkbox-33" name="toctree-checkbox-33" role="switch" type="checkbox"/><label for="toctree-checkbox-33"><div class="visually-hidden">Toggle navigation of WebM Muxing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../transcoder-as-muxer/webm-index/">WebM Muxing</a><input class="toctree-checkbox" id="toctree-checkbox-30" name="toctree-checkbox-30" role="switch" type="checkbox"/><label for="toctree-checkbox-30"><div class="visually-hidden">Toggle navigation of WebM Muxing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../transcoder-as-muxer/mux-audio-video-webm/">Mux Audio and Video Into WebM</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../transcoder-as-demuxer/">Transcoder as Demuxer</a><input class="toctree-checkbox" id="toctree-checkbox-31" name="toctree-checkbox-31" role="switch" type="checkbox"/><label for="toctree-checkbox-31"><div class="visually-hidden">Toggle navigation of Transcoder as Demuxer</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../transcoder-as-demuxer/mp4-index/">MP4 Demuxing</a><input class="toctree-checkbox" id="toctree-checkbox-32" name="toctree-checkbox-32" role="switch" type="checkbox"/><label for="toctree-checkbox-32"><div class="visually-hidden">Toggle navigation of MP4 Demuxing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../transcoder-as-demuxer/demux-audio-video-mp4/">Demux Audio and Video From MP4</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../transcoder-as-demuxer/webm-index/">WebM Demuxing</a><input class="toctree-checkbox" id="toctree-checkbox-33" name="toctree-checkbox-33" role="switch" type="checkbox"/><label for="toctree-checkbox-33"><div class="visually-hidden">Toggle navigation of WebM Demuxing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../transcoder-as-demuxer/demux-audio-video-webm/">Demux Audio and Video From WebM</a></li>
 </ul>
 </li>
 </ul>
@@ -390,18 +393,18 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Processing</span></p>
 <ul class="current">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../working-video/">Working with Video</a><input class="toctree-checkbox" id="toctree-checkbox-34" name="toctree-checkbox-34" role="switch" type="checkbox"/><label for="toctree-checkbox-34"><div class="visually-hidden">Toggle navigation of Working with Video</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 current has-children current-page"><a class="current reference internal" href="#">Working with Audio</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-34" name="toctree-checkbox-34" role="switch" type="checkbox"/><label for="toctree-checkbox-34"><div class="visually-hidden">Toggle navigation of Working with Audio</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="upsample-audio/">Upsample Audio</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../working-video/">Working with Video</a><input class="toctree-checkbox" id="toctree-checkbox-35" name="toctree-checkbox-35" role="switch" type="checkbox"/><label for="toctree-checkbox-35"><div class="visually-hidden">Toggle navigation of Working with Video</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../working-video/overlay-image-on-video/">Overlay Image On Video</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../working-video/upscale-video/">Upscale Video</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../working-video/crop-video/">Crop Video</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../working-video/pad-video/">Pad Video</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../working-video/change-video-frame-rate/">Change Video Frame Rate</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../working-video/convert-raw-video-compressed-video/">Convert Raw Video To Compressed Video</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../working-video/convert-raw-video-compressed-video/">Using Video Presets</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../working-video/create-video-jpeg-images/">Create Video From JPEG Images</a></li>
-</ul>
-</li>
-<li class="toctree-l1 current has-children current-page"><a class="current reference internal" href="#">Working with Audio</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-35" name="toctree-checkbox-35" role="switch" type="checkbox"/><label for="toctree-checkbox-35"><div class="visually-hidden">Toggle navigation of Working with Audio</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="upsample-audio/">Upsample Audio</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../working-containers/">Working with Containers</a><input class="toctree-checkbox" id="toctree-checkbox-36" name="toctree-checkbox-36" role="switch" type="checkbox"/><label for="toctree-checkbox-36"><div class="visually-hidden">Toggle navigation of Working with Containers</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -412,7 +415,7 @@
 <p class="caption" role="heading"><span class="caption-text">Parameters</span></p>
 <ul>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../codec-parameters/">Codec Parameters</a><input class="toctree-checkbox" id="toctree-checkbox-37" name="toctree-checkbox-37" role="switch" type="checkbox"/><label for="toctree-checkbox-37"><div class="visually-hidden">Toggle navigation of Codec Parameters</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../codec-parameters/avc-h-264/">AVC / H.264</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../codec-parameters/avc-h264/">AVC / H.264</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../muxer-parameters/">Muxer Parameters</a><input class="toctree-checkbox" id="toctree-checkbox-38" name="toctree-checkbox-38" role="switch" type="checkbox"/><label for="toctree-checkbox-38"><div class="visually-hidden">Toggle navigation of Muxer Parameters</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -433,6 +436,29 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../whats-new/">What’s New</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../release-notes/">Release Notes</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Codecs</span></p>
+<ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../audio-codecs/">Audio Codecs</a><input class="toctree-checkbox" id="toctree-checkbox-39" name="toctree-checkbox-39" role="switch" type="checkbox"/><label for="toctree-checkbox-39"><div class="visually-hidden">Toggle navigation of Audio Codecs</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../aac-audio/">AAC Audio (MPEG-2 Part 7 / MPEG-4 Part 3)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mpeg-audio/">MPEG-1 Audio and MPEG-2 Audio (Layer 1, 2 and 3)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../opus-audio/">Opus Audio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vorbis-audio/">Vorbis Audio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../g711-audio/">G.711 Audio</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../video-codecs/">Video Codecs</a><input class="toctree-checkbox" id="toctree-checkbox-40" name="toctree-checkbox-40" role="switch" type="checkbox"/><label for="toctree-checkbox-40"><div class="visually-hidden">Toggle navigation of Video Codecs</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../hevc-h265-video/">High Efficiency Video Coding (HEVC / H.265 / MPEG-H Part 2)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../avc-h264-video/">Advanced Video Coding (H.264 / MPEG-4 AVC / MPEG-4 Part 10)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vp9-video/">VP9 Video</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vp8-video/">VP8 Video</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Containers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../mp4-container/">MPEG-4 Part 14 / MP4 Container</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../webm-container/">WebM Container</a></li>
 </ul>
 
 </div>
@@ -488,14 +514,14 @@
       </div>
       <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
     </a>
-  <a class="prev-page" href="../working-video/create-video-jpeg-images/">
+  <a class="prev-page" href="../transcoder-as-demuxer/demux-audio-video-webm/">
       <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
       <div class="page-info">
         <div class="context">
           <span>Previous</span>
         </div>
         
-        <div class="title">Create Video From JPEG Images</div>
+        <div class="title">Demux Audio and Video From WebM</div>
         
       </div>
     </a>
