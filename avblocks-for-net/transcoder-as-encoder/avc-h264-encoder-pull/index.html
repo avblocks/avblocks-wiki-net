@@ -3,20 +3,20 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta content="This article explains how to use Transcoder to encode a raw YUV video file to VP8 video in an IVF container." name="description" />
-<meta property="og:title" content="VP8 Encoder (Run)" />
+<meta content="This article explains how to use Transcoder to encode a raw YUV video file to an AVC / H.264 Annex B elementary stream using the Pull method." name="description" />
+<meta property="og:title" content="AVC / H.264 Encoder (Pull)" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://wiki-net.avblocks.com/avblocks-for-net/transcoder-as-encoder/vp8-encoder-run/" />
+<meta property="og:url" content="https://wiki-net.avblocks.com/avblocks-for-net/transcoder-as-encoder/avc-h264-encoder-pull/" />
 <meta property="og:site_name" content="AVBlocks for .NET" />
-<meta property="og:description" content="This article explains how you can use {transcoder-run-net} to encode a raw YUV video file to VP8 video in an IVF container. The code snippets in this article are from the enc_vp8_file.NET sample. S..." />
+<meta property="og:description" content="This article explains how you can use {transcoder-pull-net} to encode a raw YUV video file to an AVC / H.264 Annex B elementary stream. The code snippets in this article are from the enc_avc_pull.N..." />
 <meta property="og:image" content="https://wiki-net.avblocks.com/_static/og-image.png" />
 <meta property="og:image:alt" content="AVBlocks for .NET" />
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://wiki-net.avblocks.com/_static/og-image.png">
-<link rel="search" title="Search" href="../../../search/" /><link rel="next" title="AAC Audio Encoding" href="../aac-index/" /><link rel="prev" title="VP8 Video Encoding" href="../vp8-index/" />
-        <link rel="canonical" href="https://wiki-net.avblocks.com/avblocks-for-net/transcoder-as-encoder/vp8-encoder-run/" />
+<link rel="search" title="Search" href="../../../search/" /><link rel="next" title="AVC / H.264 Annex B Encoder (Push)" href="../avc-h264-encoder/" /><link rel="prev" title="AVC / H.264 Annex B Encoder (Run)" href="../avc-h264-encoder-run/" />
+        <link rel="canonical" href="https://wiki-net.avblocks.com/avblocks-for-net/transcoder-as-encoder/avc-h264-encoder-pull/" />
 
-    <link rel="shortcut icon" href="../../../_static/favicon.ico"/><!-- Generated with Sphinx 7.4.7 and Furo 2024.08.06 --><title>VP8 Encoder (Run) - AVBlocks Wiki for .NET</title><link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/><!-- Generated with Sphinx 7.4.7 and Furo 2024.08.06 --><title>AVC / H.264 Encoder (Pull) - AVBlocks Wiki for .NET</title><link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?v=354aac6f" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?v=302659d7" />
@@ -274,9 +274,9 @@
 <li class="toctree-l3"><a class="reference internal" href="../hevc-encoder-pull/">HEVC / H.265 Encoder (Pull)</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../avc-h264-index/">AVC / H.264 Video Encoding</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of AVC / H.264 Video Encoding</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 current has-children"><a class="reference internal" href="../avc-h264-index/">AVC / H.264 Video Encoding</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of AVC / H.264 Video Encoding</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../avc-h264-encoder-run/">AVC / H.264 Annex B Encoder (Run)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../avc-h264-encoder-pull/">AVC / H.264 Encoder (Pull)</a></li>
+<li class="toctree-l3 current current-page"><a class="current reference internal" href="#">AVC / H.264 Encoder (Pull)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../avc-h264-encoder/">AVC / H.264 Annex B Encoder (Push)</a></li>
 </ul>
 </li>
@@ -284,8 +284,8 @@
 <li class="toctree-l3"><a class="reference internal" href="../vp9-encoder-run/">VP9 Encoder (Run)</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current has-children"><a class="reference internal" href="../vp8-index/">VP8 Video Encoding</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle navigation of VP8 Video Encoding</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l3 current current-page"><a class="current reference internal" href="#">VP8 Encoder (Run)</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../vp8-index/">VP8 Video Encoding</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle navigation of VP8 Video Encoding</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../vp8-encoder-run/">VP8 Encoder (Run)</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../aac-index/">AAC Audio Encoding</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle navigation of AAC Audio Encoding</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -495,20 +495,20 @@
           </label>
         </div>
         <article role="main" id="furo-main-content">
-          <section id="vp8-encoder-run">
-<h1>VP8 Encoder (Run)<a class="headerlink" href="#vp8-encoder-run" title="Link to this heading">¶</a></h1>
-<p>This article explains how you can use {transcoder-run-net} to encode a raw YUV video file to VP8 video in an IVF container.</p>
-<p>The code snippets in this article are from the <a class="reference external" href="https://github.com/avblocks/avblocks-net/tree/main/samples/enc_vp8_file">enc_vp8_file</a> .NET sample.</p>
+          <section id="avc-h-264-encoder-pull">
+<h1>AVC / H.264 Encoder (Pull)<a class="headerlink" href="#avc-h-264-encoder-pull" title="Link to this heading">¶</a></h1>
+<p>This article explains how you can use {transcoder-pull-net} to encode a raw YUV video file to an AVC / H.264 Annex B elementary stream.</p>
+<p>The code snippets in this article are from the <a class="reference external" href="https://github.com/avblocks/avblocks-net/tree/main/samples/enc_avc_pull">enc_avc_pull</a> .NET sample.</p>
 <section id="source-video">
 <h2>Source Video<a class="headerlink" href="#source-video" title="Link to this heading">¶</a></h2>
 <p>For source we use the <code class="docutils literal notranslate"><span class="pre">foreman_qcif.yuv</span></code> file from the <a class="reference external" href="https://github.com/avblocks/avblocks-assets/releases">AVBlocks Assets</a> repository. After downloading and unzipping you will find <code class="docutils literal notranslate"><span class="pre">foreman_qcif.yuv</span></code> in the <code class="docutils literal notranslate"><span class="pre">vid</span></code> subdirectory.</p>
 </section>
 <section id="code">
 <h2>Code<a class="headerlink" href="#code" title="Link to this heading">¶</a></h2>
-<p>This code takes a raw YUV video file and encodes it to VP8 video in an IVF container.</p>
+<p>This code takes a raw YUV video file and encodes it to AVC / H.264 Annex B format using the pull method. The encoded samples are pulled from the transcoder and written to the output file by the application.</p>
 <section id="initialize-avblocks">
 <h3>Initialize AVBlocks<a class="headerlink" href="#initialize-avblocks" title="Link to this heading">¶</a></h3>
-<p>The first step in any AVBlocks application is to initialize the library. This must be done before using any other AVBlocks functionality. Always call <code class="docutils literal notranslate"><span class="pre">Library.Shutdown()</span></code> at the end of the program to clean up resources.</p>
+<p>Initialize the AVBlocks library before creating the transcoder, and shut it down after encoding is complete.</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
 <span class="p">{</span>
 <span class="w">    </span><span class="kt">var</span><span class="w"> </span><span class="n">opt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Options</span><span class="p">();</span>
@@ -517,6 +517,9 @@
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">opt</span><span class="p">.</span><span class="n">Error</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">ExitCodes</span><span class="p">.</span><span class="n">OptionsError</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">ExitCodes</span><span class="p">.</span><span class="n">Success</span><span class="p">;</span>
 
 <span class="w">    </span><span class="n">Library</span><span class="p">.</span><span class="n">Initialize</span><span class="p">();</span>
+
+<span class="w">    </span><span class="c1">// Set license information. To run AVBlocks in demo mode, comment the next line out</span>
+<span class="w">    </span><span class="c1">// Library.SetLicense(&quot;&lt;license-string&gt;&quot;);</span>
 
 <span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">encodeResult</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Encode</span><span class="p">(</span><span class="n">opt</span><span class="p">);</span>
 
@@ -556,70 +559,90 @@
 </section>
 <section id="configure-output-socket">
 <h3>Configure Output Socket<a class="headerlink" href="#configure-output-socket" title="Link to this heading">¶</a></h3>
-<p>The output socket writes VP8 video in an IVF container. The socket stream type is <code class="docutils literal notranslate"><span class="pre">Ivf</span></code>, and the output pin stream type is <code class="docutils literal notranslate"><span class="pre">Vp8</span></code>.</p>
+<p>The output socket describes AVC / H.264 Annex B output. The pull sample does not set a file on the output socket because the application writes pulled samples to the output stream.</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">static</span><span class="w"> </span><span class="n">MediaSocket</span><span class="w"> </span><span class="nf">CreateOutputSocket</span><span class="p">(</span><span class="n">Options</span><span class="w"> </span><span class="n">opt</span><span class="p">)</span>
 <span class="p">{</span>
 <span class="w">    </span><span class="n">MediaSocket</span><span class="w"> </span><span class="n">socket</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MediaSocket</span><span class="p">();</span>
-<span class="w">    </span><span class="n">socket</span><span class="p">.</span><span class="n">File</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">opt</span><span class="p">.</span><span class="n">OutputFile</span><span class="p">;</span>
-<span class="w">    </span><span class="n">socket</span><span class="p">.</span><span class="n">StreamType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">StreamType</span><span class="p">.</span><span class="n">Ivf</span><span class="p">;</span>
+<span class="w">    </span><span class="n">socket</span><span class="p">.</span><span class="n">StreamType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">StreamType</span><span class="p">.</span><span class="n">H264</span><span class="p">;</span>
+<span class="w">    </span><span class="n">socket</span><span class="p">.</span><span class="n">StreamSubType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">StreamSubType</span><span class="p">.</span><span class="n">AvcAnnexB</span><span class="p">;</span>
 
 <span class="w">    </span><span class="n">MediaPin</span><span class="w"> </span><span class="n">pin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MediaPin</span><span class="p">();</span>
 <span class="w">    </span><span class="n">socket</span><span class="p">.</span><span class="n">Pins</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">pin</span><span class="p">);</span>
 <span class="w">    </span><span class="n">VideoStreamInfo</span><span class="w"> </span><span class="n">vsi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">VideoStreamInfo</span><span class="p">();</span>
 <span class="w">    </span><span class="n">pin</span><span class="p">.</span><span class="n">StreamInfo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vsi</span><span class="p">;</span>
 
-<span class="w">    </span><span class="n">vsi</span><span class="p">.</span><span class="n">StreamType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">StreamType</span><span class="p">.</span><span class="n">Vp8</span><span class="p">;</span>
+<span class="w">    </span><span class="n">vsi</span><span class="p">.</span><span class="n">StreamType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">StreamType</span><span class="p">.</span><span class="n">H264</span><span class="p">;</span>
+<span class="w">    </span><span class="n">vsi</span><span class="p">.</span><span class="n">StreamSubType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">StreamSubType</span><span class="p">.</span><span class="n">AvcAnnexB</span><span class="p">;</span>
 
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">socket</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 </section>
-<section id="configure-and-run-transcoder">
-<h3>Configure and Run Transcoder<a class="headerlink" href="#configure-and-run-transcoder" title="Link to this heading">¶</a></h3>
-<p>Create the sockets, enable demo mode, add the sockets to a transcoder, and run it. The sample removes an existing output because the transcoder intentionally fails when the output file already exists.</p>
+<section id="configure-transcoder-and-pull-encoded-samples">
+<h3>Configure Transcoder and Pull Encoded Samples<a class="headerlink" href="#configure-transcoder-and-pull-encoded-samples" title="Link to this heading">¶</a></h3>
+<p>After creating the input and output sockets, the sample creates a transcoder, enables demo mode, opens it, pulls encoded samples, writes each sample buffer to the output file, and checks for end-of-stream.</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">static</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="nf">Encode</span><span class="p">(</span><span class="n">Options</span><span class="w"> </span><span class="n">opt</span><span class="p">)</span>
 <span class="p">{</span>
 <span class="w">    </span><span class="n">DeleteFile</span><span class="p">(</span><span class="n">opt</span><span class="p">.</span><span class="n">OutputFile</span><span class="p">);</span>
 
 <span class="w">    </span><span class="c1">// Create output directory if needed</span>
-<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">outputDir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="n">IO</span><span class="p">.</span><span class="n">Path</span><span class="p">.</span><span class="n">GetDirectoryName</span><span class="p">(</span><span class="n">opt</span><span class="p">.</span><span class="n">OutputFile</span><span class="p">);</span>
+<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">outputDir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Path</span><span class="p">.</span><span class="n">GetDirectoryName</span><span class="p">(</span><span class="n">opt</span><span class="p">.</span><span class="n">OutputFile</span><span class="p">);</span>
 <span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="kt">string</span><span class="p">.</span><span class="n">IsNullOrEmpty</span><span class="p">(</span><span class="n">outputDir</span><span class="p">))</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="n">IO</span><span class="p">.</span><span class="n">Directory</span><span class="p">.</span><span class="n">CreateDirectory</span><span class="p">(</span><span class="n">outputDir</span><span class="p">);</span>
+<span class="w">        </span><span class="n">Directory</span><span class="p">.</span><span class="n">CreateDirectory</span><span class="p">(</span><span class="n">outputDir</span><span class="p">);</span>
 
-<span class="w">    </span><span class="n">MediaSocket</span><span class="w"> </span><span class="n">inSocket</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CreateInputSocket</span><span class="p">(</span><span class="n">opt</span><span class="p">);</span>
-<span class="w">    </span><span class="n">MediaSocket</span><span class="w"> </span><span class="n">outSocket</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CreateOutputSocket</span><span class="p">(</span><span class="n">opt</span><span class="p">);</span>
-
-<span class="w">    </span><span class="c1">// create Transcoder</span>
-<span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="p">(</span><span class="n">Transcoder</span><span class="w"> </span><span class="n">transcoder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Transcoder</span><span class="p">())</span>
+<span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="p">(</span><span class="n">FileStream</span><span class="w"> </span><span class="n">outfile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">File</span><span class="p">.</span><span class="n">Create</span><span class="p">(</span><span class="n">opt</span><span class="p">.</span><span class="n">OutputFile</span><span class="p">))</span>
 <span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="n">transcoder</span><span class="p">.</span><span class="n">AllowDemoMode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">true</span><span class="p">;</span>
-<span class="w">        </span><span class="n">transcoder</span><span class="p">.</span><span class="n">Inputs</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">inSocket</span><span class="p">);</span>
-<span class="w">        </span><span class="n">transcoder</span><span class="p">.</span><span class="n">Outputs</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">outSocket</span><span class="p">);</span>
+<span class="w">        </span><span class="n">MediaSocket</span><span class="w"> </span><span class="n">inSocket</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CreateInputSocket</span><span class="p">(</span><span class="n">opt</span><span class="p">);</span>
+<span class="w">        </span><span class="n">MediaSocket</span><span class="w"> </span><span class="n">outSocket</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CreateOutputSocket</span><span class="p">(</span><span class="n">opt</span><span class="p">);</span>
 
-<span class="w">        </span><span class="kt">bool</span><span class="w"> </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">transcoder</span><span class="p">.</span><span class="n">Open</span><span class="p">();</span>
-<span class="w">        </span><span class="n">PrintStatus</span><span class="p">(</span><span class="s">&quot;Transcoder open&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">transcoder</span><span class="p">.</span><span class="n">Error</span><span class="p">);</span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">res</span><span class="p">)</span>
-<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="k">false</span><span class="p">;</span>
+<span class="w">        </span><span class="c1">// create Transcoder</span>
+<span class="w">        </span><span class="k">using</span><span class="w"> </span><span class="p">(</span><span class="n">Transcoder</span><span class="w"> </span><span class="n">transcoder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Transcoder</span><span class="p">())</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">transcoder</span><span class="p">.</span><span class="n">AllowDemoMode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">true</span><span class="p">;</span>
+<span class="w">            </span><span class="n">transcoder</span><span class="p">.</span><span class="n">Inputs</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">inSocket</span><span class="p">);</span>
+<span class="w">            </span><span class="n">transcoder</span><span class="p">.</span><span class="n">Outputs</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">outSocket</span><span class="p">);</span>
 
-<span class="w">        </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">transcoder</span><span class="p">.</span><span class="n">Run</span><span class="p">();</span>
-<span class="w">        </span><span class="n">PrintStatus</span><span class="p">(</span><span class="s">&quot;Transcoder run&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">transcoder</span><span class="p">.</span><span class="n">Error</span><span class="p">);</span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">res</span><span class="p">)</span>
-<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="k">false</span><span class="p">;</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">transcoder</span><span class="p">.</span><span class="n">Open</span><span class="p">())</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="n">PrintError</span><span class="p">(</span><span class="s">&quot;Transcoder open&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">transcoder</span><span class="p">.</span><span class="n">Error</span><span class="p">);</span>
+<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="k">false</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
 
-<span class="w">        </span><span class="n">transcoder</span><span class="p">.</span><span class="n">Close</span><span class="p">();</span>
-<span class="w">        </span><span class="n">PrintStatus</span><span class="p">(</span><span class="s">&quot;Transcoder close&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">transcoder</span><span class="p">.</span><span class="n">Error</span><span class="p">);</span>
+<span class="w">            </span><span class="c1">// encode by pulling encoded samples</span>
+<span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">outputIndex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">            </span><span class="n">MediaSample</span><span class="w"> </span><span class="n">sample</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MediaSample</span><span class="p">();</span>
+
+<span class="w">            </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">transcoder</span><span class="p">.</span><span class="n">Pull</span><span class="p">(</span><span class="k">out</span><span class="w"> </span><span class="n">outputIndex</span><span class="p">,</span><span class="w"> </span><span class="n">sample</span><span class="p">))</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="n">outfile</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="n">sample</span><span class="p">.</span><span class="n">Buffer</span><span class="p">.</span><span class="n">Start</span><span class="p">,</span><span class="w"> </span><span class="n">sample</span><span class="p">.</span><span class="n">Buffer</span><span class="p">.</span><span class="n">DataOffset</span><span class="p">,</span><span class="w"> </span><span class="n">sample</span><span class="p">.</span><span class="n">Buffer</span><span class="p">.</span><span class="n">DataSize</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+
+<span class="w">            </span><span class="n">ErrorInfo</span><span class="w"> </span><span class="n">error</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">transcoder</span><span class="p">.</span><span class="n">Error</span><span class="p">;</span>
+<span class="w">            </span><span class="n">PrintError</span><span class="p">(</span><span class="s">&quot;Transcoder pull&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">error</span><span class="p">);</span>
+
+<span class="w">            </span><span class="kt">bool</span><span class="w"> </span><span class="n">success</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">false</span><span class="p">;</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">error</span><span class="p">.</span><span class="n">Facility</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">ErrorFacility</span><span class="p">.</span><span class="n">Codec</span><span class="w"> </span><span class="o">&amp;&amp;</span>
+<span class="w">                </span><span class="n">error</span><span class="p">.</span><span class="n">Code</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">CodecError</span><span class="p">.</span><span class="n">EOS</span><span class="p">)</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="c1">// ok</span>
+<span class="w">                </span><span class="n">success</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">true</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+
+<span class="w">            </span><span class="n">transcoder</span><span class="p">.</span><span class="n">Close</span><span class="p">();</span>
+
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">success</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
 <span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">true</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 </section>
 <section id="complete-code">
 <h3>Complete Code<a class="headerlink" href="#complete-code" title="Link to this heading">¶</a></h3>
-<p>Here’s the complete working example that demonstrates VP8 encoding using AVBlocks for .NET.</p>
+<p>Here’s the complete working example that demonstrates AVC / H.264 encoding using the pull method with AVBlocks for .NET.</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">System.IO</span><span class="p">;</span>
 <span class="k">using</span><span class="w"> </span><span class="nn">PrimoSoftware.AVBlocks</span><span class="p">;</span>
 
 <span class="k">namespace</span><span class="w"> </span><span class="nn">CliSample</span>
@@ -650,43 +673,61 @@
 <span class="w">            </span><span class="n">DeleteFile</span><span class="p">(</span><span class="n">opt</span><span class="p">.</span><span class="n">OutputFile</span><span class="p">);</span>
 
 <span class="w">            </span><span class="c1">// Create output directory if needed</span>
-<span class="w">            </span><span class="kt">string</span><span class="w"> </span><span class="n">outputDir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="n">IO</span><span class="p">.</span><span class="n">Path</span><span class="p">.</span><span class="n">GetDirectoryName</span><span class="p">(</span><span class="n">opt</span><span class="p">.</span><span class="n">OutputFile</span><span class="p">);</span>
+<span class="w">            </span><span class="kt">string</span><span class="w"> </span><span class="n">outputDir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Path</span><span class="p">.</span><span class="n">GetDirectoryName</span><span class="p">(</span><span class="n">opt</span><span class="p">.</span><span class="n">OutputFile</span><span class="p">);</span>
 <span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="kt">string</span><span class="p">.</span><span class="n">IsNullOrEmpty</span><span class="p">(</span><span class="n">outputDir</span><span class="p">))</span>
-<span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="n">IO</span><span class="p">.</span><span class="n">Directory</span><span class="p">.</span><span class="n">CreateDirectory</span><span class="p">(</span><span class="n">outputDir</span><span class="p">);</span>
+<span class="w">                </span><span class="n">Directory</span><span class="p">.</span><span class="n">CreateDirectory</span><span class="p">(</span><span class="n">outputDir</span><span class="p">);</span>
 
-<span class="w">            </span><span class="n">MediaSocket</span><span class="w"> </span><span class="n">inSocket</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CreateInputSocket</span><span class="p">(</span><span class="n">opt</span><span class="p">);</span>
-<span class="w">            </span><span class="n">MediaSocket</span><span class="w"> </span><span class="n">outSocket</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CreateOutputSocket</span><span class="p">(</span><span class="n">opt</span><span class="p">);</span>
-
-<span class="w">            </span><span class="c1">// create Transcoder</span>
-<span class="w">            </span><span class="k">using</span><span class="w"> </span><span class="p">(</span><span class="n">Transcoder</span><span class="w"> </span><span class="n">transcoder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Transcoder</span><span class="p">())</span>
+<span class="w">            </span><span class="k">using</span><span class="w"> </span><span class="p">(</span><span class="n">FileStream</span><span class="w"> </span><span class="n">outfile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">File</span><span class="p">.</span><span class="n">Create</span><span class="p">(</span><span class="n">opt</span><span class="p">.</span><span class="n">OutputFile</span><span class="p">))</span>
 <span class="w">            </span><span class="p">{</span>
-<span class="w">                </span><span class="n">transcoder</span><span class="p">.</span><span class="n">AllowDemoMode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">true</span><span class="p">;</span>
-<span class="w">                </span><span class="n">transcoder</span><span class="p">.</span><span class="n">Inputs</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">inSocket</span><span class="p">);</span>
-<span class="w">                </span><span class="n">transcoder</span><span class="p">.</span><span class="n">Outputs</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">outSocket</span><span class="p">);</span>
+<span class="w">                </span><span class="n">MediaSocket</span><span class="w"> </span><span class="n">inSocket</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CreateInputSocket</span><span class="p">(</span><span class="n">opt</span><span class="p">);</span>
+<span class="w">                </span><span class="n">MediaSocket</span><span class="w"> </span><span class="n">outSocket</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CreateOutputSocket</span><span class="p">(</span><span class="n">opt</span><span class="p">);</span>
 
-<span class="w">                </span><span class="kt">bool</span><span class="w"> </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">transcoder</span><span class="p">.</span><span class="n">Open</span><span class="p">();</span>
-<span class="w">                </span><span class="n">PrintStatus</span><span class="p">(</span><span class="s">&quot;Transcoder open&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">transcoder</span><span class="p">.</span><span class="n">Error</span><span class="p">);</span>
-<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">res</span><span class="p">)</span>
-<span class="w">                    </span><span class="k">return</span><span class="w"> </span><span class="k">false</span><span class="p">;</span>
+<span class="w">                </span><span class="c1">// create Transcoder</span>
+<span class="w">                </span><span class="k">using</span><span class="w"> </span><span class="p">(</span><span class="n">Transcoder</span><span class="w"> </span><span class="n">transcoder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Transcoder</span><span class="p">())</span>
+<span class="w">                </span><span class="p">{</span>
+<span class="w">                    </span><span class="n">transcoder</span><span class="p">.</span><span class="n">AllowDemoMode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">true</span><span class="p">;</span>
+<span class="w">                    </span><span class="n">transcoder</span><span class="p">.</span><span class="n">Inputs</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">inSocket</span><span class="p">);</span>
+<span class="w">                    </span><span class="n">transcoder</span><span class="p">.</span><span class="n">Outputs</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">outSocket</span><span class="p">);</span>
 
-<span class="w">                </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">transcoder</span><span class="p">.</span><span class="n">Run</span><span class="p">();</span>
-<span class="w">                </span><span class="n">PrintStatus</span><span class="p">(</span><span class="s">&quot;Transcoder run&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">transcoder</span><span class="p">.</span><span class="n">Error</span><span class="p">);</span>
-<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">res</span><span class="p">)</span>
-<span class="w">                    </span><span class="k">return</span><span class="w"> </span><span class="k">false</span><span class="p">;</span>
+<span class="w">                    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">transcoder</span><span class="p">.</span><span class="n">Open</span><span class="p">())</span>
+<span class="w">                    </span><span class="p">{</span>
+<span class="w">                        </span><span class="n">PrintError</span><span class="p">(</span><span class="s">&quot;Transcoder open&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">transcoder</span><span class="p">.</span><span class="n">Error</span><span class="p">);</span>
+<span class="w">                        </span><span class="k">return</span><span class="w"> </span><span class="k">false</span><span class="p">;</span>
+<span class="w">                    </span><span class="p">}</span>
 
-<span class="w">                </span><span class="n">transcoder</span><span class="p">.</span><span class="n">Close</span><span class="p">();</span>
-<span class="w">                </span><span class="n">PrintStatus</span><span class="p">(</span><span class="s">&quot;Transcoder close&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">transcoder</span><span class="p">.</span><span class="n">Error</span><span class="p">);</span>
+<span class="w">                    </span><span class="c1">// encode by pulling encoded samples</span>
+<span class="w">                    </span><span class="kt">int</span><span class="w"> </span><span class="n">outputIndex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">                    </span><span class="n">MediaSample</span><span class="w"> </span><span class="n">sample</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MediaSample</span><span class="p">();</span>
+
+<span class="w">                    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">transcoder</span><span class="p">.</span><span class="n">Pull</span><span class="p">(</span><span class="k">out</span><span class="w"> </span><span class="n">outputIndex</span><span class="p">,</span><span class="w"> </span><span class="n">sample</span><span class="p">))</span>
+<span class="w">                    </span><span class="p">{</span>
+<span class="w">                        </span><span class="n">outfile</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="n">sample</span><span class="p">.</span><span class="n">Buffer</span><span class="p">.</span><span class="n">Start</span><span class="p">,</span><span class="w"> </span><span class="n">sample</span><span class="p">.</span><span class="n">Buffer</span><span class="p">.</span><span class="n">DataOffset</span><span class="p">,</span><span class="w"> </span><span class="n">sample</span><span class="p">.</span><span class="n">Buffer</span><span class="p">.</span><span class="n">DataSize</span><span class="p">);</span>
+<span class="w">                    </span><span class="p">}</span>
+
+<span class="w">                    </span><span class="n">ErrorInfo</span><span class="w"> </span><span class="n">error</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">transcoder</span><span class="p">.</span><span class="n">Error</span><span class="p">;</span>
+<span class="w">                    </span><span class="n">PrintError</span><span class="p">(</span><span class="s">&quot;Transcoder pull&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">error</span><span class="p">);</span>
+
+<span class="w">                    </span><span class="kt">bool</span><span class="w"> </span><span class="n">success</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">false</span><span class="p">;</span>
+<span class="w">                    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">error</span><span class="p">.</span><span class="n">Facility</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">ErrorFacility</span><span class="p">.</span><span class="n">Codec</span><span class="w"> </span><span class="o">&amp;&amp;</span>
+<span class="w">                        </span><span class="n">error</span><span class="p">.</span><span class="n">Code</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">CodecError</span><span class="p">.</span><span class="n">EOS</span><span class="p">)</span>
+<span class="w">                    </span><span class="p">{</span>
+<span class="w">                        </span><span class="c1">// ok</span>
+<span class="w">                        </span><span class="n">success</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">true</span><span class="p">;</span>
+<span class="w">                    </span><span class="p">}</span>
+
+<span class="w">                    </span><span class="n">transcoder</span><span class="p">.</span><span class="n">Close</span><span class="p">();</span>
+
+<span class="w">                    </span><span class="k">return</span><span class="w"> </span><span class="n">success</span><span class="p">;</span>
+<span class="w">                </span><span class="p">}</span>
 <span class="w">            </span><span class="p">}</span>
-
-<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="k">true</span><span class="p">;</span>
 <span class="w">        </span><span class="p">}</span>
 
 <span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">DeleteFile</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">filename</span><span class="p">)</span>
 <span class="w">        </span><span class="p">{</span>
 <span class="w">            </span><span class="k">try</span>
 <span class="w">            </span><span class="p">{</span>
-<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="n">IO</span><span class="p">.</span><span class="n">File</span><span class="p">.</span><span class="n">Exists</span><span class="p">(</span><span class="n">filename</span><span class="p">))</span>
-<span class="w">                    </span><span class="n">System</span><span class="p">.</span><span class="n">IO</span><span class="p">.</span><span class="n">File</span><span class="p">.</span><span class="n">Delete</span><span class="p">(</span><span class="n">filename</span><span class="p">);</span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">File</span><span class="p">.</span><span class="n">Exists</span><span class="p">(</span><span class="n">filename</span><span class="p">))</span>
+<span class="w">                    </span><span class="n">File</span><span class="p">.</span><span class="n">Delete</span><span class="p">(</span><span class="n">filename</span><span class="p">);</span>
 <span class="w">            </span><span class="p">}</span>
 <span class="w">            </span><span class="k">catch</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span>
 <span class="w">        </span><span class="p">}</span>
@@ -716,20 +757,21 @@
 <span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="n">MediaSocket</span><span class="w"> </span><span class="nf">CreateOutputSocket</span><span class="p">(</span><span class="n">Options</span><span class="w"> </span><span class="n">opt</span><span class="p">)</span>
 <span class="w">        </span><span class="p">{</span>
 <span class="w">            </span><span class="n">MediaSocket</span><span class="w"> </span><span class="n">socket</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MediaSocket</span><span class="p">();</span>
-<span class="w">            </span><span class="n">socket</span><span class="p">.</span><span class="n">File</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">opt</span><span class="p">.</span><span class="n">OutputFile</span><span class="p">;</span>
-<span class="w">            </span><span class="n">socket</span><span class="p">.</span><span class="n">StreamType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">StreamType</span><span class="p">.</span><span class="n">Ivf</span><span class="p">;</span>
+<span class="w">            </span><span class="n">socket</span><span class="p">.</span><span class="n">StreamType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">StreamType</span><span class="p">.</span><span class="n">H264</span><span class="p">;</span>
+<span class="w">            </span><span class="n">socket</span><span class="p">.</span><span class="n">StreamSubType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">StreamSubType</span><span class="p">.</span><span class="n">AvcAnnexB</span><span class="p">;</span>
 
 <span class="w">            </span><span class="n">MediaPin</span><span class="w"> </span><span class="n">pin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MediaPin</span><span class="p">();</span>
 <span class="w">            </span><span class="n">socket</span><span class="p">.</span><span class="n">Pins</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">pin</span><span class="p">);</span>
 <span class="w">            </span><span class="n">VideoStreamInfo</span><span class="w"> </span><span class="n">vsi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">VideoStreamInfo</span><span class="p">();</span>
 <span class="w">            </span><span class="n">pin</span><span class="p">.</span><span class="n">StreamInfo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vsi</span><span class="p">;</span>
 
-<span class="w">            </span><span class="n">vsi</span><span class="p">.</span><span class="n">StreamType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">StreamType</span><span class="p">.</span><span class="n">Vp8</span><span class="p">;</span>
+<span class="w">            </span><span class="n">vsi</span><span class="p">.</span><span class="n">StreamType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">StreamType</span><span class="p">.</span><span class="n">H264</span><span class="p">;</span>
+<span class="w">            </span><span class="n">vsi</span><span class="p">.</span><span class="n">StreamSubType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">StreamSubType</span><span class="p">.</span><span class="n">AvcAnnexB</span><span class="p">;</span>
 
 <span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">socket</span><span class="p">;</span>
 <span class="w">        </span><span class="p">}</span>
 
-<span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">PrintStatus</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">action</span><span class="p">,</span><span class="w"> </span><span class="n">ErrorInfo</span><span class="w"> </span><span class="n">e</span><span class="p">)</span>
+<span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">PrintError</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">action</span><span class="p">,</span><span class="w"> </span><span class="n">ErrorInfo</span><span class="w"> </span><span class="n">e</span><span class="p">)</span>
 <span class="w">        </span><span class="p">{</span>
 <span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">action</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="k">null</span><span class="p">)</span>
 <span class="w">            </span><span class="p">{</span>
@@ -761,40 +803,25 @@
 </section>
 <section id="how-to-run">
 <h2>How to Run<a class="headerlink" href="#how-to-run" title="Link to this heading">¶</a></h2>
-<p>See the <a class="reference external" href="https://github.com/avblocks/avblocks-net/tree/main/samples/enc_vp8_file">enc_vp8_file</a> .NET sample for details.</p>
+<p>See the <a class="reference external" href="https://github.com/avblocks/avblocks-net/blob/main/docs/build-mac.md">build instructions</a> for macOS and the <a class="reference external" href="https://github.com/avblocks/avblocks-net/tree/main/samples/enc_avc_pull">enc_avc_pull</a> .NET sample for details.</p>
 <section id="command-line">
 <h3>Command Line<a class="headerlink" href="#command-line" title="Link to this heading">¶</a></h3>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>enc_vp8_file<span class="w"> </span>--frame<span class="w"> </span>&lt;width&gt;x&lt;height&gt;<span class="w"> </span>--rate<span class="w"> </span>&lt;fps&gt;<span class="w"> </span>--color<span class="w"> </span>&lt;color&gt;<span class="w"> </span>--input<span class="w"> </span>&lt;file.yuv&gt;<span class="w"> </span>--output<span class="w"> </span>&lt;file.ivf&gt;<span class="w"> </span><span class="o">[</span>--colors<span class="o">]</span>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>enc_avc_pull<span class="w"> </span>--input<span class="w"> </span>&lt;file.yuv&gt;<span class="w"> </span>--output<span class="w"> </span>&lt;file.h264&gt;
 </pre></div>
 </div>
 </section>
 <section id="examples">
 <h3>Examples<a class="headerlink" href="#examples" title="Link to this heading">¶</a></h3>
 <p>List options:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>./bin/net10.0/enc_vp8_file<span class="w"> </span>--help
-</pre></div>
-</div>
-<p>Encode a raw YUV video from <code class="docutils literal notranslate"><span class="pre">./assets/vid/foreman_qcif.yuv</span></code> to a VP8 video in <code class="docutils literal notranslate"><span class="pre">./output/enc_vp8_file/foreman_qcif.ivf</span></code>:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="c1"># Linux and macOS</span>
-mkdir<span class="w"> </span>-p<span class="w"> </span>./output/enc_vp8_file
-
-./bin/net10.0/enc_vp8_file<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>--input<span class="w"> </span>./assets/vid/foreman_qcif.yuv<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>--output<span class="w"> </span>./output/enc_vp8_file/foreman_qcif.ivf<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>--frame<span class="w"> </span>176x144<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>--rate<span class="w"> </span><span class="m">30</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>--color<span class="w"> </span>yuv420
-</pre></div>
-</div>
-<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="c"># Windows</span>
-<span class="n">mkdir</span> <span class="n">-Force</span> <span class="n">-Path</span> <span class="p">./</span><span class="n">output</span><span class="p">/</span><span class="n">enc_vp8_file</span>
-
-<span class="p">./</span><span class="n">bin</span><span class="p">/</span><span class="n">net10</span><span class="p">.</span><span class="n">0</span><span class="p">/</span><span class="n">enc_vp8_file</span> <span class="p">`</span>
-  <span class="p">-</span><span class="n">-input</span> <span class="p">./</span><span class="n">assets</span><span class="p">/</span><span class="n">vid</span><span class="p">/</span><span class="n">foreman_qcif</span><span class="p">.</span><span class="n">yuv</span> <span class="p">`</span>
-  <span class="p">-</span><span class="n">-output</span> <span class="p">./</span><span class="n">output</span><span class="p">/</span><span class="n">enc_vp8_file</span><span class="p">/</span><span class="n">foreman_qcif</span><span class="p">.</span><span class="n">ivf</span> <span class="p">`</span>
-  <span class="p">-</span><span class="n">-frame</span> <span class="n">176x144</span> <span class="p">`</span>
-  <span class="p">-</span><span class="n">-rate</span> <span class="n">30</span> <span class="p">`</span>
-  <span class="p">-</span><span class="n">-color</span> <span class="n">yuv420</span>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>./bin/net10.0/enc_avc_pull<span class="w"> </span>--help
+Usage:<span class="w"> </span>enc_avc_pull<span class="w"> </span>--input<span class="w"> </span>&lt;file.yuv&gt;<span class="w"> </span>--output<span class="w"> </span>&lt;file.h264&gt;
+<span class="w">  </span>-i,<span class="w">    </span>--input<span class="w">    </span>input<span class="w"> </span>YUV<span class="w"> </span>file
+<span class="w">  </span>-o,<span class="w">    </span>--output<span class="w">   </span>output<span class="w"> </span>AVC<span class="w"> </span>/<span class="w"> </span>H.264<span class="w"> </span>file
+<span class="w">  </span>-r,<span class="w">    </span>--rate<span class="w">     </span>input<span class="w"> </span>frame<span class="w"> </span>rate
+<span class="w">  </span>-f,<span class="w">    </span>--frame<span class="w">    </span>input<span class="w"> </span>frame<span class="w"> </span>size
+<span class="w">  </span>-c,<span class="w">    </span>--color<span class="w">    </span>input<span class="w"> </span>color<span class="w"> </span>space
+<span class="w">  </span>--colors<span class="w">          </span>list<span class="w"> </span>supported<span class="w"> </span>input<span class="w"> </span>color<span class="w"> </span>spaces
+<span class="w">  </span>--help<span class="w">            </span>Display<span class="w"> </span>this<span class="w"> </span><span class="nb">help</span><span class="w"> </span>screen.
 </pre></div>
 </div>
 </section>
@@ -806,23 +833,23 @@ mkdir<span class="w"> </span>-p<span class="w"> </span>./output/enc_vp8_file
       <footer>
         
 <div class="related-pages">
-  <a class="next-page" href="../aac-index/">
+  <a class="next-page" href="../avc-h264-encoder/">
       <div class="page-info">
         <div class="context">
           <span>Next</span>
         </div>
-        <div class="title">AAC Audio Encoding</div>
+        <div class="title">AVC / H.264 Annex B Encoder (Push)</div>
       </div>
       <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
     </a>
-  <a class="prev-page" href="../vp8-index/">
+  <a class="prev-page" href="../avc-h264-encoder-run/">
       <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
       <div class="page-info">
         <div class="context">
           <span>Previous</span>
         </div>
         
-        <div class="title">VP8 Video Encoding</div>
+        <div class="title">AVC / H.264 Annex B Encoder (Run)</div>
         
       </div>
     </a>
@@ -861,13 +888,13 @@ mkdir<span class="w"> </span>-p<span class="w"> </span>./output/enc_vp8_file
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">VP8 Encoder (Run)</a><ul>
+<li><a class="reference internal" href="#">AVC / H.264 Encoder (Pull)</a><ul>
 <li><a class="reference internal" href="#source-video">Source Video</a></li>
 <li><a class="reference internal" href="#code">Code</a><ul>
 <li><a class="reference internal" href="#initialize-avblocks">Initialize AVBlocks</a></li>
 <li><a class="reference internal" href="#configure-input-socket">Configure Input Socket</a></li>
 <li><a class="reference internal" href="#configure-output-socket">Configure Output Socket</a></li>
-<li><a class="reference internal" href="#configure-and-run-transcoder">Configure and Run Transcoder</a></li>
+<li><a class="reference internal" href="#configure-transcoder-and-pull-encoded-samples">Configure Transcoder and Pull Encoded Samples</a></li>
 <li><a class="reference internal" href="#complete-code">Complete Code</a></li>
 </ul>
 </li>
