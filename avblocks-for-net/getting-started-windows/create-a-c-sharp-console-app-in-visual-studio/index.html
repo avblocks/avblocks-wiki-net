@@ -508,7 +508,6 @@
 <li><p>Choose <code class="docutils literal notranslate"><span class="pre">.NET</span> <span class="pre">10.0</span> <span class="pre">(Long-term</span> <span class="pre">support)</span></code> for Framework</p></li>
 </ul>
 </li>
-<li><p>In Visual Studio, select <code class="docutils literal notranslate"><span class="pre">Build</span> <span class="pre">|</span> <span class="pre">Configuration</span> <span class="pre">Manager</span></code> from the menu, then add the <code class="docutils literal notranslate"><span class="pre">x64</span></code> platform to the solution platforms.</p></li>
 <li><p>Replace the contents of Program.cs with this code:</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="nn">PrimoSoftware.AVBlocks</span><span class="p">;</span>
 
@@ -549,26 +548,65 @@
 </pre></div>
 </div>
 </li>
-<li><p><a class="reference external" href="https://github.com/avblocks/avblocks-net-core/releases/">Download</a> the Windows version of AVBlocks for .NET (net10.0). The file you need will have a name similar to <code class="docutils literal notranslate"><span class="pre">avblocks-net10.0-v3.3.0-demo.1-windows.zip</span></code> - the version number may differ.</p></li>
+</ol>
+</section>
+<section id="add-avblocks-net">
+<h2>Add AVBlocks .NET<a class="headerlink" href="#add-avblocks-net" title="Link to this heading">¶</a></h2>
+<p>Follow the section that matches your machine.</p>
+<section id="x64">
+<h3>x64<a class="headerlink" href="#x64" title="Link to this heading">¶</a></h3>
+<p>For x64 machines.</p>
+<ol class="arabic simple">
+<li><p>In Visual Studio, select <code class="docutils literal notranslate"><span class="pre">Build</span> <span class="pre">|</span> <span class="pre">Configuration</span> <span class="pre">Manager</span></code> from the menu, then add the <code class="docutils literal notranslate"><span class="pre">x64</span></code> platform to the solution platforms.</p></li>
+<li><p><a class="reference external" href="https://github.com/avblocks/avblocks-net-core/releases/">Download</a> the Windows version of AVBlocks for .NET (net10.0). The file you need will have a name similar to <code class="docutils literal notranslate"><span class="pre">avblocks-net10.0-v3.4.0-demo.1-windows.zip</span></code> - the version number may differ.</p></li>
 <li><p>Unzip in a location of your choice, then copy the file <code class="docutils literal notranslate"><span class="pre">AVBlocks.clrcore.x64.dll</span></code> and <code class="docutils literal notranslate"><span class="pre">AVBlocks64.dll</span></code> to the project’s directory.</p></li>
 <li><p>Switch to the project in Visual Studio and add a reference to <code class="docutils literal notranslate"><span class="pre">AVBlocks.clrcore.x64.dll</span></code>.</p></li>
-<li><p>Add the <code class="docutils literal notranslate"><span class="pre">AVBlocks64.dll</span></code> to your project simply as a file, open file properties, and set the ‘Copy to Output Directory’ to ‘Copy if newer’, so it is copied to the output directory automatically. The <code class="docutils literal notranslate"><span class="pre">AVBlocks.clrcore.x64.dll</span></code> needs <code class="docutils literal notranslate"><span class="pre">AVBlocks64.dll</span></code> and will not work without it.</p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">AVBlocks64.dll</span></code> to your project simply as a file, open file properties, and set the ‘Copy to Output Directory’ to ‘Copy if newer’, so it is copied to the output directory automatically. The <code class="docutils literal notranslate"><span class="pre">AVBlocks.clrcore.x64.dll</span></code> needs it and will not work without it.</p></li>
 <li><p>Build the project (Ctrl + Shift + B)</p></li>
 </ol>
+</section>
+<section id="arm64">
+<h3>arm64<a class="headerlink" href="#arm64" title="Link to this heading">¶</a></h3>
+<p>For Windows on ARM (arm64) machines.</p>
+<ol class="arabic simple">
+<li><p>In Visual Studio, select <code class="docutils literal notranslate"><span class="pre">Build</span> <span class="pre">|</span> <span class="pre">Configuration</span> <span class="pre">Manager</span></code> from the menu, then add the <code class="docutils literal notranslate"><span class="pre">ARM64</span></code> platform to the solution platforms.</p></li>
+<li><p><a class="reference external" href="https://github.com/avblocks/avblocks-net-core/releases/">Download</a> the Windows version of AVBlocks for .NET (net10.0). The file you need will have a name similar to <code class="docutils literal notranslate"><span class="pre">avblocks-net10.0-v3.4.0-demo.1-windows-arm64.zip</span></code> - the version number may differ.</p></li>
+<li><p>Unzip in a location of your choice, then copy the file <code class="docutils literal notranslate"><span class="pre">AVBlocks.clrcore.arm64.dll</span></code> and <code class="docutils literal notranslate"><span class="pre">AVBlocks64.dll</span></code> to the project’s directory.</p></li>
+<li><p>Switch to the project in Visual Studio and add a reference to <code class="docutils literal notranslate"><span class="pre">AVBlocks.clrcore.arm64.dll</span></code>.</p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">AVBlocks64.dll</span></code> to your project simply as a file, open file properties, and set the ‘Copy to Output Directory’ to ‘Copy if newer’, so it is copied to the output directory automatically. The <code class="docutils literal notranslate"><span class="pre">AVBlocks.clrcore.arm64.dll</span></code> needs it and will not work without it.</p></li>
+<li><p>Build the project (Ctrl + Shift + B)</p></li>
+</ol>
+</section>
 </section>
 <section id="run-the-application">
 <h2>Run the application<a class="headerlink" href="#run-the-application" title="Link to this heading">¶</a></h2>
 <ol class="arabic simple">
-<li><p>Download the <code class="docutils literal notranslate"><span class="pre">Wildlife.wmv</span></code> HD movie from the <a class="reference external" href="https://archive.org/download/WildlifeHd/Wildlife.wmv">Internet Archive</a> and save it in <code class="docutils literal notranslate"><span class="pre">bin/x64/Debug/net10.0</span></code> under the project’s directory.</p></li>
-<li><p>Run the application in Visual Studio. Wait a few seconds for the Transcoder to finish. The converted file <code class="docutils literal notranslate"><span class="pre">Wildlife.mp4</span></code> will be in the <code class="docutils literal notranslate"><span class="pre">bin/x64/Debug/net10.0</span></code> directory.</p></li>
+<li><p>Download the <code class="docutils literal notranslate"><span class="pre">Wildlife.wmv</span></code> HD movie from the <a class="reference external" href="https://archive.org/download/WildlifeHd/Wildlife.wmv">Internet Archive</a> and save it in the output directory under the project’s directory: <code class="docutils literal notranslate"><span class="pre">bin/x64/Debug/net10.0</span></code> on x64, or <code class="docutils literal notranslate"><span class="pre">bin/arm64/Debug/net10.0</span></code> on arm64.</p></li>
+<li><p>Run the application in Visual Studio. Wait a few seconds for the Transcoder to finish. The converted file <code class="docutils literal notranslate"><span class="pre">Wildlife.mp4</span></code> will be in the same output directory.</p></li>
 </ol>
 </section>
 <section id="troubleshooting">
 <h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this heading">¶</a></h2>
+<section id="id1">
+<h3>x64<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>You may get a <code class="docutils literal notranslate"><span class="pre">'DllNotFoundException'</span> <span class="pre">exception:</span> <span class="pre">Unable</span> <span class="pre">to</span> <span class="pre">load</span> <span class="pre">DLL</span> <span class="pre">'AVBlocks64.dll':</span> <span class="pre">The</span> <span class="pre">specified</span> <span class="pre">module</span> <span class="pre">could</span> <span class="pre">not</span> <span class="pre">be</span> <span class="pre">found.</span></code> To fix that, copy the file <code class="docutils literal notranslate"><span class="pre">AVBlocks64.dll</span></code> to <code class="docutils literal notranslate"><span class="pre">bin/x64/Debug/net10.0</span></code> under the project’s directory.</p></li>
 <li><p>Transcoder.Open may fail if there is already a file <code class="docutils literal notranslate"><span class="pre">Wildlife.mp4</span></code> in the <code class="docutils literal notranslate"><span class="pre">bin/x64/Debug/net10.0</span></code> directory. Delete <code class="docutils literal notranslate"><span class="pre">Wildlife.mp4</span></code> to solve that.</p></li>
 </ul>
+</section>
+<section id="id2">
+<h3>arm64<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>You may get a <code class="docutils literal notranslate"><span class="pre">'DllNotFoundException'</span> <span class="pre">exception:</span> <span class="pre">Unable</span> <span class="pre">to</span> <span class="pre">load</span> <span class="pre">DLL</span> <span class="pre">'AVBlocks64.dll':</span> <span class="pre">The</span> <span class="pre">specified</span> <span class="pre">module</span> <span class="pre">could</span> <span class="pre">not</span> <span class="pre">be</span> <span class="pre">found.</span></code> To fix that, copy the file <code class="docutils literal notranslate"><span class="pre">AVBlocks64.dll</span></code> from the arm64 package to <code class="docutils literal notranslate"><span class="pre">bin/arm64/Debug/net10.0</span></code> under the project’s directory.</p></li>
+<li><p>Transcoder.Open may fail if there is already a file <code class="docutils literal notranslate"><span class="pre">Wildlife.mp4</span></code> in the <code class="docutils literal notranslate"><span class="pre">bin/arm64/Debug/net10.0</span></code> directory. Delete <code class="docutils literal notranslate"><span class="pre">Wildlife.mp4</span></code> to solve that.</p></li>
+</ul>
+</section>
+<section id="both-architectures">
+<h3>Both architectures<a class="headerlink" href="#both-architectures" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>You may get a <code class="docutils literal notranslate"><span class="pre">BadImageFormatException</span></code>. The AVBlocks package does not match the architecture of the process. Use the <code class="docutils literal notranslate"><span class="pre">x64</span></code> package and <code class="docutils literal notranslate"><span class="pre">AVBlocks.clrcore.x64.dll</span></code> with an x64 build, and the <code class="docutils literal notranslate"><span class="pre">arm64</span></code> package and <code class="docutils literal notranslate"><span class="pre">AVBlocks.clrcore.arm64.dll</span></code> with an arm64 build.</p></li>
+</ul>
+</section>
 </section>
 </section>
 
@@ -634,8 +672,18 @@
             <ul>
 <li><a class="reference internal" href="#">Create a C# Console App in Visual Studio</a><ul>
 <li><a class="reference internal" href="#create-the-visual-studio-project">Create the Visual Studio project</a></li>
+<li><a class="reference internal" href="#add-avblocks-net">Add AVBlocks .NET</a><ul>
+<li><a class="reference internal" href="#x64">x64</a></li>
+<li><a class="reference internal" href="#arm64">arm64</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#run-the-application">Run the application</a></li>
-<li><a class="reference internal" href="#troubleshooting">Troubleshooting</a></li>
+<li><a class="reference internal" href="#troubleshooting">Troubleshooting</a><ul>
+<li><a class="reference internal" href="#id1">x64</a></li>
+<li><a class="reference internal" href="#id2">arm64</a></li>
+<li><a class="reference internal" href="#both-architectures">Both architectures</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>

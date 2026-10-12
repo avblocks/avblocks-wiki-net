@@ -548,12 +548,33 @@
 </pre></div>
 </div>
 </li>
-<li><p><a class="reference external" href="https://github.com/avblocks/avblocks-net-core/releases/">Download</a> the Darwin version of AVBlocks for .NET (net10.0). The file you need will have a name similar to <code class="docutils literal notranslate"><span class="pre">avblocks-net10.0-v3.3.0-demo.1-darwin.zip</span></code> - the version number may differ.</p></li>
+</ol>
+</section>
+<section id="add-avblocks-net">
+<h2>Add AVBlocks .NET<a class="headerlink" href="#add-avblocks-net" title="Link to this heading">¶</a></h2>
+<p>Follow the section that matches the architecture of your .NET installation (run <code class="docutils literal notranslate"><span class="pre">dotnet</span> <span class="pre">--info</span></code> and check the <code class="docutils literal notranslate"><span class="pre">Architecture</span></code> line).</p>
+<section id="x64">
+<h3>x64<a class="headerlink" href="#x64" title="Link to this heading">¶</a></h3>
+<p>For Intel Macs, or an x64 .NET running under Rosetta.</p>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://github.com/avblocks/avblocks-net-core/releases/">Download</a> the Darwin version of AVBlocks for .NET (net10.0). The file you need will have a name similar to <code class="docutils literal notranslate"><span class="pre">avblocks-net10.0-v3.4.0-demo.1-darwin.zip</span></code> - the version number may differ.</p></li>
 <li><p>Unzip in a location of your choice, then copy the file <code class="docutils literal notranslate"><span class="pre">AVBlocks.clrcore.x64.dll</span></code> and <code class="docutils literal notranslate"><span class="pre">libAVBlocks.dylib</span></code> to the project’s directory.</p></li>
 <li><p>Switch to the project in Visual Studio and add a reference to <code class="docutils literal notranslate"><span class="pre">AVBlocks.clrcore.x64.dll</span></code>. To do this right click the <code class="docutils literal notranslate"><span class="pre">simple-converter</span></code> project, select <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">|</span> <span class="pre">Reference</span> <span class="pre">|</span> <span class="pre">.NET</span> <span class="pre">Assembly</span> <span class="pre">|</span> <span class="pre">Browse</span></code> then select <code class="docutils literal notranslate"><span class="pre">AVBlocks.clrcore.x64.dll</span></code>.</p></li>
 <li><p>Add the <code class="docutils literal notranslate"><span class="pre">libAVBlocks.dylib</span></code> to your project simply as a file, open file properties, and set the ‘Copy to Output Directory’ to ‘Copy if newer’, so it is copied to the output directory automatically. The <code class="docutils literal notranslate"><span class="pre">AVBlocks.clrcore.x64.dll</span></code> needs <code class="docutils literal notranslate"><span class="pre">libAVBlocks.dylib</span></code> and will not work without it.</p></li>
 <li><p>Build the project (Cmd + K)</p></li>
 </ol>
+</section>
+<section id="arm64">
+<h3>arm64<a class="headerlink" href="#arm64" title="Link to this heading">¶</a></h3>
+<p>For Apple Silicon Macs (M1 and later) running an arm64 .NET.</p>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://github.com/avblocks/avblocks-net-core/releases/">Download</a> the Darwin version of AVBlocks for .NET (net10.0). The file you need will have a name similar to <code class="docutils literal notranslate"><span class="pre">avblocks-net10.0-v3.4.0-demo.1-darwin-arm64.zip</span></code> - the version number may differ.</p></li>
+<li><p>Unzip in a location of your choice, then copy the file <code class="docutils literal notranslate"><span class="pre">AVBlocks.clrcore.arm64.dll</span></code> and <code class="docutils literal notranslate"><span class="pre">libAVBlocks.dylib</span></code> to the project’s directory.</p></li>
+<li><p>Switch to the project in Visual Studio and add a reference to <code class="docutils literal notranslate"><span class="pre">AVBlocks.clrcore.arm64.dll</span></code>. To do this right click the <code class="docutils literal notranslate"><span class="pre">simple-converter</span></code> project, select <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">|</span> <span class="pre">Reference</span> <span class="pre">|</span> <span class="pre">.NET</span> <span class="pre">Assembly</span> <span class="pre">|</span> <span class="pre">Browse</span></code> then select <code class="docutils literal notranslate"><span class="pre">AVBlocks.clrcore.arm64.dll</span></code>.</p></li>
+<li><p>Add the <code class="docutils literal notranslate"><span class="pre">libAVBlocks.dylib</span></code> to your project simply as a file, open file properties, and set the ‘Copy to Output Directory’ to ‘Copy if newer’, so it is copied to the output directory automatically. The <code class="docutils literal notranslate"><span class="pre">AVBlocks.clrcore.arm64.dll</span></code> needs <code class="docutils literal notranslate"><span class="pre">libAVBlocks.dylib</span></code> and will not work without it.</p></li>
+<li><p>Build the project (Cmd + K)</p></li>
+</ol>
+</section>
 </section>
 <section id="run-the-application">
 <h2>Run the application<a class="headerlink" href="#run-the-application" title="Link to this heading">¶</a></h2>
@@ -567,6 +588,7 @@
 <ul class="simple">
 <li><p>You may get a <code class="docutils literal notranslate"><span class="pre">'DllNotFoundException'</span> <span class="pre">exception:</span> <span class="pre">Unable</span> <span class="pre">to</span> <span class="pre">load</span> <span class="pre">DLL</span> <span class="pre">'libAVBlocks.dylib':</span> <span class="pre">The</span> <span class="pre">specified</span> <span class="pre">module</span> <span class="pre">could</span> <span class="pre">not</span> <span class="pre">be</span> <span class="pre">found.</span></code> To fix that, copy the file <code class="docutils literal notranslate"><span class="pre">libAVBlocks.dylib</span></code> to <code class="docutils literal notranslate"><span class="pre">bin/Debug/net10.0</span></code> under the project’s directory.</p></li>
 <li><p>Transcoder.Open may fail if there is already a file <code class="docutils literal notranslate"><span class="pre">AAP.mp4</span></code> in the <code class="docutils literal notranslate"><span class="pre">bin/Debug/net10.0</span></code> directory. Delete <code class="docutils literal notranslate"><span class="pre">AAP.mp4</span></code> to solve that.</p></li>
+<li><p>You may get a <code class="docutils literal notranslate"><span class="pre">BadImageFormatException</span></code> (or the library fails to load with an architecture mismatch). The AVBlocks package does not match the architecture of your .NET. Run <code class="docutils literal notranslate"><span class="pre">dotnet</span> <span class="pre">--info</span></code>, check the <code class="docutils literal notranslate"><span class="pre">Architecture</span></code> line, and use the matching <code class="docutils literal notranslate"><span class="pre">x64</span></code> or <code class="docutils literal notranslate"><span class="pre">arm64</span></code> package and <code class="docutils literal notranslate"><span class="pre">AVBlocks.clrcore.&lt;arch&gt;.dll</span></code>.</p></li>
 </ul>
 </section>
 </section>
@@ -633,6 +655,11 @@
             <ul>
 <li><a class="reference internal" href="#">Create a C# Console App in Visual Studio for Mac</a><ul>
 <li><a class="reference internal" href="#create-the-visual-studio-project">Create the Visual Studio project</a></li>
+<li><a class="reference internal" href="#add-avblocks-net">Add AVBlocks .NET</a><ul>
+<li><a class="reference internal" href="#x64">x64</a></li>
+<li><a class="reference internal" href="#arm64">arm64</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#run-the-application">Run the application</a></li>
 <li><a class="reference internal" href="#troubleshooting">Troubleshooting</a></li>
 </ul>

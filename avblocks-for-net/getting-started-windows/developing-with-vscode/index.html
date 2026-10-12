@@ -633,7 +633,16 @@
 </pre></div>
 </div>
 </li>
-<li><p><a class="reference external" href="https://github.com/avblocks/avblocks-net-core/releases/">Download</a> the Windows version of AVBlocks for .NET (net10.0). The file you need will have a name similar to <code class="docutils literal notranslate"><span class="pre">avblocks-net10.0-v3.3.0-demo.1-windows.zip</span></code> - the version number may differ.</p></li>
+</ol>
+</section>
+<section id="add-avblocks-net">
+<h2>Add AVBlocks .NET<a class="headerlink" href="#add-avblocks-net" title="Link to this heading">¶</a></h2>
+<p>Follow the section that matches the architecture of your .NET installation (run <code class="docutils literal notranslate"><span class="pre">dotnet</span> <span class="pre">--info</span></code> and check the <code class="docutils literal notranslate"><span class="pre">Architecture</span></code> line).</p>
+<section id="x64">
+<h3>x64<a class="headerlink" href="#x64" title="Link to this heading">¶</a></h3>
+<p>For x64 machines.</p>
+<ol class="arabic">
+<li><p><a class="reference external" href="https://github.com/avblocks/avblocks-net-core/releases/">Download</a> the Windows version of AVBlocks for .NET (net10.0). The file you need will have a name similar to <code class="docutils literal notranslate"><span class="pre">avblocks-net10.0-v3.4.0-demo.1-windows.zip</span></code> - the version number may differ.</p></li>
 <li><p>Unzip in a location of your choice, then copy the file <code class="docutils literal notranslate"><span class="pre">AVBlocks.clrcore.x64.dll</span></code> and <code class="docutils literal notranslate"><span class="pre">AVBlocks64.dll</span></code> to the project’s directory.</p></li>
 <li><p>Add a reference to <code class="docutils literal notranslate"><span class="pre">AVBlocks.clrcore.x64.dll</span></code></p>
 <p>Replace the contents of the <code class="docutils literal notranslate"><span class="pre">simple-converter.csproj</span></code> project file with this code:</p>
@@ -660,6 +669,38 @@
 </li>
 </ol>
 </section>
+<section id="arm64">
+<h3>arm64<a class="headerlink" href="#arm64" title="Link to this heading">¶</a></h3>
+<p>For Windows on ARM (arm64) machines.</p>
+<ol class="arabic">
+<li><p><a class="reference external" href="https://github.com/avblocks/avblocks-net-core/releases/">Download</a> the Windows version of AVBlocks for .NET (net10.0). The file you need will have a name similar to <code class="docutils literal notranslate"><span class="pre">avblocks-net10.0-v3.4.0-demo.1-windows-arm64.zip</span></code> - the version number may differ.</p></li>
+<li><p>Unzip in a location of your choice, then copy the file <code class="docutils literal notranslate"><span class="pre">AVBlocks.clrcore.arm64.dll</span></code> and <code class="docutils literal notranslate"><span class="pre">AVBlocks64.dll</span></code> to the project’s directory.</p></li>
+<li><p>Add a reference to <code class="docutils literal notranslate"><span class="pre">AVBlocks.clrcore.arm64.dll</span></code></p>
+<p>Replace the contents of the <code class="docutils literal notranslate"><span class="pre">simple-converter.csproj</span></code> project file with this code:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;Project</span><span class="w"> </span><span class="na">Sdk=</span><span class="s">&quot;Microsoft.NET.Sdk&quot;</span><span class="nt">&gt;</span>
+
+<span class="nt">&lt;PropertyGroup&gt;</span>
+<span class="w">    </span><span class="nt">&lt;OutputType&gt;</span>Exe<span class="nt">&lt;/OutputType&gt;</span>
+<span class="w">    </span><span class="nt">&lt;TargetFramework&gt;</span>net10.0<span class="nt">&lt;/TargetFramework&gt;</span>
+<span class="w">    </span><span class="nt">&lt;RootNamespace&gt;</span>SimpleConverter<span class="nt">&lt;/RootNamespace&gt;</span>
+<span class="w">    </span><span class="nt">&lt;ImplicitUsings&gt;</span>enable<span class="nt">&lt;/ImplicitUsings&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Nullable&gt;</span>enable<span class="nt">&lt;/Nullable&gt;</span>
+<span class="nt">&lt;/PropertyGroup&gt;</span>
+
+<span class="cm">&lt;!-- This adds a reference to AVBlocks .NET dll--&gt;</span>
+<span class="nt">&lt;ItemGroup&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Reference</span><span class="w"> </span><span class="na">Include=</span><span class="s">&quot;AVBlocks.clrcore.arm64&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;HintPath&gt;</span>AVBlocks.clrcore.arm64.dll<span class="nt">&lt;/HintPath&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/Reference&gt;</span><span class="w">  </span>
+<span class="nt">&lt;/ItemGroup&gt;</span>
+
+<span class="nt">&lt;/Project&gt;</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+</section>
 <section id="run-the-application">
 <h2>Run the application<a class="headerlink" href="#run-the-application" title="Link to this heading">¶</a></h2>
 <ol class="arabic simple">
@@ -672,6 +713,7 @@
 <ul class="simple">
 <li><p>You may get a <code class="docutils literal notranslate"><span class="pre">'DllNotFoundException'</span> <span class="pre">exception:</span> <span class="pre">Unable</span> <span class="pre">to</span> <span class="pre">load</span> <span class="pre">DLL</span> <span class="pre">'AVBlocks64.dll':</span> <span class="pre">The</span> <span class="pre">specified</span> <span class="pre">module</span> <span class="pre">could</span> <span class="pre">not</span> <span class="pre">be</span> <span class="pre">found.</span></code> To fix that, copy the file <code class="docutils literal notranslate"><span class="pre">AVBlocks64.dll</span></code> to the project directory.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Transcoder.Open</span></code> may fail if there is already a file <code class="docutils literal notranslate"><span class="pre">Wildlife.mp4</span></code> in the project directory. Delete <code class="docutils literal notranslate"><span class="pre">Wildlife.mp4</span></code> to solve that.</p></li>
+<li><p>You may get a <code class="docutils literal notranslate"><span class="pre">BadImageFormatException</span></code> (or the library fails to load with an architecture mismatch). The AVBlocks package does not match the architecture of your .NET. Run <code class="docutils literal notranslate"><span class="pre">dotnet</span> <span class="pre">--info</span></code>, check the <code class="docutils literal notranslate"><span class="pre">Architecture</span></code> line, and use the matching <code class="docutils literal notranslate"><span class="pre">x64</span></code> or <code class="docutils literal notranslate"><span class="pre">arm64</span></code> package and <code class="docutils literal notranslate"><span class="pre">AVBlocks.clrcore.&lt;arch&gt;.dll</span></code>.</p></li>
 </ul>
 </section>
 </section>
@@ -753,6 +795,11 @@
 </ul>
 </li>
 <li><a class="reference internal" href="#update-for-avblocks-net">Update for AVBlocks .NET</a></li>
+<li><a class="reference internal" href="#add-avblocks-net">Add AVBlocks .NET</a><ul>
+<li><a class="reference internal" href="#x64">x64</a></li>
+<li><a class="reference internal" href="#arm64">arm64</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#run-the-application">Run the application</a></li>
 <li><a class="reference internal" href="#troubleshooting">Troubleshooting</a></li>
 </ul>
